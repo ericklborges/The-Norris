@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CCF779D9B86707DD0DDC4B4 /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE7D5FC8357C7B21FC68D2 /* Pods_The_Norris.framework */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
 		3726982125D1FE4B004FD4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */; };
+		5A5576CB729D4DCC23CEB094 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_NorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.release.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.release.xcconfig"; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,10 @@
 		3726982225D1FE4B004FD4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The-NorrisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726982D25D1FE4C004FD4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A19A03325BBAB956031A26D /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
+		5543CB2AB737DF21959A5AC4 /* Pods-The-NorrisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.release.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.release.xcconfig"; sourceTree = "<group>"; };
+		61DE7D5FC8357C7B21FC68D2 /* Pods_The_Norris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Norris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACB20107734C6885B6DFA10 /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCF779D9B86707DD0DDC4B4 /* Pods_The_Norris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,18 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5576CB729D4DCC23CEB094 /* Pods_The_NorrisTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B80138215F570CE92592778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61DE7D5FC8357C7B21FC68D2 /* Pods_The_Norris.framework */,
+				267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3726980825D1FE45004FD4F9 = {
 			isa = PBXGroup;
 			children = (
 				3726981325D1FE45004FD4F9 /* The-Norris */,
 				3726982A25D1FE4C004FD4F9 /* The-NorrisTests */,
 				3726981225D1FE45004FD4F9 /* Products */,
+				D86A796943F053FD164B860E /* Pods */,
+				2B80138215F570CE92592778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +111,17 @@
 			path = "The-NorrisTests";
 			sourceTree = "<group>";
 		};
+		D86A796943F053FD164B860E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A19A03325BBAB956031A26D /* Pods-The-Norris.debug.xcconfig */,
+				3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */,
+				BACB20107734C6885B6DFA10 /* Pods-The-NorrisTests.debug.xcconfig */,
+				5543CB2AB737DF21959A5AC4 /* Pods-The-NorrisTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,6 +129,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3726983B25D1FE4C004FD4F9 /* Build configuration list for PBXNativeTarget "The-Norris" */;
 			buildPhases = (
+				5DDC7C5561FC90671E1868D7 /* [CP] Check Pods Manifest.lock */,
 				3726980D25D1FE45004FD4F9 /* Sources */,
 				3726980E25D1FE45004FD4F9 /* Frameworks */,
 				3726980F25D1FE45004FD4F9 /* Resources */,
@@ -114,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3726983E25D1FE4C004FD4F9 /* Build configuration list for PBXNativeTarget "The-NorrisTests" */;
 			buildPhases = (
+				3020ECF9CF04D7551F6F911A /* [CP] Check Pods Manifest.lock */,
 				3726982325D1FE4C004FD4F9 /* Sources */,
 				3726982425D1FE4C004FD4F9 /* Frameworks */,
 				3726982525D1FE4C004FD4F9 /* Resources */,
+				8DEA933323C89DEE48C719FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +218,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3020ECF9CF04D7551F6F911A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The-NorrisTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DDC7C5561FC90671E1868D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The-Norris-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DEA933323C89DEE48C719FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3726980D25D1FE45004FD4F9 /* Sources */ = {
@@ -341,6 +440,7 @@
 		};
 		3726983C25D1FE4C004FD4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A19A03325BBAB956031A26D /* Pods-The-Norris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,6 +460,7 @@
 		};
 		3726983D25D1FE4C004FD4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,8 +480,9 @@
 		};
 		3726983F25D1FE4C004FD4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACB20107734C6885B6DFA10 /* Pods-The-NorrisTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
@@ -401,8 +503,9 @@
 		};
 		3726984025D1FE4C004FD4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5543CB2AB737DF21959A5AC4 /* Pods-The-NorrisTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
