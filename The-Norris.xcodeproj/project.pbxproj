@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CCF779D9B86707DD0DDC4B4 /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE7D5FC8357C7B21FC68D2 /* Pods_The_Norris.framework */; };
 		3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708766B25D4726E004E6C10 /* BundleWrapper.swift */; };
+		3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708767025D47BB7004E6C10 /* BaseUrl.swift */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_NorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.release.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.release.xcconfig"; sourceTree = "<group>"; };
 		3708766B25D4726E004E6C10 /* BundleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleWrapper.swift; sourceTree = "<group>"; };
+		3708767025D47BB7004E6C10 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3708766F25D47BAA004E6C10 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3708767025D47BB7004E6C10 /* BaseUrl.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3726980825D1FE45004FD4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,8 @@
 				3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */,
 				3708765125D4706F004E6C10 /* Application */,
 				3708765E25D470A1004E6C10 /* Assets */,
+				3708766F25D47BAA004E6C10 /* Constants */,
+				3708766A25D47258004E6C10 /* Utilities */,
 			);
 			path = "The-Norris";
 			sourceTree = "<group>";
@@ -315,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */,
+				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
+				3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */,
 				3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
