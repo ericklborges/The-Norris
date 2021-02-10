@@ -460,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CHUCK_NORRIS_API_BASE_URL = "https://api.chucknorris.io";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				INFOPLIST_FILE = "The-Norris/Info.plist";
@@ -480,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CHUCK_NORRIS_API_BASE_URL = "https://api.chucknorris.io";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				INFOPLIST_FILE = "The-Norris/Info.plist";
