@@ -19,6 +19,7 @@
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
 		3726982125D1FE4B004FD4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */; };
+		37316AD125D49A6E005C4688 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD025D49A6E005C4688 /* Color.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		BD50CC9CB6B7509B6A395CAB /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933216773006E741379B4602 /* Pods_InterfaceTests.framework */; };
 		DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */; };
@@ -89,6 +90,7 @@
 		3726982225D1FE4B004FD4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The-NorrisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726982D25D1FE4C004FD4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37316AD025D49A6E005C4688 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933216773006E741379B4602 /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		3708769625D493DA004E6C10 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				37316ACF25D49A64005C4688 /* Resources */,
 				3708769725D493DA004E6C10 /* Interface.h */,
 				3708769825D493DA004E6C10 /* Info.plist */,
 			);
@@ -238,6 +241,14 @@
 				3726982D25D1FE4C004FD4F9 /* Info.plist */,
 			);
 			path = "The-NorrisTests";
+			sourceTree = "<group>";
+		};
+		37316ACF25D49A64005C4688 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37316AD025D49A6E005C4688 /* Color.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C4F7FA31F7280B2E139223E1 /* Frameworks */ = {
@@ -367,6 +378,7 @@
 				TargetAttributes = {
 					3708769425D493DA004E6C10 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					3708769C25D493DB004E6C10 = {
 						CreatedOnToolsVersion = 12.2;
@@ -544,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37316AD125D49A6E005C4688 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +627,7 @@
 		370876AD25D493DB004E6C10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -632,6 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -642,6 +657,7 @@
 		370876AE25D493DB004E6C10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -829,6 +845,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CHUCK_NORRIS_API_BASE_URL = "https://api.chucknorris.io";
@@ -850,6 +867,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDCFB72B0E4071A5826B0981 /* Pods-The-Norris.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CHUCK_NORRIS_API_BASE_URL = "https://api.chucknorris.io";
