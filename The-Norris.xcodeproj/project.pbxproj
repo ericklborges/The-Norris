@@ -12,6 +12,11 @@
 		3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708767025D47BB7004E6C10 /* BaseUrl.swift */; };
 		3708767A25D47C9B004E6C10 /* FactsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708767925D47C9B004E6C10 /* FactsQuery.swift */; };
 		3708768225D47D5A004E6C10 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708768125D47D5A004E6C10 /* Fact.swift */; };
+		3708769E25D493DB004E6C10 /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; };
+		370876A525D493DB004E6C10 /* InterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370876A425D493DB004E6C10 /* InterfaceTests.swift */; };
+		370876A725D493DB004E6C10 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3708769725D493DA004E6C10 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		370876AA25D493DB004E6C10 /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; };
+		370876AB25D493DB004E6C10 /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
@@ -20,6 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3708769F25D493DB004E6C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3708769425D493DA004E6C10;
+			remoteInfo = Interface;
+		};
+		370876A125D493DB004E6C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3726981025D1FE45004FD4F9;
+			remoteInfo = "The-Norris";
+		};
+		370876A825D493DB004E6C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3708769425D493DA004E6C10;
+			remoteInfo = Interface;
+		};
 		3726982825D1FE4C004FD4F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
@@ -29,6 +55,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		370876AC25D493DB004E6C10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				370876AB25D493DB004E6C10 /* Interface.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_NorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.release.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.release.xcconfig"; sourceTree = "<group>"; };
@@ -36,6 +76,12 @@
 		3708767025D47BB7004E6C10 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
 		3708767925D47C9B004E6C10 /* FactsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsQuery.swift; sourceTree = "<group>"; };
 		3708768125D47D5A004E6C10 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		3708769525D493DA004E6C10 /* Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3708769725D493DA004E6C10 /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		3708769825D493DA004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3708769D25D493DB004E6C10 /* InterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370876A425D493DB004E6C10 /* InterfaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceTests.swift; sourceTree = "<group>"; };
+		370876A625D493DB004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,10 +97,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3708769225D493DA004E6C10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3708769A25D493DB004E6C10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3708769E25D493DB004E6C10 /* Interface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3726980E25D1FE45004FD4F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370876AA25D493DB004E6C10 /* Interface.framework in Frameworks */,
 				2CCF779D9B86707DD0DDC4B4 /* Pods_The_Norris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,11 +183,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3708769625D493DA004E6C10 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				3708769725D493DA004E6C10 /* Interface.h */,
+				3708769825D493DA004E6C10 /* Info.plist */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		370876A325D493DB004E6C10 /* InterfaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				370876A425D493DB004E6C10 /* InterfaceTests.swift */,
+				370876A625D493DB004E6C10 /* Info.plist */,
+			);
+			path = InterfaceTests;
+			sourceTree = "<group>";
+		};
 		3726980825D1FE45004FD4F9 = {
 			isa = PBXGroup;
 			children = (
 				3726981325D1FE45004FD4F9 /* The-Norris */,
 				3726982A25D1FE4C004FD4F9 /* The-NorrisTests */,
+				3708769625D493DA004E6C10 /* Interface */,
+				370876A325D493DB004E6C10 /* InterfaceTests */,
 				3726981225D1FE45004FD4F9 /* Products */,
 				D86A796943F053FD164B860E /* Pods */,
 				2B80138215F570CE92592778 /* Frameworks */,
@@ -137,6 +219,8 @@
 			children = (
 				3726981125D1FE45004FD4F9 /* The-Norris.app */,
 				3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */,
+				3708769525D493DA004E6C10 /* Interface.framework */,
+				3708769D25D493DB004E6C10 /* InterfaceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +260,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3708769025D493DA004E6C10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370876A725D493DB004E6C10 /* Interface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		3708769425D493DA004E6C10 /* Interface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370876B125D493DB004E6C10 /* Build configuration list for PBXNativeTarget "Interface" */;
+			buildPhases = (
+				3708769025D493DA004E6C10 /* Headers */,
+				3708769125D493DA004E6C10 /* Sources */,
+				3708769225D493DA004E6C10 /* Frameworks */,
+				3708769325D493DA004E6C10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Interface;
+			productName = Interface;
+			productReference = 3708769525D493DA004E6C10 /* Interface.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3708769C25D493DB004E6C10 /* InterfaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370876B225D493DB004E6C10 /* Build configuration list for PBXNativeTarget "InterfaceTests" */;
+			buildPhases = (
+				3708769925D493DB004E6C10 /* Sources */,
+				3708769A25D493DB004E6C10 /* Frameworks */,
+				3708769B25D493DB004E6C10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370876A025D493DB004E6C10 /* PBXTargetDependency */,
+				370876A225D493DB004E6C10 /* PBXTargetDependency */,
+			);
+			name = InterfaceTests;
+			productName = InterfaceTests;
+			productReference = 3708769D25D493DB004E6C10 /* InterfaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3726981025D1FE45004FD4F9 /* The-Norris */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3726983B25D1FE4C004FD4F9 /* Build configuration list for PBXNativeTarget "The-Norris" */;
@@ -185,10 +317,12 @@
 				3726980D25D1FE45004FD4F9 /* Sources */,
 				3726980E25D1FE45004FD4F9 /* Frameworks */,
 				3726980F25D1FE45004FD4F9 /* Resources */,
+				370876AC25D493DB004E6C10 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				370876A925D493DB004E6C10 /* PBXTargetDependency */,
 			);
 			name = "The-Norris";
 			productName = "The-Norris";
@@ -224,6 +358,13 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					3708769425D493DA004E6C10 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					3708769C25D493DB004E6C10 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 3726981025D1FE45004FD4F9;
+					};
 					3726981025D1FE45004FD4F9 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -248,11 +389,27 @@
 			targets = (
 				3726981025D1FE45004FD4F9 /* The-Norris */,
 				3726982625D1FE4C004FD4F9 /* The-NorrisTests */,
+				3708769425D493DA004E6C10 /* Interface */,
+				3708769C25D493DB004E6C10 /* InterfaceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3708769325D493DA004E6C10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3708769B25D493DB004E6C10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3726980F25D1FE45004FD4F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +493,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3708769125D493DA004E6C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3708769925D493DB004E6C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370876A525D493DB004E6C10 /* InterfaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3726980D25D1FE45004FD4F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +531,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		370876A025D493DB004E6C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3708769425D493DA004E6C10 /* Interface */;
+			targetProxy = 3708769F25D493DB004E6C10 /* PBXContainerItemProxy */;
+		};
+		370876A225D493DB004E6C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3726981025D1FE45004FD4F9 /* The-Norris */;
+			targetProxy = 370876A125D493DB004E6C10 /* PBXContainerItemProxy */;
+		};
+		370876A925D493DB004E6C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3708769425D493DA004E6C10 /* Interface */;
+			targetProxy = 370876A825D493DB004E6C10 /* PBXContainerItemProxy */;
+		};
 		3726982925D1FE4C004FD4F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3726981025D1FE45004FD4F9 /* The-Norris */;
@@ -378,6 +565,102 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		370876AD25D493DB004E6C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Interface/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.Interface;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		370876AE25D493DB004E6C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Interface/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.Interface;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		370876AF25D493DB004E6C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				INFOPLIST_FILE = InterfaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.InterfaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Norris.app/The-Norris";
+			};
+			name = Debug;
+		};
+		370876B025D493DB004E6C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				INFOPLIST_FILE = InterfaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.InterfaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Norris.app/The-Norris";
+			};
+			name = Release;
+		};
 		3726983925D1FE4C004FD4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -585,6 +868,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		370876B125D493DB004E6C10 /* Build configuration list for PBXNativeTarget "Interface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370876AD25D493DB004E6C10 /* Debug */,
+				370876AE25D493DB004E6C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370876B225D493DB004E6C10 /* Build configuration list for PBXNativeTarget "InterfaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370876AF25D493DB004E6C10 /* Debug */,
+				370876B025D493DB004E6C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3726980C25D1FE45004FD4F9 /* Build configuration list for PBXProject "The-Norris" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
