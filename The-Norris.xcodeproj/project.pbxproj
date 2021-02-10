@@ -71,6 +71,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3708765125D4706F004E6C10 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3726981425D1FE45004FD4F9 /* AppDelegate.swift */,
+				3726981625D1FE45004FD4F9 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3708765E25D470A1004E6C10 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3726981D25D1FE4B004FD4F9 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		3726980825D1FE45004FD4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -94,11 +111,10 @@
 		3726981325D1FE45004FD4F9 /* The-Norris */ = {
 			isa = PBXGroup;
 			children = (
-				3726981425D1FE45004FD4F9 /* AppDelegate.swift */,
-				3726981625D1FE45004FD4F9 /* SceneDelegate.swift */,
-				3726981D25D1FE4B004FD4F9 /* Assets.xcassets */,
-				3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */,
 				3726982225D1FE4B004FD4F9 /* Info.plist */,
+				3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */,
+				3708765125D4706F004E6C10 /* Application */,
+				3708765E25D470A1004E6C10 /* Assets */,
 			);
 			path = "The-Norris";
 			sourceTree = "<group>";
