@@ -20,6 +20,7 @@
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
 		3726982125D1FE4B004FD4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */; };
 		37316AD125D49A6E005C4688 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD025D49A6E005C4688 /* Color.swift */; };
+		37316AD725D49BD3005C4688 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD625D49BD3005C4688 /* Font.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		BD50CC9CB6B7509B6A395CAB /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933216773006E741379B4602 /* Pods_InterfaceTests.framework */; };
 		DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */; };
@@ -91,6 +92,7 @@
 		3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The-NorrisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726982D25D1FE4C004FD4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37316AD025D49A6E005C4688 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		37316AD625D49BD3005C4688 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933216773006E741379B4602 /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				37316AD025D49A6E005C4688 /* Color.swift */,
+				37316AD625D49BD3005C4688 /* Font.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37316AD725D49BD3005C4688 /* Font.swift in Sources */,
 				37316AD125D49A6E005C4688 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
