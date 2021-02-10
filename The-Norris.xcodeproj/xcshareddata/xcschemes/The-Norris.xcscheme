@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3708769425D493DA004E6C10"
-               BuildableName = "Interface.framework"
-               BlueprintName = "Interface"
+               BlueprintIdentifier = "3726981025D1FE45004FD4F9"
+               BuildableName = "The-Norris.app"
+               BlueprintName = "The-Norris"
                ReferencedContainer = "container:The-Norris.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3708769C25D493DB004E6C10"
-               BuildableName = "InterfaceTests.xctest"
-               BlueprintName = "InterfaceTests"
+               BlueprintIdentifier = "3726982625D1FE4C004FD4F9"
+               BuildableName = "The-NorrisTests.xctest"
+               BlueprintName = "The-NorrisTests"
                ReferencedContainer = "container:The-Norris.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -50,6 +50,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3726981025D1FE45004FD4F9"
+            BuildableName = "The-Norris.app"
+            BlueprintName = "The-Norris"
+            ReferencedContainer = "container:The-Norris.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,15 +67,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3708769425D493DA004E6C10"
-            BuildableName = "Interface.framework"
-            BlueprintName = "Interface"
+            BlueprintIdentifier = "3726981025D1FE45004FD4F9"
+            BuildableName = "The-Norris.app"
+            BlueprintName = "The-Norris"
             ReferencedContainer = "container:The-Norris.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
