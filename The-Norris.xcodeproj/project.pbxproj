@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CCF779D9B86707DD0DDC4B4 /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DE7D5FC8357C7B21FC68D2 /* Pods_The_Norris.framework */; };
+		3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3708766B25D4726E004E6C10 /* BundleWrapper.swift */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		267A19F02DAE15E1C27DD895 /* Pods_The_NorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_NorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3403FC414FA662611740E2BC /* Pods-The-Norris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.release.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.release.xcconfig"; sourceTree = "<group>"; };
+		3708766B25D4726E004E6C10 /* BundleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleWrapper.swift; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 				3726981D25D1FE4B004FD4F9 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		3708766A25D47258004E6C10 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3708766B25D4726E004E6C10 /* BundleWrapper.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3726980825D1FE45004FD4F9 = {
