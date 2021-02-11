@@ -27,7 +27,7 @@ class SeparatorViewSpec: QuickSpec {
                 }
                 
                 it("shuold layout itself properly") {
-                    expect(sut) == recordSnapshot("SeparatorView_Layout")
+                    expect(sut) == snapshot("SeparatorView_Layout")
                 }
             }
         }
