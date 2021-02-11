@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift">
-   </FileRef>
-   <FileRef
       location = "group:The-Norris.xcodeproj">
    </FileRef>
    <FileRef
