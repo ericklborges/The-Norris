@@ -25,6 +25,7 @@
 		37316B8325D49DFF005C4688 /* ViewCodableDsl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316B8225D49DFF005C4688 /* ViewCodableDsl.swift */; };
 		37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316B8B25D49E95005C4688 /* UIView+Anchors.swift */; };
 		37316B9925D4A716005C4688 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316B9825D4A716005C4688 /* Asset.swift */; };
+		37316BA325D4A96B005C4688 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BA225D4A96B005C4688 /* TagView.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		BD50CC9CB6B7509B6A395CAB /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933216773006E741379B4602 /* Pods_InterfaceTests.framework */; };
@@ -102,6 +103,7 @@
 		37316B8225D49DFF005C4688 /* ViewCodableDsl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodableDsl.swift; sourceTree = "<group>"; };
 		37316B8B25D49E95005C4688 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		37316B9825D4A716005C4688 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		37316BA225D4A96B005C4688 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933216773006E741379B4602 /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 			children = (
 				3708769725D493DA004E6C10 /* Interface.h */,
 				3708769825D493DA004E6C10 /* Info.plist */,
+				37316BA025D4A952005C4688 /* Component */,
 				37316B8A25D49E81005C4688 /* Extensions */,
 				37316AE125D49C77005C4688 /* Protocol */,
 				37316ACF25D49A64005C4688 /* Resources */,
@@ -291,6 +294,22 @@
 				37316B8B25D49E95005C4688 /* UIView+Anchors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37316BA025D4A952005C4688 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				37316BA125D4A95D005C4688 /* TagView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		37316BA125D4A95D005C4688 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				37316BA225D4A96B005C4688 /* TagView.swift */,
+			);
+			path = TagView;
 			sourceTree = "<group>";
 		};
 		C4F7FA31F7280B2E139223E1 /* Frameworks */ = {
@@ -602,6 +621,7 @@
 				37316B9925D4A716005C4688 /* Asset.swift in Sources */,
 				37316AD125D49A6E005C4688 /* Color.swift in Sources */,
 				37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */,
+				37316BA325D4A96B005C4688 /* TagView.swift in Sources */,
 				37316AE325D49C87005C4688 /* ViewCodable.swift in Sources */,
 				37316B8325D49DFF005C4688 /* ViewCodableDsl.swift in Sources */,
 				376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */,
