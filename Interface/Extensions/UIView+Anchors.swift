@@ -70,4 +70,13 @@ extension UIView {
         
         return self
     }
+    
+    @discardableResult
+    public func centerYAnchor(equalTo anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0, priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint: NSLayoutConstraint = centerYAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        
+        return self
+    }
 }
