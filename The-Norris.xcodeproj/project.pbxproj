@@ -26,6 +26,7 @@
 		37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316B8B25D49E95005C4688 /* UIView+Anchors.swift */; };
 		37316B9925D4A716005C4688 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316B9825D4A716005C4688 /* Asset.swift */; };
 		37316BA325D4A96B005C4688 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BA225D4A96B005C4688 /* TagView.swift */; };
+		37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */; };
 		37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
@@ -107,6 +108,7 @@
 		37316B8B25D49E95005C4688 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		37316B9825D4A716005C4688 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		37316BA225D4A96B005C4688 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewSpec.swift; sourceTree = "<group>"; };
 		37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				376C822C25D5D3A700965BC6 /* ReferenceImages */,
 				370876A625D493DB004E6C10 /* Info.plist */,
 				376C821A25D5D1DB00965BC6 /* Configuration.swift */,
+				37316BAA25D4ACCD005C4688 /* Component */,
 				37316BB725D4AF2B005C4688 /* Utilities */,
 			);
 			path = InterfaceTests;
@@ -317,6 +320,22 @@
 			isa = PBXGroup;
 			children = (
 				37316BA225D4A96B005C4688 /* TagView.swift */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		37316BAA25D4ACCD005C4688 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				37316BAB25D4ACD5005C4688 /* TagView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		37316BAB25D4ACD5005C4688 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */,
 			);
 			path = TagView;
 			sourceTree = "<group>";
@@ -460,6 +479,7 @@
 					};
 					3708769C25D493DB004E6C10 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 						TestTargetID = 3726981025D1FE45004FD4F9;
 					};
 					3726981025D1FE45004FD4F9 = {
@@ -651,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */,
+				37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */,
 				37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,6 +797,7 @@
 			baseConfigurationReference = DAFE3CEED6CAAF62B82269DD /* Pods-InterfaceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				INFOPLIST_FILE = InterfaceTests/Info.plist;
@@ -786,6 +808,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.InterfaceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Norris.app/The-Norris";
@@ -797,6 +820,7 @@
 			baseConfigurationReference = AABD4808CF315C8DA4A50450 /* Pods-InterfaceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				INFOPLIST_FILE = InterfaceTests/Info.plist;
