@@ -35,6 +35,8 @@
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
+		378717DE25D5EE4600E9E320 /* TermSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378717DD25D5EE4600E9E320 /* TermSuggestionView.swift */; };
+		378717E425D5EE4D00E9E320 /* TermSuggestionViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378717E325D5EE4D00E9E320 /* TermSuggestionViewSpec.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		BD50CC9CB6B7509B6A395CAB /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933216773006E741379B4602 /* Pods_InterfaceTests.framework */; };
 		DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */; };
@@ -121,6 +123,8 @@
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
+		378717DD25D5EE4600E9E320 /* TermSuggestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermSuggestionView.swift; sourceTree = "<group>"; };
+		378717E325D5EE4D00E9E320 /* TermSuggestionViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermSuggestionViewSpec.swift; sourceTree = "<group>"; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933216773006E741379B4602 /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,9 +304,10 @@
 		3726DEBC25D5E089008EFE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3726DEBD25D5E09F008EFE9E /* Separator */,
 				3726DE9B25D5DC98008EFE9E /* SectionHeader */,
+				3726DEBD25D5E09F008EFE9E /* Separator */,
 				37316BA125D4A95D005C4688 /* Tag */,
+				378717DC25D5EE4600E9E320 /* TermSuggestion */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				3726DEA425D5DDDF008EFE9E /* SectionHeader */,
 				3726DEC725D5E147008EFE9E /* Separator */,
 				37316BAB25D4ACD5005C4688 /* Tag */,
+				378717E225D5EE4D00E9E320 /* TermSuggestion */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +412,22 @@
 				37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				378717DD25D5EE4600E9E320 /* TermSuggestionView.swift */,
+			);
+			path = TermSuggestion;
+			sourceTree = "<group>";
+		};
+		378717E225D5EE4D00E9E320 /* TermSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				378717E325D5EE4D00E9E320 /* TermSuggestionViewSpec.swift */,
+			);
+			path = TermSuggestion;
 			sourceTree = "<group>";
 		};
 		C4F7FA31F7280B2E139223E1 /* Frameworks */ = {
@@ -722,6 +744,7 @@
 				37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */,
 				3726DE9D25D5DCC7008EFE9E /* SectionHeaderView.swift in Sources */,
 				37316BA325D4A96B005C4688 /* TagView.swift in Sources */,
+				378717DE25D5EE4600E9E320 /* TermSuggestionView.swift in Sources */,
 				37316AE325D49C87005C4688 /* ViewCodable.swift in Sources */,
 				37316B8325D49DFF005C4688 /* ViewCodableDsl.swift in Sources */,
 				376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */,
@@ -735,6 +758,7 @@
 				376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */,
 				37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */,
 				3726DEAF25D5DE1B008EFE9E /* SectionHeaderViewSpec.swift in Sources */,
+				378717E425D5EE4D00E9E320 /* TermSuggestionViewSpec.swift in Sources */,
 				3726DEC925D5E156008EFE9E /* SeparatorViewSpec.swift in Sources */,
 				37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */,
 			);
