@@ -30,6 +30,6 @@ class PrimaryButton: UIButton {
     private func setupTitleLabel() {
         titleLabel?.font = Font.header
         titleLabel?.textColor = Color.Text.highlight
-        contentEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
+        contentEdgeInsets = UIEdgeInsets(top: 4, left: 28, bottom: 4, right: 28)
     }
 }
