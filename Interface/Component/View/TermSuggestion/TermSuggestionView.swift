@@ -20,9 +20,9 @@ class TermSuggestionView: UIView {
     
     private let arrowIcon: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        imageView.image = Asset.arrowUpBackward
-        imageView.contentMode = .scaleAspectFit
+        imageView.image = Symbol.arrowUpBackward.image()
         imageView.tintColor = Color.Background.highlight
+        imageView.contentMode = .scaleAspectFit
         imageView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         return imageView
     }()

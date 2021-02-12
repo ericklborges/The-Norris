@@ -30,7 +30,7 @@ class TermSuggestionViewSpec: QuickSpec {
                         sut.setOffsetSeparator()
                     }
                     
-                    it("shuold layout itself properly") {
+                    it("should layout itself properly") {
                         expect(sut) == snapshot("TermSuggestionView_Layout_Offset_Separator")
                     }
                 }
@@ -40,7 +40,7 @@ class TermSuggestionViewSpec: QuickSpec {
                         sut.setFullWidthSeparator()
                     }
                     
-                    it("shuold layout itself properly") {
+                    it("should layout itself properly") {
                         expect(sut) == snapshot("TermSuggestionView_Layout_Full_Width_Separator")
                     }
                 }
