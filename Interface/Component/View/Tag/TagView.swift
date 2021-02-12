@@ -48,8 +48,8 @@ extension TagView: ViewCodable {
         label.layout.applyConstraint { make in
             make.leadingAnchor(equalTo: leadingAnchor, constant: 8)
             make.trailingAnchor(equalTo: trailingAnchor, constant: -8)
-            make.topAnchor(equalTo: topAnchor, constant: 4)
-            make.bottomAnchor(equalTo: bottomAnchor, constant: -4)
+            make.topAnchor(equalTo: topAnchor, constant: 5)
+            make.bottomAnchor(equalTo: bottomAnchor, constant: -5)
         }
     }
     
