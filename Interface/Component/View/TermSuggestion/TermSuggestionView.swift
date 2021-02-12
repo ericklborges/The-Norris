@@ -113,4 +113,3 @@ extension TermSuggestionView: ViewCodable {
         backgroundColor = Color.Background.main
     }
 }
-
