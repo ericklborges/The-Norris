@@ -26,7 +26,7 @@ class SeparatorViewSpec: QuickSpec {
                     sut.setDynamicSize(forWidth: 100)
                 }
                 
-                it("shuold layout itself properly") {
+                it("should layout itself properly") {
                     expect(sut) == snapshot("SeparatorView_Layout")
                 }
             }

@@ -25,7 +25,7 @@ class TagViewSpec: QuickSpec {
                     sut.setDynamicSize(forHeight: 24.0)
                 }
                 
-                it("shuold layout itself properly") {
+                it("should layout itself properly") {
                     expect(sut) == snapshot("TagView_Layout")
                 }
             }

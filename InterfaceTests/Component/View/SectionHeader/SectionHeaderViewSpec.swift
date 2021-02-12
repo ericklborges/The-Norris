@@ -25,7 +25,7 @@ class SectionHeaderSpec: QuickSpec {
                     sut.setDynamicSize(forHeight: 38.0)
                 }
                 
-                it("shuold layout itself properly") {
+                it("should layout itself properly") {
                     expect(sut) == snapshot("SectionHeader_Layout")
                 }
             }
