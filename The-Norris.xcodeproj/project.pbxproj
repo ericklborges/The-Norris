@@ -41,6 +41,8 @@
 		3787180725D5F7A100E9E320 /* FactViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787180625D5F7A100E9E320 /* FactViewSpec.swift */; };
 		37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */; };
 		37C4DB1A25D6C1CB00F4BD31 /* PrimaryButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */; };
+		37C4DB8025D70A2100F4BD31 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB7F25D70A2100F4BD31 /* MessageView.swift */; };
+		37C4DB9F25D71A3E00F4BD31 /* MessageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB9E25D71A3E00F4BD31 /* MessageViewSpec.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		BD50CC9CB6B7509B6A395CAB /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933216773006E741379B4602 /* Pods_InterfaceTests.framework */; };
 		DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */; };
@@ -133,6 +135,8 @@
 		3787180625D5F7A100E9E320 /* FactViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewSpec.swift; sourceTree = "<group>"; };
 		37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonSpec.swift; sourceTree = "<group>"; };
+		37C4DB7F25D70A2100F4BD31 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		37C4DB9E25D71A3E00F4BD31 /* MessageViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewSpec.swift; sourceTree = "<group>"; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933216773006E741379B4602 /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
@@ -388,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				37C4DB0F25D6C0BE00F4BD31 /* Button */,
+				37C4DB7325D7093F00F4BD31 /* State */,
 				3726DEBC25D5E089008EFE9E /* View */,
 			);
 			path = Component;
@@ -405,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				37C4DB1825D6C1BE00F4BD31 /* Button */,
+				37C4DB9D25D719B400F4BD31 /* State */,
 				3726DEC625D5E141008EFE9E /* View */,
 			);
 			path = Component;
@@ -472,6 +478,38 @@
 				37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		37C4DB7325D7093F00F4BD31 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				37C4DB7425D7094700F4BD31 /* Message */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		37C4DB7425D7094700F4BD31 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				37C4DB7E25D70A1700F4BD31 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		37C4DB7E25D70A1700F4BD31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37C4DB7F25D70A2100F4BD31 /* MessageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37C4DB9D25D719B400F4BD31 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				37C4DB9E25D71A3E00F4BD31 /* MessageViewSpec.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		C4F7FA31F7280B2E139223E1 /* Frameworks */ = {
@@ -808,6 +846,7 @@
 				37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */,
 				3726DE9D25D5DCC7008EFE9E /* SectionHeaderView.swift in Sources */,
 				378717F625D5F23800E9E320 /* FactView.swift in Sources */,
+				37C4DB8025D70A2100F4BD31 /* MessageView.swift in Sources */,
 				37316BA325D4A96B005C4688 /* TagView.swift in Sources */,
 				378717DE25D5EE4600E9E320 /* TermSuggestionView.swift in Sources */,
 				37316AE325D49C87005C4688 /* ViewCodable.swift in Sources */,
@@ -824,6 +863,7 @@
 				37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */,
 				3787180725D5F7A100E9E320 /* FactViewSpec.swift in Sources */,
 				3726DEAF25D5DE1B008EFE9E /* SectionHeaderViewSpec.swift in Sources */,
+				37C4DB9F25D71A3E00F4BD31 /* MessageViewSpec.swift in Sources */,
 				378717E425D5EE4D00E9E320 /* TermSuggestionViewSpec.swift in Sources */,
 				37C4DB1A25D6C1CB00F4BD31 /* PrimaryButtonSpec.swift in Sources */,
 				3726DEC925D5E156008EFE9E /* SeparatorViewSpec.swift in Sources */,
