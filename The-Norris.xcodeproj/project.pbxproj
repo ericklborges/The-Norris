@@ -559,6 +559,7 @@
 				3726980E25D1FE45004FD4F9 /* Frameworks */,
 				3726980F25D1FE45004FD4F9 /* Resources */,
 				370876AC25D493DB004E6C10 /* Embed Frameworks */,
+				37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] */,
 			);
 			buildRules = (
 			);
@@ -690,6 +691,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
 		6BB28BCB65A2027E8C05F357 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

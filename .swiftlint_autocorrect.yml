@@ -1,0 +1,20 @@
+# Explanation of rules: https://github.com/realm/SwiftLint/blob/master/Rules.md
+whitelist_rules:
+  - colon
+  - comma
+  - closing_brace
+  - closure_spacing
+  - empty_count
+  - array_init
+  - closure_end_indentation
+  - contains_over_first_not_nil
+  - explicit_init
+  - multiline_parameters
+  - object_literal
+  - overridden_super_call
+  - switch_case_on_newline
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+excluded:
+  - Pods
+reporter: "xcode"
