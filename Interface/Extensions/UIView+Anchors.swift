@@ -57,4 +57,10 @@ extension UIView {
         constraint.priority = priority
         constraint.isActive = true
     }
+    
+    public func centerXAnchor(equalTo anchor: NSLayoutXAxisAnchor, constant: CGFloat = 0, priority: UILayoutPriority = UILayoutPriority.required) {
+        let constraint: NSLayoutConstraint = centerXAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+    }
 }

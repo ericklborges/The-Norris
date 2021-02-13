@@ -31,15 +31,11 @@ class FactView: UIView {
     public var buttonAction: (() -> Void)?
     
     public var factText: String? {
-        didSet {
-            setFact(factText)
-        }
+        didSet { setFact(factText) }
     }
     
     public var categoryText: String? {
-        didSet {
-            categoryView.text = categoryText
-        }
+        didSet { categoryView.text = categoryText }
     }
     
     // MARK: - Life Cycle

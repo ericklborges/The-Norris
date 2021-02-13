@@ -44,9 +44,7 @@ class TermSuggestionView: UIView {
     
     // MARK: - Properties
     public var text: String? {
-        didSet {
-            label.text = text
-        }
+        didSet { label.text = text }
     }
     
     // MARK: - Life Cycle
