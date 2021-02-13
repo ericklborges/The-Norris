@@ -19,20 +19,24 @@ class MessageViewSpec: QuickSpec {
             var sut: MessageView!
 
             context("when initialized") {
+                let title = "This is a Title"
+                let message = "This is a a larger text that should fill the space of the message label component."
+                
                 beforeEach {
                     sut = MessageView()
                     sut.frame.size = CGSize(width: 375.0, height: 242.0)
                 }
                 
                 context("and buttonConfiguraton is set") {
+                    
                     beforeEach {
                         sut.buttonConfiguration = (title: "Button Title", action: {})
                     }
                     
                     context("plus title and message") {
                         beforeEach {
-                            sut.title = "This is a Title"
-                            sut.message = "This is a a larger text that should fill the space of the message label component."
+                            sut.title = title
+                            sut.message = message
                         }
                         
                         it("should layout itself properly") {
@@ -58,8 +62,8 @@ class MessageViewSpec: QuickSpec {
                     
                     context("plus title and message") {
                         beforeEach {
-                            sut.title = "This is a Title"
-                            sut.message = "This is a a larger text that should fill the space of the message label component."
+                            sut.title = title
+                            sut.message = message
                         }
                         
                         it("should layout itself properly") {
