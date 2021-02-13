@@ -46,7 +46,9 @@
 		37E7124A25D8581B00E49F68 /* MessageViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */; };
 		37E7124B25D8581B00E49F68 /* MessageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124925D8581B00E49F68 /* MessageViewSpec.swift */; };
 		37E7125425D8593A00E49F68 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7125325D8593A00E49F68 /* WindowHelper.swift */; };
+		37E7129B25D8610900E49F68 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7129A25D8610900E49F68 /* StateViewController.swift */; };
 		37E712A025D869D600E49F68 /* UIViewController+Childs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */; };
+		37E712B825D86F6700E49F68 /* StateViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E712B725D86F6700E49F68 /* StateViewControllerSpec.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		9596963E95A81DBC25F31671 /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */; };
 		9BA84C6F9561335582F7CC3E /* Pods_Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */; };
@@ -145,7 +147,9 @@
 		37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewControllerSpec.swift; sourceTree = "<group>"; };
 		37E7124925D8581B00E49F68 /* MessageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewSpec.swift; sourceTree = "<group>"; };
 		37E7125325D8593A00E49F68 /* WindowHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
+		37E7129A25D8610900E49F68 /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Childs.swift"; sourceTree = "<group>"; };
+		37E712B725D86F6700E49F68 /* StateViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewControllerSpec.swift; sourceTree = "<group>"; };
 		642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				37C4DB7425D7094700F4BD31 /* Message */,
+				37E7129925D860F900E49F68 /* StateController */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				37E7124525D8581B00E49F68 /* Message */,
+				37E712B625D86F5100E49F68 /* StateController */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -569,6 +575,22 @@
 				37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37E7129925D860F900E49F68 /* StateController */ = {
+			isa = PBXGroup;
+			children = (
+				37E7129A25D8610900E49F68 /* StateViewController.swift */,
+			);
+			path = StateController;
+			sourceTree = "<group>";
+		};
+		37E712B625D86F5100E49F68 /* StateController */ = {
+			isa = PBXGroup;
+			children = (
+				37E712B725D86F6700E49F68 /* StateViewControllerSpec.swift */,
+			);
+			path = StateController;
 			sourceTree = "<group>";
 		};
 		C4F7FA31F7280B2E139223E1 /* Frameworks */ = {
@@ -967,6 +989,7 @@
 				37316AD725D49BD3005C4688 /* Font.swift in Sources */,
 				37316B9925D4A716005C4688 /* Symbol.swift in Sources */,
 				37316AD125D49A6E005C4688 /* Color.swift in Sources */,
+				37E7129B25D8610900E49F68 /* StateViewController.swift in Sources */,
 				37C4DBA825D731B400F4BD31 /* MessageViewController.swift in Sources */,
 				37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */,
 				37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */,
@@ -989,6 +1012,7 @@
 				376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */,
 				37E7124A25D8581B00E49F68 /* MessageViewControllerSpec.swift in Sources */,
 				37E7124B25D8581B00E49F68 /* MessageViewSpec.swift in Sources */,
+				37E712B825D86F6700E49F68 /* StateViewControllerSpec.swift in Sources */,
 				37E7125425D8593A00E49F68 /* WindowHelper.swift in Sources */,
 				37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */,
 				3787180725D5F7A100E9E320 /* FactViewSpec.swift in Sources */,
