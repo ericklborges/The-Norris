@@ -36,7 +36,7 @@ class MessageViewControllerSpec: QuickSpec {
                 
                 context("with button configuiration") {
                     beforeEach {
-                        let buttonConfiguration = MessageView.ButtonConfiguration(title: "Try again", action: {})
+                        let buttonConfiguration = ButtonConfiguration(title: "Try again", action: {})
                         sut = MessageViewController(image: image, title: title, message: message, buttonConfiguration: buttonConfiguration)
                         WindowHelper.showInTestWindow(sut)
                     }

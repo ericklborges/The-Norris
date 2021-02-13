@@ -19,7 +19,7 @@ class MessageViewController: UIViewController {
         messageView.message = message
     }
     
-    init(image: UIImage? = nil, title: String, message: String? = nil, buttonConfiguration: MessageView.ButtonConfiguration) {
+    init(image: UIImage? = nil, title: String, message: String? = nil, buttonConfiguration: ButtonConfiguration?) {
         super.init(nibName: nil, bundle: nil)
         messageView.image = image
         messageView.title = title
