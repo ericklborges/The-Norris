@@ -49,6 +49,7 @@ class MessageView: UIView {
     private let button: PrimaryButton = {
         let button = PrimaryButton()
         button.isHidden = true
+        button.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
         return button
     }()
     
