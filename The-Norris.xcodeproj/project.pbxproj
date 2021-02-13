@@ -46,6 +46,7 @@
 		37E7124A25D8581B00E49F68 /* MessageViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */; };
 		37E7124B25D8581B00E49F68 /* MessageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124925D8581B00E49F68 /* MessageViewSpec.swift */; };
 		37E7125425D8593A00E49F68 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7125325D8593A00E49F68 /* WindowHelper.swift */; };
+		37E712A025D869D600E49F68 /* UIViewController+Childs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
 		9596963E95A81DBC25F31671 /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */; };
 		9BA84C6F9561335582F7CC3E /* Pods_Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */; };
@@ -144,6 +145,7 @@
 		37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewControllerSpec.swift; sourceTree = "<group>"; };
 		37E7124925D8581B00E49F68 /* MessageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewSpec.swift; sourceTree = "<group>"; };
 		37E7125325D8593A00E49F68 /* WindowHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
+		37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Childs.swift"; sourceTree = "<group>"; };
 		642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,6 +400,7 @@
 			children = (
 				376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */,
 				37316B8B25D49E95005C4688 /* UIView+Anchors.swift */,
+				37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 				37C4DBA825D731B400F4BD31 /* MessageViewController.swift in Sources */,
 				37316B8C25D49E95005C4688 /* UIView+Anchors.swift in Sources */,
 				37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */,
+				37E712A025D869D600E49F68 /* UIViewController+Childs.swift in Sources */,
 				3726DE9D25D5DCC7008EFE9E /* SectionHeaderView.swift in Sources */,
 				378717F625D5F23800E9E320 /* FactView.swift in Sources */,
 				37C4DB8025D70A2100F4BD31 /* MessageView.swift in Sources */,
