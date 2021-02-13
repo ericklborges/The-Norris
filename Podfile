@@ -6,12 +6,16 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 def test_dependencies
 	pod 'Quick', '~> 3.1.1'
-    pod 'Nimble', '~> 9.0.0'
-    pod 'Nimble-Snapshots', '~> 9.0.0'
+  pod 'Nimble', '~> 9.0.0'
+  pod 'Nimble-Snapshots', '~> 9.0.0'
+end
+
+def commom_dependencies
+  pod 'SwiftLint', '0.42.0'
 end
 
 target 'The-Norris' do
-  pod 'SwiftLint', '0.42.0'
+  commom_dependencies
   
   target 'The-NorrisTests' do
     inherit! :search_paths
@@ -19,8 +23,13 @@ target 'The-Norris' do
   end
 end
 
-target 'InterfaceTests' do
-  test_dependencies
+target 'Interface' do
+  commom_dependencies
+
+  target 'InterfaceTests' do
+    inherit! :search_paths
+    test_dependencies
+  end
 end
 
 post_install do |installer|
