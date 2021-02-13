@@ -32,6 +32,10 @@
 		37316BA325D4A96B005C4688 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BA225D4A96B005C4688 /* TagView.swift */; };
 		37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */; };
 		37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */; };
+		37397DF825D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
+		37397E0125D89342008C2EAC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 37397DF125D89342008C2EAC /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37397E0425D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
+		37397E0525D89342008C2EAC /* Client.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -49,7 +53,9 @@
 		37E7129B25D8610900E49F68 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7129A25D8610900E49F68 /* StateViewController.swift */; };
 		37E712A025D869D600E49F68 /* UIViewController+Childs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7129F25D869D600E49F68 /* UIViewController+Childs.swift */; };
 		37E712B825D86F6700E49F68 /* StateViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E712B725D86F6700E49F68 /* StateViewControllerSpec.swift */; };
+		3D60AE74012E3D15301C317E /* Pods_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274B30A4F1792EAEE3C16F65 /* Pods_Client.framework */; };
 		5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */; };
+		903701A1C76409605CB2998F /* Pods_ClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78ABB19C772BC39CA81DC4A /* Pods_ClientTests.framework */; };
 		9596963E95A81DBC25F31671 /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */; };
 		9BA84C6F9561335582F7CC3E /* Pods_Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */; };
 		DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */; };
@@ -84,6 +90,27 @@
 			remoteGlobalIDString = 3726981025D1FE45004FD4F9;
 			remoteInfo = "The-Norris";
 		};
+		37397DF925D89342008C2EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37397DEE25D89342008C2EAC;
+			remoteInfo = Client;
+		};
+		37397DFB25D89342008C2EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3726981025D1FE45004FD4F9;
+			remoteInfo = "The-Norris";
+		};
+		37397E0225D89342008C2EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3726980925D1FE45004FD4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37397DEE25D89342008C2EAC;
+			remoteInfo = Client;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +121,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				370876AB25D493DB004E6C10 /* Interface.framework in Embed Frameworks */,
+				37397E0525D89342008C2EAC /* Client.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +130,8 @@
 
 /* Begin PBXFileReference section */
 		068CE455937DA15B22A09A4B /* Pods_The_Norris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Norris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06BBCA81C751665BE3D704AC /* Pods-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client.debug.xcconfig"; path = "Target Support Files/Pods-Client/Pods-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		274B30A4F1792EAEE3C16F65 /* Pods_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_NorrisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3708766B25D4726E004E6C10 /* BundleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleWrapper.swift; sourceTree = "<group>"; };
 		3708767025D47BB7004E6C10 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
@@ -133,6 +163,11 @@
 		37316BA225D4A96B005C4688 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewSpec.swift; sourceTree = "<group>"; };
 		37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
+		37397DEF25D89342008C2EAC /* Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37397DF125D89342008C2EAC /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		37397DF225D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37397DF725D89342008C2EAC /* ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37397E0025D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -152,15 +187,19 @@
 		37E712B725D86F6700E49F68 /* StateViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewControllerSpec.swift; sourceTree = "<group>"; };
 		642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F802C0290B6EA9DD5369E /* Pods-The-NorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
+		743ACC835DA32EE6E020915D /* Pods-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Client.release.xcconfig"; path = "Target Support Files/Pods-Client/Pods-Client.release.xcconfig"; sourceTree = "<group>"; };
 		A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B3BF054E69DF5BE40E65E3 /* Pods-The-Norris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.debug.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.debug.xcconfig"; sourceTree = "<group>"; };
 		AABD4808CF315C8DA4A50450 /* Pods-InterfaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaceTests.release.xcconfig"; path = "Target Support Files/Pods-InterfaceTests/Pods-InterfaceTests.release.xcconfig"; sourceTree = "<group>"; };
+		B78ABB19C772BC39CA81DC4A /* Pods_ClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29E4148199ED526EE4B95F4 /* Pods-Interface-InterfaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface-InterfaceTests.debug.xcconfig"; path = "Target Support Files/Pods-Interface-InterfaceTests/Pods-Interface-InterfaceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D54B28CBFB5610C3FF2DFD01 /* Pods-The-NorrisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-NorrisTests.release.xcconfig"; path = "Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests.release.xcconfig"; sourceTree = "<group>"; };
 		D872C76401568EF31C2412F1 /* Pods-Interface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface.release.xcconfig"; path = "Target Support Files/Pods-Interface/Pods-Interface.release.xcconfig"; sourceTree = "<group>"; };
 		DAFE3CEED6CAAF62B82269DD /* Pods-InterfaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterfaceTests.debug.xcconfig"; path = "Target Support Files/Pods-InterfaceTests/Pods-InterfaceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7435768B744A417383B9B62 /* Pods-Interface-InterfaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface-InterfaceTests.release.xcconfig"; path = "Target Support Files/Pods-Interface-InterfaceTests/Pods-Interface-InterfaceTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC4FF6ADB552BD4B300D8639 /* Pods-ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientTests.debug.xcconfig"; path = "Target Support Files/Pods-ClientTests/Pods-ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDB3B97A1ABA2F7A201F2434 /* Pods-Interface.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface.debug.xcconfig"; path = "Target Support Files/Pods-Interface/Pods-Interface.debug.xcconfig"; sourceTree = "<group>"; };
+		EEBFA12E6A56A39714FD8FE6 /* Pods-ClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientTests.release.xcconfig"; path = "Target Support Files/Pods-ClientTests/Pods-ClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDCFB72B0E4071A5826B0981 /* Pods-The-Norris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The-Norris.release.xcconfig"; path = "Target Support Files/Pods-The-Norris/Pods-The-Norris.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +227,7 @@
 			files = (
 				370876AA25D493DB004E6C10 /* Interface.framework in Frameworks */,
 				5B0EFA005EC2CCE3979DE47B /* Pods_The_Norris.framework in Frameworks */,
+				37397E0425D89342008C2EAC /* Client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +236,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE61E4F5316248A2DF47BB97 /* Pods_The_NorrisTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37397DEC25D89342008C2EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D60AE74012E3D15301C317E /* Pods_Client.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37397DF425D89342008C2EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37397DF825D89342008C2EAC /* Client.framework in Frameworks */,
+				903701A1C76409605CB2998F /* Pods_ClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +335,8 @@
 				3726982A25D1FE4C004FD4F9 /* The-NorrisTests */,
 				3708769625D493DA004E6C10 /* Interface */,
 				370876A325D493DB004E6C10 /* InterfaceTests */,
+				37397DF025D89342008C2EAC /* Client */,
+				37397DFD25D89342008C2EAC /* ClientTests */,
 				3726981225D1FE45004FD4F9 /* Products */,
 				D86A796943F053FD164B860E /* Pods */,
 				C4F7FA31F7280B2E139223E1 /* Frameworks */,
@@ -291,6 +350,8 @@
 				3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */,
 				3708769525D493DA004E6C10 /* Interface.framework */,
 				3708769D25D493DB004E6C10 /* InterfaceTests.xctest */,
+				37397DEF25D89342008C2EAC /* Client.framework */,
+				37397DF725D89342008C2EAC /* ClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -453,6 +514,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		37397DF025D89342008C2EAC /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				37397DF125D89342008C2EAC /* Client.h */,
+				37397DF225D89342008C2EAC /* Info.plist */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		37397DFD25D89342008C2EAC /* ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				37397E0025D89342008C2EAC /* Info.plist */,
+			);
+			path = ClientTests;
+			sourceTree = "<group>";
+		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +678,8 @@
 				36CF2E42DC8A7F115FA0D1A2 /* Pods_The_NorrisTests.framework */,
 				A383D45F80D84A67B4DB0FD6 /* Pods_Interface.framework */,
 				642E687355A71018069CDDCF /* Pods_InterfaceTests.framework */,
+				274B30A4F1792EAEE3C16F65 /* Pods_Client.framework */,
+				B78ABB19C772BC39CA81DC4A /* Pods_ClientTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -617,6 +697,10 @@
 				D872C76401568EF31C2412F1 /* Pods-Interface.release.xcconfig */,
 				C29E4148199ED526EE4B95F4 /* Pods-Interface-InterfaceTests.debug.xcconfig */,
 				E7435768B744A417383B9B62 /* Pods-Interface-InterfaceTests.release.xcconfig */,
+				06BBCA81C751665BE3D704AC /* Pods-Client.debug.xcconfig */,
+				743ACC835DA32EE6E020915D /* Pods-Client.release.xcconfig */,
+				EC4FF6ADB552BD4B300D8639 /* Pods-ClientTests.debug.xcconfig */,
+				EEBFA12E6A56A39714FD8FE6 /* Pods-ClientTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -629,6 +713,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				370876A725D493DB004E6C10 /* Interface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37397DEA25D89342008C2EAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37397E0125D89342008C2EAC /* Client.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +784,7 @@
 			);
 			dependencies = (
 				370876A925D493DB004E6C10 /* PBXTargetDependency */,
+				37397E0325D89342008C2EAC /* PBXTargetDependency */,
 			);
 			name = "The-Norris";
 			productName = "The-Norris";
@@ -716,6 +809,48 @@
 			name = "The-NorrisTests";
 			productName = "The-NorrisTests";
 			productReference = 3726982725D1FE4C004FD4F9 /* The-NorrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37397DEE25D89342008C2EAC /* Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37397E0A25D89342008C2EAC /* Build configuration list for PBXNativeTarget "Client" */;
+			buildPhases = (
+				157C4FDD03CEFF04B6D22B88 /* [CP] Check Pods Manifest.lock */,
+				37397DEA25D89342008C2EAC /* Headers */,
+				37397DEB25D89342008C2EAC /* Sources */,
+				37397DEC25D89342008C2EAC /* Frameworks */,
+				37397DED25D89342008C2EAC /* Resources */,
+				37397E1625D8935B008C2EAC /* [SwiftLint] */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Client;
+			productName = Client;
+			productReference = 37397DEF25D89342008C2EAC /* Client.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		37397DF625D89342008C2EAC /* ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37397E0B25D89342008C2EAC /* Build configuration list for PBXNativeTarget "ClientTests" */;
+			buildPhases = (
+				D08707FA9B39BA14B987FC27 /* [CP] Check Pods Manifest.lock */,
+				37397DF325D89342008C2EAC /* Sources */,
+				37397DF425D89342008C2EAC /* Frameworks */,
+				37397DF525D89342008C2EAC /* Resources */,
+				37397E1725D89361008C2EAC /* [SwiftLint] */,
+				1227F8DEB063D97FE372620E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37397DFA25D89342008C2EAC /* PBXTargetDependency */,
+				37397DFC25D89342008C2EAC /* PBXTargetDependency */,
+			);
+			name = ClientTests;
+			productName = ClientTests;
+			productReference = 37397DF725D89342008C2EAC /* ClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -744,6 +879,13 @@
 						LastSwiftMigration = 1220;
 						TestTargetID = 3726981025D1FE45004FD4F9;
 					};
+					37397DEE25D89342008C2EAC = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					37397DF625D89342008C2EAC = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 3726981025D1FE45004FD4F9;
+					};
 				};
 			};
 			buildConfigurationList = 3726980C25D1FE45004FD4F9 /* Build configuration list for PBXProject "The-Norris" */;
@@ -763,6 +905,8 @@
 				3726982625D1FE4C004FD4F9 /* The-NorrisTests */,
 				3708769425D493DA004E6C10 /* Interface */,
 				3708769C25D493DB004E6C10 /* InterfaceTests */,
+				37397DEE25D89342008C2EAC /* Client */,
+				37397DF625D89342008C2EAC /* ClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -799,6 +943,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37397DED25D89342008C2EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37397DF525D89342008C2EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -818,6 +976,81 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The-NorrisTests/Pods-The-NorrisTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1227F8DEB063D97FE372620E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClientTests/Pods-ClientTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClientTests/Pods-ClientTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClientTests/Pods-ClientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		157C4FDD03CEFF04B6D22B88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37397E1625D8935B008C2EAC /* [SwiftLint] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		37397E1725D89361008C2EAC /* [SwiftLint] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -939,6 +1172,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D08707FA9B39BA14B987FC27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DFD3C19BACD83B67DCC8813D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1044,6 +1299,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37397DEB25D89342008C2EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37397DF325D89342008C2EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1066,6 +1335,21 @@
 			isa = PBXTargetDependency;
 			target = 3726981025D1FE45004FD4F9 /* The-Norris */;
 			targetProxy = 37316AC725D499B1005C4688 /* PBXContainerItemProxy */;
+		};
+		37397DFA25D89342008C2EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37397DEE25D89342008C2EAC /* Client */;
+			targetProxy = 37397DF925D89342008C2EAC /* PBXContainerItemProxy */;
+		};
+		37397DFC25D89342008C2EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3726981025D1FE45004FD4F9 /* The-Norris */;
+			targetProxy = 37397DFB25D89342008C2EAC /* PBXContainerItemProxy */;
+		};
+		37397E0325D89342008C2EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37397DEE25D89342008C2EAC /* Client */;
+			targetProxy = 37397E0225D89342008C2EAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1396,6 +1680,104 @@
 			};
 			name = Release;
 		};
+		37397E0625D89342008C2EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BBCA81C751665BE3D704AC /* Pods-Client.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Client/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.Client;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37397E0725D89342008C2EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743ACC835DA32EE6E020915D /* Pods-Client.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Client/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.Client;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37397E0825D89342008C2EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4FF6ADB552BD4B300D8639 /* Pods-ClientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				INFOPLIST_FILE = ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.ClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Norris.app/The-Norris";
+			};
+			name = Debug;
+		};
+		37397E0925D89342008C2EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBFA12E6A56A39714FD8FE6 /* Pods-ClientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
+				INFOPLIST_FILE = ClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borges.erick.ClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Norris.app/The-Norris";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1440,6 +1822,24 @@
 			buildConfigurations = (
 				3726983F25D1FE4C004FD4F9 /* Debug */,
 				3726984025D1FE4C004FD4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37397E0A25D89342008C2EAC /* Build configuration list for PBXNativeTarget "Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37397E0625D89342008C2EAC /* Debug */,
+				37397E0725D89342008C2EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37397E0B25D89342008C2EAC /* Build configuration list for PBXNativeTarget "ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37397E0825D89342008C2EAC /* Debug */,
+				37397E0925D89342008C2EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
