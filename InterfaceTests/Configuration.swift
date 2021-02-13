@@ -14,5 +14,9 @@ class InterfaceTestsConfiguration: QuickConfiguration {
         configuration.beforeSuite {
             setNimbleTestFolder("InterfaceTests")
         }
+        
+        configuration.afterEach {
+            WindowHelper.cleanTestWindow()
+        }
     }
 }
