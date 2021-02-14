@@ -10,7 +10,7 @@ import Foundation
 final class Client {
     
     private let session: URLSession
-    private var logger = RequestLogger(level: .debug)
+    var logger = RequestLogger(level: .debug)
     
     public init(session: URLSession = .shared) {
         self.session = session
@@ -42,6 +42,13 @@ extension Client: ClientProtocol {
             }
             
             let statusCode = httpResponse.statusCode
+            
+            if let error = error {
+                let clientError = ClientError(reason: .api(error.localizedDescription), statusCode: statusCode)
+                self.logger.log(error: clientError, request: request)
+                completion(.failure(clientError))
+                return
+            }
             
             guard let data = data else {
                 let clientError = ClientError(reason: .invalidData, statusCode: statusCode)

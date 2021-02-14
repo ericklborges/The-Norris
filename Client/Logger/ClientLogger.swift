@@ -93,7 +93,6 @@ private extension RequestLogger {
         printTagged("Headers: [")
         headers.forEach { printTagged("\t\($0): \($1)") }
         printTagged("]")
-
     }
     
     // MARK: - Response
@@ -110,6 +109,5 @@ private extension RequestLogger {
         printTagged("Headers: [")
         headers.forEach { printTagged("\t\($0): \($1)") }
         printTagged("]")
-
     }
 }

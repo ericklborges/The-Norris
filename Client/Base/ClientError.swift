@@ -28,3 +28,18 @@ public enum ClientErrorReason {
         }
     }
 }
+
+extension ClientErrorReason: Equatable {
+    public static func == (lhs: ClientErrorReason, rhs: ClientErrorReason) -> Bool {
+        switch (lhs, rhs) {
+        case (.api, .api):
+            return true
+        case (.invalidData, .invalidData):
+            return true
+        case (.decoding, .decoding):
+            return true
+        default:
+            return false
+        }
+    }
+}

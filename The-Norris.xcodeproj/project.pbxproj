@@ -19,6 +19,7 @@
 		371E422125D9947F00C3D8BF /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E422025D9947F00C3D8BF /* URLSessionMock.swift */; };
 		371E422925D9964D00C3D8BF /* URL+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E422825D9964D00C3D8BF /* URL+Stub.swift */; };
 		371E423525D9966100C3D8BF /* HTTPURLResponse+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E423425D9966100C3D8BF /* HTTPURLResponse+Stub.swift */; };
+		371E423D25D9975400C3D8BF /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E423C25D9975400C3D8BF /* ClientSpec.swift */; };
 		371E424925D999C300C3D8BF /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E424825D999C300C3D8BF /* URLSessionDataTaskMock.swift */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
@@ -156,6 +157,7 @@
 		371E422025D9947F00C3D8BF /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		371E422825D9964D00C3D8BF /* URL+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Stub.swift"; sourceTree = "<group>"; };
 		371E423425D9966100C3D8BF /* HTTPURLResponse+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Stub.swift"; sourceTree = "<group>"; };
+		371E423C25D9975400C3D8BF /* ClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSpec.swift; sourceTree = "<group>"; };
 		371E424825D999C300C3D8BF /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 			children = (
 				37397E0025D89342008C2EAC /* Info.plist */,
 				371E421F25D9946300C3D8BF /* Mock */,
+				371E423B25D9974900C3D8BF /* ProjectClient */,
 				371E422725D9962C00C3D8BF /* Stub */,
 			);
 			path = ClientTests;
@@ -1366,6 +1369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371E422125D9947F00C3D8BF /* URLSessionMock.swift in Sources */,
+				371E423D25D9975400C3D8BF /* ClientSpec.swift in Sources */,
 				371E422925D9964D00C3D8BF /* URL+Stub.swift in Sources */,
 				371E423525D9966100C3D8BF /* HTTPURLResponse+Stub.swift in Sources */,
 				371E424925D999C300C3D8BF /* URLSessionDataTaskMock.swift in Sources */,

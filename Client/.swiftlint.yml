@@ -54,6 +54,7 @@ opt_in_rules:
 
 excluded:
   - Pods
+  - ClientTests
   - Interface
   - InterfaceTests
   - The-Norris
