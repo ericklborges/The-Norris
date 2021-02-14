@@ -33,7 +33,7 @@
 		372CF68225D9CCA6007A0366 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF68125D9CCA6007A0366 /* AppFlowController.swift */; };
 		372CF69025D9CF7B007A0366 /* FactsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF68F25D9CF7B007A0366 /* FactsFlowController.swift */; };
 		372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6A625D9D00E007A0366 /* AppFlowControllerSpec.swift */; };
-		372CF6C925D9D2AD007A0366 /* FactsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6C825D9D2AD007A0366 /* FactsListController.swift */; };
+		372CF6C925D9D2AD007A0366 /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6C825D9D2AD007A0366 /* FactsListViewController.swift */; };
 		372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */; };
 		372CF6EB25D9D5F9007A0366 /* FactsListControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6EA25D9D5F9007A0366 /* FactsListControllerSpec.swift */; };
 		372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6F925D9D753007A0366 /* Configuration.swift */; };
@@ -184,7 +184,7 @@
 		372CF68125D9CCA6007A0366 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		372CF68F25D9CF7B007A0366 /* FactsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFlowController.swift; sourceTree = "<group>"; };
 		372CF6A625D9D00E007A0366 /* AppFlowControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowControllerSpec.swift; sourceTree = "<group>"; };
-		372CF6C825D9D2AD007A0366 /* FactsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListController.swift; sourceTree = "<group>"; };
+		372CF6C825D9D2AD007A0366 /* FactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
 		372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFlowControllerSpec.swift; sourceTree = "<group>"; };
 		372CF6EA25D9D5F9007A0366 /* FactsListControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListControllerSpec.swift; sourceTree = "<group>"; };
 		372CF6F925D9D753007A0366 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 		372CF6B825D9D1E2007A0366 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				372CF6C825D9D2AD007A0366 /* FactsListController.swift */,
+				372CF6C825D9D2AD007A0366 /* FactsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1420,7 +1420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */,
-				372CF6C925D9D2AD007A0366 /* FactsListController.swift in Sources */,
+				372CF6C925D9D2AD007A0366 /* FactsListViewController.swift in Sources */,
 				3708768225D47D5A004E6C10 /* Fact.swift in Sources */,
 				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
 				372CF68225D9CCA6007A0366 /* AppFlowController.swift in Sources */,

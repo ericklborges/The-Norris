@@ -1,5 +1,5 @@
 //
-//  FactsListController.swift
+//  FactsListViewController.swift
 //  The-Norris
 //
 //  Created by erick.lozano.borges on 14/02/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FactsListController: UIViewController {
+class FactsListViewController: UIViewController {
     
     // MARK: - Views
     private lazy var searchButton: UIBarButtonItem = {

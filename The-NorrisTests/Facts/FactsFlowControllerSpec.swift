@@ -32,7 +32,7 @@ class FactsFlowControllerSpec: QuickSpec {
                     }
                     
                     it("should show the correct first view controller") {
-                        expect(navigation?.viewControllers.first).to(beAKindOf(FactsListController.self))
+                        expect(navigation?.viewControllers.first).to(beAKindOf(FactsListViewController.self))
                     }
                 }
             }

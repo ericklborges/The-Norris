@@ -15,7 +15,7 @@ class FactsFlowController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigation.applyCustomAppearence()
-        navigation.show(FactsListController(), sender: nil)
+        navigation.show(FactsListViewController(), sender: nil)
         install(child: navigation)
     }
 }

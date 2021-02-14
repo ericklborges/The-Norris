@@ -1,5 +1,5 @@
 //
-//  FactsListControllerSpec.swift
+//  FactsListViewControllerSpec.swift
 //  The-NorrisTests
 //
 //  Created by erick.lozano.borges on 14/02/21.
@@ -11,24 +11,24 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactsListControllerSpec: QuickSpec {
+class FactsListViewControllerSpec: QuickSpec {
     override func spec() {
-        describe("FactsListController") {
+        describe("FactsListViewController") {
             
-            var sut: FactsListController!
+            var sut: FactsListViewController!
             var navigationMock: UINavigationController!
             
             context("when initialized") {
                 
                 beforeEach {
-                    sut = FactsListController()
+                    sut = FactsListViewController()
                     navigationMock = UINavigationController(rootViewController: sut)
                     navigationMock.applyCustomAppearence()
                     WindowHelper.showInTestWindow(navigationMock)
                 }
                 
                 it("should layout it's navigation properly") {
-                    expect(sut.navigationController?.navigationBar) == snapshot("FactsListController_Navigation_Layout")
+                    expect(sut.navigationController?.navigationBar) == snapshot("FactsListViewController_Navigation_Layout")
                 }
             }
         }
