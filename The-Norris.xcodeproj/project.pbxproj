@@ -15,6 +15,7 @@
 		370876A725D493DB004E6C10 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3708769725D493DA004E6C10 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		370876AA25D493DB004E6C10 /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; };
 		370876AB25D493DB004E6C10 /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		371E41D525D981D500C3D8BF /* ClientLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E41D425D981D500C3D8BF /* ClientLogger.swift */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
@@ -147,6 +148,7 @@
 		3708769825D493DA004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3708769D25D493DB004E6C10 /* InterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370876A625D493DB004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		371E41D425D981D500C3D8BF /* ClientLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogger.swift; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +338,14 @@
 				37316BB725D4AF2B005C4688 /* Utilities */,
 			);
 			path = InterfaceTests;
+			sourceTree = "<group>";
+		};
+		371E41D325D981BD00C3D8BF /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				371E41D425D981D500C3D8BF /* ClientLogger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		3726980825D1FE45004FD4F9 = {
@@ -530,8 +540,9 @@
 				37397DF125D89342008C2EAC /* Client.h */,
 				37397DF225D89342008C2EAC /* Info.plist */,
 				37397E4225D89527008C2EAC /* Base */,
-				37397E4825D89527008C2EAC /* Client */,
 				37397E4625D89527008C2EAC /* Factory */,
+				371E41D325D981BD00C3D8BF /* Logger */,
+				37397E4825D89527008C2EAC /* ProjectClient */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -562,12 +573,12 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		37397E4825D89527008C2EAC /* Client */ = {
+		37397E4825D89527008C2EAC /* ProjectClient */ = {
 			isa = PBXGroup;
 			children = (
 				37397E4925D89527008C2EAC /* Client.swift */,
 			);
-			path = Client;
+			path = ProjectClient;
 			sourceTree = "<group>";
 		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
@@ -795,7 +806,6 @@
 				3708769A25D493DB004E6C10 /* Frameworks */,
 				3708769B25D493DB004E6C10 /* Resources */,
 				DFD3C19BACD83B67DCC8813D /* [CP] Embed Pods Frameworks */,
-				37E7128C25D85F8200E49F68 /* [SwiftLint] */,
 			);
 			buildRules = (
 			);
@@ -878,7 +888,6 @@
 				37397DF325D89342008C2EAC /* Sources */,
 				37397DF425D89342008C2EAC /* Frameworks */,
 				37397DF525D89342008C2EAC /* Resources */,
-				37397E1725D89361008C2EAC /* [SwiftLint] */,
 				1227F8DEB063D97FE372620E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -1308,6 +1317,7 @@
 			files = (
 				37397E4C25D89527008C2EAC /* ClientError.swift in Sources */,
 				37397E4D25D89527008C2EAC /* ClientFactory.swift in Sources */,
+				371E41D525D981D500C3D8BF /* ClientLogger.swift in Sources */,
 				37397E4B25D89527008C2EAC /* HTTPMethod.swift in Sources */,
 				37397E4E25D89527008C2EAC /* Client.swift in Sources */,
 				37397E4A25D89527008C2EAC /* ClientProtocol.swift in Sources */,
