@@ -35,6 +35,7 @@
 		372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6A625D9D00E007A0366 /* AppFlowControllerSpec.swift */; };
 		372CF6C925D9D2AD007A0366 /* FactsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6C825D9D2AD007A0366 /* FactsListController.swift */; };
 		372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */; };
+		372CF6EB25D9D5F9007A0366 /* FactsListControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6EA25D9D5F9007A0366 /* FactsListControllerSpec.swift */; };
 		372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF6F925D9D753007A0366 /* Configuration.swift */; };
 		372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF70625D9D78F007A0366 /* WindowHelper.swift */; };
 		37316AD125D49A6E005C4688 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD025D49A6E005C4688 /* Color.swift */; };
@@ -185,6 +186,7 @@
 		372CF6A625D9D00E007A0366 /* AppFlowControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowControllerSpec.swift; sourceTree = "<group>"; };
 		372CF6C825D9D2AD007A0366 /* FactsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListController.swift; sourceTree = "<group>"; };
 		372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFlowControllerSpec.swift; sourceTree = "<group>"; };
+		372CF6EA25D9D5F9007A0366 /* FactsListControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListControllerSpec.swift; sourceTree = "<group>"; };
 		372CF6F925D9D753007A0366 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		372CF70625D9D78F007A0366 /* WindowHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
 		37316AD025D49A6E005C4688 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -549,8 +551,17 @@
 			isa = PBXGroup;
 			children = (
 				372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */,
+				372CF6E925D9D5EC007A0366 /* Controller */,
 			);
 			path = Facts;
+			sourceTree = "<group>";
+		};
+		372CF6E925D9D5EC007A0366 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				372CF6EA25D9D5F9007A0366 /* FactsListControllerSpec.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		372CF70525D9D78F007A0366 /* Utilities */ = {
@@ -1424,6 +1435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372CF6EB25D9D5F9007A0366 /* FactsListControllerSpec.swift in Sources */,
 				372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */,
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,

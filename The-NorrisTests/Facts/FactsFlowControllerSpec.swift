@@ -22,7 +22,7 @@ class FactsFlowControllerSpec: QuickSpec {
                     sut = FactsFlowController()
                 }
                 
-                context("and view appears") {
+                context("and view loads") {
                     var navigation: UINavigationController?
                     
                     beforeEach {
