@@ -56,6 +56,5 @@ excluded:
   - Pods
   - Client
   - ClientTests
-  - Interface
-  - InterfaceTests
-  
+  - The-Norris
+  - The-NorrisTests
