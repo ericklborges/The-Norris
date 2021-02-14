@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Interface
 
 class FactsFlowController: UIViewController {
     
+    private let navigation = UINavigationController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let controller = UIViewController()
-        controller.view.backgroundColor = .cyan
-        install(child: controller)
+        navigation.applyCustomAppearence()
+        navigation.show(FactsListController(), sender: nil)
+        install(child: navigation)
     }
 }
