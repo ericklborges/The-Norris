@@ -36,6 +36,7 @@
 		37397E0125D89342008C2EAC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 37397DF125D89342008C2EAC /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37397E0425D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
 		37397E0525D89342008C2EAC /* Client.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37397E4A25D89527008C2EAC /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37397E4325D89527008C2EAC /* ClientProtocol.swift */; };
 		37397E4B25D89527008C2EAC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37397E4425D89527008C2EAC /* HTTPMethod.swift */; };
 		37397E4C25D89527008C2EAC /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37397E4525D89527008C2EAC /* ClientError.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
@@ -170,6 +171,7 @@
 		37397DF225D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37397DF725D89342008C2EAC /* ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37397E0025D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37397E4325D89527008C2EAC /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		37397E4425D89527008C2EAC /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		37397E4525D89527008C2EAC /* ClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
@@ -539,6 +541,7 @@
 		37397E4225D89527008C2EAC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				37397E4325D89527008C2EAC /* ClientProtocol.swift */,
 				37397E4425D89527008C2EAC /* HTTPMethod.swift */,
 				37397E4525D89527008C2EAC /* ClientError.swift */,
 			);
@@ -1319,6 +1322,7 @@
 			files = (
 				37397E4C25D89527008C2EAC /* ClientError.swift in Sources */,
 				37397E4B25D89527008C2EAC /* HTTPMethod.swift in Sources */,
+				37397E4A25D89527008C2EAC /* ClientProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
