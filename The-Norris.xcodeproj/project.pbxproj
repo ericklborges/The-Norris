@@ -80,6 +80,7 @@
 		374F3F9C25DB0D1900290577 /* FactsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F9B25DB0D1900290577 /* FactsSearchViewController.swift */; };
 		374F3FB125DB20D500290577 /* FactsSearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FB025DB20D500290577 /* FactsSearchViewControllerSpec.swift */; };
 		374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */; };
+		374F3FDE25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FDD25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -256,6 +257,7 @@
 		374F3F9B25DB0D1900290577 /* FactsSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsSearchViewController.swift; sourceTree = "<group>"; };
 		374F3FB025DB20D500290577 /* FactsSearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewControllerSpec.swift; sourceTree = "<group>"; };
 		374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewControllerFlowDelegateSpy.swift; sourceTree = "<group>"; };
+		374F3FDD25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewShareDelegateSpy.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -874,6 +876,7 @@
 			isa = PBXGroup;
 			children = (
 				374F3F4F25DAF69200290577 /* FactsListViewModelDelegateSpy.swift */,
+				374F3FDD25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -1673,6 +1676,7 @@
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,
 				374F3FB125DB20D500290577 /* FactsSearchViewControllerSpec.swift in Sources */,
+				374F3FDE25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift in Sources */,
 				374F3F5025DAF69200290577 /* FactsListViewModelDelegateSpy.swift in Sources */,
 				374F3F5D25DAF73400290577 /* FactsListViewModelSpec.swift in Sources */,
 				374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */,
