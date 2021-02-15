@@ -66,7 +66,10 @@
 		374F3EA125DACAA900290577 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3EA025DACAA900290577 /* UIView+DynamicSize.swift */; };
 		374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3EB125DACD5400290577 /* FactTableViewCellSpec.swift */; };
 		374F3ED625DAD28700290577 /* FactsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3ED525DAD28700290577 /* FactsApi.swift */; };
+		374F3EF325DAD72C00290577 /* ClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3EF225DAD72C00290577 /* ClientMock.swift */; };
+		374F3F0625DADC7900290577 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F0525DADC7900290577 /* JsonHelper.swift */; };
 		374F3F1F25DAE52D00290577 /* FactsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F1E25DAE52D00290577 /* FactsEndpoint.swift */; };
+		374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F2A25DAE62100290577 /* URL+Stub.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -229,7 +232,10 @@
 		374F3EA025DACAA900290577 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
 		374F3EB125DACD5400290577 /* FactTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCellSpec.swift; sourceTree = "<group>"; };
 		374F3ED525DAD28700290577 /* FactsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApi.swift; sourceTree = "<group>"; };
+		374F3EF225DAD72C00290577 /* ClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMock.swift; sourceTree = "<group>"; };
+		374F3F0525DADC7900290577 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		374F3F1E25DAE52D00290577 /* FactsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsEndpoint.swift; sourceTree = "<group>"; };
+		374F3F2A25DAE62100290577 /* URL+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Stub.swift"; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -478,6 +484,7 @@
 				372CF6A525D9CFF5007A0366 /* Application */,
 				374F3E9F25DACAA900290577 /* Extensions */,
 				372CF6CF25D9D388007A0366 /* Facts */,
+				374F3EF125DAD71A00290577 /* Mock */,
 				374F3E8025DAC8BF00290577 /* Stub */,
 				372CF70525D9D78F007A0366 /* Utilities */,
 			);
@@ -605,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				372CF70625D9D78F007A0366 /* WindowHelper.swift */,
+				374F3F0525DADC7900290577 /* JsonHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -763,6 +771,7 @@
 			isa = PBXGroup;
 			children = (
 				374F3E8225DAC8F900290577 /* Fact+Stub.swift */,
+				374F3F2A25DAE62100290577 /* URL+Stub.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -782,6 +791,14 @@
 				374F3F1E25DAE52D00290577 /* FactsEndpoint.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		374F3EF125DAD71A00290577 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				374F3EF225DAD72C00290577 /* ClientMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
@@ -1523,10 +1540,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374F3EF325DAD72C00290577 /* ClientMock.swift in Sources */,
 				372CF6EB25D9D5F9007A0366 /* FactsListControllerSpec.swift in Sources */,
+				374F3F0625DADC7900290577 /* JsonHelper.swift in Sources */,
 				372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */,
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,
 				374F3E8325DAC8F900290577 /* Fact+Stub.swift in Sources */,
+				374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */,
 				374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */,
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,
