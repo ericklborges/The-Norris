@@ -12,6 +12,7 @@ class FactsFlowController: UIViewController {
     
     // MARK: - Parameters
     private let navigation = UINavigationController()
+    private var searchEndAction: ((String) -> Void)?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -57,6 +58,7 @@ extension FactsFlowController: FactsListViewControllerFlowDelegate {
 
 extension FactsFlowController: FactsSearchViewControllerFlowDelegate {
     func factsSearch(_ controller: FactsSearchViewController, didEndWith query: String) {
+        searchEndAction?(query)
         controller.dismiss(animated: true, completion: nil)
     }
 }

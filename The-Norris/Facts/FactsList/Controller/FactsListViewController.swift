@@ -68,6 +68,10 @@ class FactsListViewController: StateViewController {
     private func searchButtonTap() {
         showSearch()
     }
+    
+    func fetchFacts(query: String) {
+        viewModel.fetchFacts(query: query)
+    }
 }
 
 // MARK: - FactsListViewModelDelegate
