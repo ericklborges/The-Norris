@@ -23,6 +23,63 @@ class FactsApiSpec: QuickSpec {
                     sut = FactsApi(client: clientMock)
                 }
                 
+                context("and categories are fetched") {
+                    beforeEach {
+                        clientMock.mockFileName = "categories"
+                        sut.fetchCategories { _ in }
+                    }
+                    
+                    it("should setup the url correctly") {
+                        expect(clientMock.url?.absoluteString) == "https://api.chucknorris.io/jokes/categories"
+                    }
+                    
+                    it("should use .get http method") {
+                        expect(clientMock.method?.rawValue) == "GET"
+                    }
+                    
+                    it("should not have headers") {
+                        expect(clientMock.headers?.isEmpty) == true
+                    }
+                    
+                    it("should not have body parameters") {
+                        expect(clientMock.parameters?.isEmpty) == true
+                    }
+                    
+                    context("and it succeeds") {
+                        beforeEach {
+                            clientMock.shouldFail = false
+                        }
+                        
+                        it("it should parse the response correctly") {
+                            sut.fetchCategories { result in
+                                switch result {
+                                case let .success(categories):
+                                    expect(categories.isEmpty) == false
+                                case .failure:
+                                    fail("The object is not matching the API response.")
+                                }
+                            }
+                        }
+                    }
+                    
+                    context("and it fails") {
+                        beforeEach {
+                            clientMock.shouldFail = true
+                        }
+                        
+                        it("return an error") {
+                            sut.fetchCategories { result in
+                                switch result {
+                                case .success:
+                                    fail("The request was supposed to fail.")
+                                case let .failure(error):
+                                    expect(error.reason) == .api(error.reason.description)
+                                }
+                            }
+                        }
+                    }
+                }
+                
                 context("and facts are fetched") {
                     beforeEach {
                         clientMock.mockFileName = "facts-query"
