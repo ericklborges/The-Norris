@@ -39,6 +39,7 @@ class FactsListViewController: StateViewController {
         super.viewDidLoad()
         setupNavigation()
         viewModel.delegate = self
+        setFirstTimeEmptyState()
     }
     
     override func loadView() {
@@ -70,7 +71,7 @@ extension FactsListViewController: FactsListViewModelDelegate {
     }
     
     func didReceiveEmptyResult() {
-        seteEmptyState()
+        setEmptyState()
     }
     
     func didReceiveError() {
@@ -85,7 +86,19 @@ private extension FactsListViewController {
         state = .loading(title: viewModel.loadingTitle, message: viewModel.loadingMessage)
     }
     
-    func seteEmptyState() {
+    func setFirstTimeEmptyState() {
+        let buttonConfiguration = ButtonConfiguration(title: viewModel.firstTimeEmptyButtonTitle, action: { [weak self] in
+            self?.searchButtonTap()
+        })
+        
+        state = .empty(
+            title: viewModel.firstTimeEmptyTitle,
+            message: viewModel.firstTimeEmptyMessage,
+            buttonConfiguration: buttonConfiguration
+        )
+    }
+    
+    func setEmptyState() {
         let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
             self?.searchButtonTap()
         })
@@ -98,9 +111,7 @@ private extension FactsListViewController {
     }
     
     func setErrorState() {
-        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
-            self?.searchButtonTap()
-        })
+        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: {})
         
         state = .error(
             image: Symbol.clockArrowCirclepath.image(pointSize: 48),

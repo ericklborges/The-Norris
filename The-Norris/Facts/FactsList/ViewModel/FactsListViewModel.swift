@@ -26,7 +26,7 @@ class FactsListViewModel {
         self.api = api
     }
     
-    // MARK: - Computed Properties
+    // MARK: - Strings
     
     // MARK: Button
     var buttonTitle: String {
@@ -40,6 +40,19 @@ class FactsListViewModel {
     
     var loadingMessage: String {
         return "Norris brain is processing your request, it won't take long."
+    }
+    
+    // MARK: First Time Empty
+    var firstTimeEmptyTitle: String {
+        return "First time around?"
+    }
+    
+    var firstTimeEmptyMessage: String {
+        return "Start looking for the most interesting facts about Norris you've ever seen."
+    }
+    
+    var firstTimeEmptyButtonTitle: String {
+        return "Tap to search"
     }
     
     // MARK: Empty
