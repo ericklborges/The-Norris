@@ -88,7 +88,7 @@ extension FactsListViewModel {
         }
     }
     
-    func handleFetchFactsSuccess(_ factsQuery: FactsQuery) {
+    private func handleFetchFactsSuccess(_ factsQuery: FactsQuery) {
         self.factsQuery = factsQuery
         
         guard factsQuery.total > 0 else {

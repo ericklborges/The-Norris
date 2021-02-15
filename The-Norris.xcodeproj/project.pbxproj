@@ -74,6 +74,7 @@
 		374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F2A25DAE62100290577 /* URL+Stub.swift */; };
 		374F3F4225DAE87F00290577 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F4125DAE87F00290577 /* FactsListViewModel.swift */; };
 		374F3F5025DAF69200290577 /* FactsListViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F4F25DAF69200290577 /* FactsListViewModelDelegateSpy.swift */; };
+		374F3F5D25DAF73400290577 /* FactsListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F5C25DAF73400290577 /* FactsListViewModelSpec.swift */; };
 		374F3F6A25DAF78000290577 /* FactsApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F6925DAF78000290577 /* FactsApiMock.swift */; };
 		374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F7625DAF7D200290577 /* FactsQuery+Stub.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
@@ -246,6 +247,7 @@
 		374F3F2A25DAE62100290577 /* URL+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Stub.swift"; sourceTree = "<group>"; };
 		374F3F4125DAE87F00290577 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		374F3F4F25DAF69200290577 /* FactsListViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelDelegateSpy.swift; sourceTree = "<group>"; };
+		374F3F5C25DAF73400290577 /* FactsListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelSpec.swift; sourceTree = "<group>"; };
 		374F3F6925DAF78000290577 /* FactsApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApiMock.swift; sourceTree = "<group>"; };
 		374F3F7625DAF7D200290577 /* FactsQuery+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsQuery+Stub.swift"; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
@@ -769,6 +771,7 @@
 				372CF6E925D9D5EC007A0366 /* Controller */,
 				374F3F4E25DAF67C00290577 /* Spy */,
 				374F3E7325DAC83D00290577 /* View */,
+				374F3F5B25DAF71B00290577 /* ViewModel */,
 			);
 			path = FactsList;
 			sourceTree = "<group>";
@@ -849,6 +852,14 @@
 				374F3F4F25DAF69200290577 /* FactsListViewModelDelegateSpy.swift */,
 			);
 			path = Spy;
+			sourceTree = "<group>";
+		};
+		374F3F5B25DAF71B00290577 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				374F3F5C25DAF73400290577 /* FactsListViewModelSpec.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		374F3F6825DAF76F00290577 /* Mock */ = {
@@ -1612,6 +1623,7 @@
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,
 				374F3F5025DAF69200290577 /* FactsListViewModelDelegateSpy.swift in Sources */,
+				374F3F5D25DAF73400290577 /* FactsListViewModelSpec.swift in Sources */,
 				374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */,
 				374F3EE625DAD51B00290577 /* FactsApiSpec.swift in Sources */,
 				372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */,
