@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Interface
+
+protocol FactsSearchViewControllerFlowDelegate: AnyObject {
+    func factsSearch(_ controller: FactsSearchViewController, didEndWith query: String)
+}
 
 class FactsSearchViewController: UIViewController {
     
@@ -19,24 +24,23 @@ class FactsSearchViewController: UIViewController {
         return searchbar
     }()
     
-    // MARK: Life Cycle
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        setup()
-    }
+    // MARK: - Properties
+    weak var flowDelegate: FactsSearchViewControllerFlowDelegate?
     
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupSearchBar()
         setupKeyboardHideGesture()
     }
     
-    // MARK: Setup
-    private func setup() {
+    // MARK: - Setup
+    private func setupView() {
+        view.backgroundColor = Color.Background.main
+    }
+    
+    private func setupSearchBar() {
         navigationItem.titleView = searchBar
     }
     
@@ -46,7 +50,7 @@ class FactsSearchViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    // MARK: Actions
+    // MARK: - Actions
     @objc
     private func dismissKeyboard() {
         searchBar.resignFirstResponder()
@@ -65,6 +69,7 @@ extension FactsSearchViewController: UISearchBarDelegate {
 
 extension FactsSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        flowDelegate?.factsSearch(self, didEndWith: textField.text ?? "")
         return true
     }
 }
