@@ -8,10 +8,18 @@
 import UIKit
 import Interface
 
+protocol FactTableViewCellActionDelegate: AnyObject {
+    func factCell(_ cell: FactTableViewCell, buttonTappedWith fact: Fact)
+}
+
 class FactTableViewCell: UITableViewCell {
     
     // MARK: - Views
     private let factView = FactView()
+    
+    // MARK: - Property
+    private var fact: Fact?
+    weak var actionDelegate: FactTableViewCellActionDelegate?
     
     // MARK: - Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -31,11 +39,18 @@ class FactTableViewCell: UITableViewCell {
     // MARK: - Setup
     func setup(fact: Fact) {
         clearData()
+        self.fact = fact
         factView.factText = fact.value
         factView.categoryText = fact.categories.first ?? "Uncategorized"
+        
+        factView.buttonAction = { [weak self] in
+            guard let self = self else { return }
+            self.actionDelegate?.factCell(self, buttonTappedWith: fact)
+        }
     }
     
     private func clearData() {
+        self.fact = nil
         factView.factText = nil
         factView.categoryText = nil
         factView.buttonAction = nil

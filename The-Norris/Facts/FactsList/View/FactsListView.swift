@@ -8,20 +8,26 @@
 import UIKit
 import Interface
 
+protocol FactsListViewShareDelegate: AnyObject {
+    func factsList(_ view: FactsListView, wantsToShare fact: Fact)
+}
+
 class FactsListView: UIView {
     
     // MARK: - Views
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(FactTableViewCell.self)
         return tableView
     }()
     
     // MARK: - Properties
     private var facts: [Fact] = []
+    weak var shareDelegate: FactsListViewShareDelegate?
     
     // MARK: - Life Cycle
     init() {
@@ -44,6 +50,12 @@ class FactsListView: UIView {
     }
 }
 
+extension FactsListView: FactTableViewCellActionDelegate {
+    func factCell(_ cell: FactTableViewCell, buttonTappedWith fact: Fact) {
+        shareDelegate?.factsList(self, wantsToShare: fact)
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension FactsListView: UITableViewDataSource {
@@ -53,6 +65,7 @@ extension FactsListView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FactTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.actionDelegate = self
         cell.setup(fact: facts[indexPath.row])
         return cell
     }

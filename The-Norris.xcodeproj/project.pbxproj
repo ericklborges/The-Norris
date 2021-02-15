@@ -452,13 +452,6 @@
 			path = ProjectClient;
 			sourceTree = "<group>";
 		};
-		371E426D25D9A8C600C3D8BF /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		371E426F25D9A8EE00C3D8BF /* FactsSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,7 +506,6 @@
 				3708766F25D47BAA004E6C10 /* Constants */,
 				372CF68E25D9CF33007A0366 /* Facts */,
 				3708767825D47C81004E6C10 /* Model */,
-				371E426D25D9A8C600C3D8BF /* Search */,
 				3708766A25D47258004E6C10 /* Utilities */,
 			);
 			path = "The-Norris";
