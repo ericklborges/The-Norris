@@ -38,7 +38,9 @@ class FactsListView: UIView {
     // MARK: - Setup
     func setup(facts: [Fact]) {
         self.facts = facts
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 }
 
