@@ -91,7 +91,7 @@ extension FactsListViewModel {
     func handleFetchFactsSuccess(_ factsQuery: FactsQuery) {
         self.factsQuery = factsQuery
         
-        if factsQuery.result.isEmpty {
+        guard factsQuery.total > 0 else {
             delegate?.didReceiveEmptyResult()
             return
         }
