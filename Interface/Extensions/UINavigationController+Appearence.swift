@@ -12,6 +12,10 @@ public extension UINavigationController {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: Color.Text.primary]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: Color.Text.primary]
+        navBarAppearance.backgroundColor = Color.Background.main
+        
         navigationBar.compactAppearance = navBarAppearance
         navigationBar.standardAppearance = navBarAppearance
         navigationBar.scrollEdgeAppearance = navBarAppearance
