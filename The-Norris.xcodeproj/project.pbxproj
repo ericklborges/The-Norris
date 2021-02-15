@@ -78,6 +78,8 @@
 		374F3F6A25DAF78000290577 /* FactsApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F6925DAF78000290577 /* FactsApiMock.swift */; };
 		374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F7625DAF7D200290577 /* FactsQuery+Stub.swift */; };
 		374F3F9C25DB0D1900290577 /* FactsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F9B25DB0D1900290577 /* FactsSearchViewController.swift */; };
+		374F3FB125DB20D500290577 /* FactsSearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FB025DB20D500290577 /* FactsSearchViewControllerSpec.swift */; };
+		374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -252,6 +254,8 @@
 		374F3F6925DAF78000290577 /* FactsApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApiMock.swift; sourceTree = "<group>"; };
 		374F3F7625DAF7D200290577 /* FactsQuery+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsQuery+Stub.swift"; sourceTree = "<group>"; };
 		374F3F9B25DB0D1900290577 /* FactsSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsSearchViewController.swift; sourceTree = "<group>"; };
+		374F3FB025DB20D500290577 /* FactsSearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewControllerSpec.swift; sourceTree = "<group>"; };
+		374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewControllerFlowDelegateSpy.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -630,6 +634,7 @@
 				372CF6D025D9D39B007A0366 /* FactsFlowControllerSpec.swift */,
 				374F3EE425DAD50500290577 /* API */,
 				374F3E7225DAC7EC00290577 /* FactsList */,
+				374F3FAE25DB20AA00290577 /* FactsSearch */,
 			);
 			path = Facts;
 			sourceTree = "<group>";
@@ -895,6 +900,31 @@
 				374F3F6925DAF78000290577 /* FactsApiMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		374F3FAE25DB20AA00290577 /* FactsSearch */ = {
+			isa = PBXGroup;
+			children = (
+				374F3FAF25DB20C700290577 /* Controller */,
+				374F3FBC25DB21A100290577 /* Spy */,
+			);
+			path = FactsSearch;
+			sourceTree = "<group>";
+		};
+		374F3FAF25DB20C700290577 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374F3FB025DB20D500290577 /* FactsSearchViewControllerSpec.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374F3FBC25DB21A100290577 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
@@ -1650,8 +1680,10 @@
 				374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */,
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,
+				374F3FB125DB20D500290577 /* FactsSearchViewControllerSpec.swift in Sources */,
 				374F3F5025DAF69200290577 /* FactsListViewModelDelegateSpy.swift in Sources */,
 				374F3F5D25DAF73400290577 /* FactsListViewModelSpec.swift in Sources */,
+				374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */,
 				374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */,
 				374F3EE625DAD51B00290577 /* FactsApiSpec.swift in Sources */,
 				372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */,
