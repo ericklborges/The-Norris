@@ -72,6 +72,7 @@
 		374F3F0E25DADD1C00290577 /* facts-query.json in Resources */ = {isa = PBXBuildFile; fileRef = 374F3F0D25DADD1C00290577 /* facts-query.json */; };
 		374F3F1F25DAE52D00290577 /* FactsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F1E25DAE52D00290577 /* FactsEndpoint.swift */; };
 		374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F2A25DAE62100290577 /* URL+Stub.swift */; };
+		374F3F4225DAE87F00290577 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3F4125DAE87F00290577 /* FactsListViewModel.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -240,6 +241,7 @@
 		374F3F0D25DADD1C00290577 /* facts-query.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "facts-query.json"; sourceTree = "<group>"; };
 		374F3F1E25DAE52D00290577 /* FactsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsEndpoint.swift; sourceTree = "<group>"; };
 		374F3F2A25DAE62100290577 /* URL+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Stub.swift"; sourceTree = "<group>"; };
+		374F3F4125DAE87F00290577 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 			children = (
 				372CF6B825D9D1E2007A0366 /* Controller */,
 				372CF6DC25D9D5B5007A0366 /* View */,
+				374F3F4025DAE87300290577 /* ViewModel */,
 			);
 			path = FactsList;
 			sourceTree = "<group>";
@@ -821,6 +824,14 @@
 				374F3F0D25DADD1C00290577 /* facts-query.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		374F3F4025DAE87300290577 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				374F3F4125DAE87F00290577 /* FactsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
@@ -1545,6 +1556,7 @@
 				3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */,
 				374F3ED625DAD28700290577 /* FactsApi.swift in Sources */,
 				372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */,
+				374F3F4225DAE87F00290577 /* FactsListViewModel.swift in Sources */,
 				372CF6C925D9D2AD007A0366 /* FactsListViewController.swift in Sources */,
 				374F3F1F25DAE52D00290577 /* FactsEndpoint.swift in Sources */,
 				372CF73725D9DDC4007A0366 /* FactTableViewCell.swift in Sources */,

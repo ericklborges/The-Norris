@@ -7,7 +7,11 @@
 
 import Client
 
-class FactsApi {
+protocol FactsApiProtocol {
+    func fetchFacts(query: String, completion: @escaping (Result<FactsQuery, ClientError>) -> Void)
+}
+
+class FactsApi: FactsApiProtocol {
     
     // MARK: - Parameters
     private let client: ClientProtocol
