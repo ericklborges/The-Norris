@@ -8,6 +8,10 @@
 import UIKit
 import Interface
 
+protocol FactsListViewControllerFlowDelegate: AnyObject {
+    func factsListShowsSearch(_ controller: FactsListViewController)
+}
+
 class FactsListViewController: StateViewController {
     
     // MARK: - Views
@@ -23,6 +27,7 @@ class FactsListViewController: StateViewController {
     
     // MARK: - Properties
     private let viewModel: FactsListViewModel
+    weak var flowDelegate: FactsListViewControllerFlowDelegate?
     
     // MARK: - Life Cycle
     init(viewModel: FactsListViewModel = FactsListViewModel()) {
@@ -47,15 +52,26 @@ class FactsListViewController: StateViewController {
     }
     
     // MARK: - Setup
-    func setupNavigation() {
+    private func setupNavigation() {
         title = "Facts"
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.rightBarButtonItem = searchButton
     }
     
+    // MARK: - Navigation
+    private func showSearch() {
+        flowDelegate?.factsListShowsSearch(self)
+    }
+    
     // MARK: - Actions
     @objc
-    private func searchButtonTap() { }
+    private func searchButtonTap() {
+        showSearch()
+    }
+    
+    func fetchFacts(query: String) {
+        viewModel.fetchFacts(query: query)
+    }
 }
 
 // MARK: - FactsListViewModelDelegate
@@ -88,7 +104,7 @@ private extension FactsListViewController {
     
     func setFirstTimeEmptyState() {
         let buttonConfiguration = ButtonConfiguration(title: viewModel.firstTimeEmptyButtonTitle, action: { [weak self] in
-            self?.searchButtonTap()
+            self?.showSearch()
         })
         
         state = .empty(
@@ -100,7 +116,7 @@ private extension FactsListViewController {
     
     func setEmptyState() {
         let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
-            self?.searchButtonTap()
+            self?.showSearch()
         })
         
         state = .empty(
