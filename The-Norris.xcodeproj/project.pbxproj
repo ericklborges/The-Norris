@@ -64,6 +64,7 @@
 		374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3E7425DAC86A00290577 /* FactsListViewSpec.swift */; };
 		374F3E8325DAC8F900290577 /* Fact+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3E8225DAC8F900290577 /* Fact+Stub.swift */; };
 		374F3EA125DACAA900290577 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3EA025DACAA900290577 /* UIView+DynamicSize.swift */; };
+		374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3EB125DACD5400290577 /* FactTableViewCellSpec.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -224,6 +225,7 @@
 		374F3E7425DAC86A00290577 /* FactsListViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewSpec.swift; sourceTree = "<group>"; };
 		374F3E8225DAC8F900290577 /* Fact+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fact+Stub.swift"; sourceTree = "<group>"; };
 		374F3EA025DACAA900290577 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
+		374F3EB125DACD5400290577 /* FactTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCellSpec.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -747,6 +749,7 @@
 			isa = PBXGroup;
 			children = (
 				374F3E7425DAC86A00290577 /* FactsListViewSpec.swift */,
+				374F3EB125DACD5400290577 /* FactTableViewCellSpec.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 				372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */,
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,
 				374F3E8325DAC8F900290577 /* Fact+Stub.swift in Sources */,
+				374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */,
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				372CF6FA25D9D753007A0366 /* Configuration.swift in Sources */,
 				372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */,
