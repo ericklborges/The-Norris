@@ -39,6 +39,5 @@ class FactsListViewController: UIViewController {
     
     // MARK: - Actions
     @objc
-    private func searchButtonTap() {
-    }
+    private func searchButtonTap() { }
 }

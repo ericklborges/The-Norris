@@ -20,6 +20,9 @@ class FactsListView: UIView {
         return tableView
     }()
     
+    // MARK: - Properties
+    private var facts: [Fact] = []
+    
     // MARK: - Life Cycle
     init() {
         super.init(frame: .zero)
@@ -31,23 +34,29 @@ class FactsListView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Setup
+    func setup(facts: [Fact]) {
+        self.facts = facts
+        tableView.reloadData()
+    }
 }
 
-// MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 
 extension FactsListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return factsStub.count
+        return facts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FactTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setup(fact: factsStub[indexPath.row])
+        cell.setup(fact: facts[indexPath.row])
         return cell
     }
 }
 
-// MARK: Auto Layout
+// MARK: - Auto Layout
 
 extension FactsListView: ViewCodable {
     func setupViewHierarchy() {
