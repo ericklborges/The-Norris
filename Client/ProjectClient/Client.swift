@@ -36,7 +36,7 @@ extension Client: ClientProtocol {
             guard let httpResponse = response as? HTTPURLResponse else {
                 let unknownStatusCode = 666
                 let clientError = ClientError(reason: .api(error?.localizedDescription), statusCode: unknownStatusCode)
-                self.logger.log(error: clientError, request: request)
+                self.logger.log(error: clientError, request: request, data: data)
                 completion(.failure(clientError))
                 return
             }
@@ -45,14 +45,14 @@ extension Client: ClientProtocol {
             
             if let error = error {
                 let clientError = ClientError(reason: .api(error.localizedDescription), statusCode: statusCode)
-                self.logger.log(error: clientError, request: request)
+                self.logger.log(error: clientError, request: request, data: data)
                 completion(.failure(clientError))
                 return
             }
             
             guard let data = data else {
                 let clientError = ClientError(reason: .invalidData, statusCode: statusCode)
-                self.logger.log(error: clientError, request: request)
+                self.logger.log(error: clientError, request: request, data: nil)
                 completion(.failure(clientError))
                 return
             }
@@ -63,7 +63,7 @@ extension Client: ClientProtocol {
                 completion(.success(object))
             } catch let error {
                 let clientError = ClientError(reason: .decoding(error), statusCode: statusCode)
-                self.logger.log(error: clientError, request: request)
+                self.logger.log(error: clientError, request: request, data: data)
                 completion(.failure(clientError))
             }
         }.resume()

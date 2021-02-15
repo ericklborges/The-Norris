@@ -10,6 +10,11 @@ import Foundation
 public struct ClientError: Error {
     public var reason: ClientErrorReason
     public var statusCode: Int
+    
+    public init(reason: ClientErrorReason, statusCode: Int) {
+        self.reason = reason
+        self.statusCode = statusCode
+    }
 }
 
 public enum ClientErrorReason {
