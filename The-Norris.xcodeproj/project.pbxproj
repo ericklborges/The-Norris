@@ -40,6 +40,7 @@
 		372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF70625D9D78F007A0366 /* WindowHelper.swift */; };
 		372CF71825D9DA92007A0366 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 372CF71725D9DA92007A0366 /* ReferenceImages */; };
 		372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF72E25D9DB62007A0366 /* Reusable.swift */; };
+		372CF73725D9DDC4007A0366 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF73625D9DDC4007A0366 /* FactTableViewCell.swift */; };
 		372CF74625D9EE00007A0366 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CF74525D9EE00007A0366 /* UIView+Shadow.swift */; };
 		37316AD125D49A6E005C4688 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD025D49A6E005C4688 /* Color.swift */; };
 		37316AD725D49BD3005C4688 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316AD625D49BD3005C4688 /* Font.swift */; };
@@ -194,6 +195,7 @@
 		372CF70625D9D78F007A0366 /* WindowHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
 		372CF71725D9DA92007A0366 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
 		372CF72E25D9DB62007A0366 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		372CF73625D9DDC4007A0366 /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		372CF74525D9EE00007A0366 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		37316AD025D49A6E005C4688 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		37316AD625D49BD3005C4688 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -543,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				372CF6B825D9D1E2007A0366 /* Controller */,
+				372CF6DC25D9D5B5007A0366 /* View */,
 			);
 			path = FactsList;
 			sourceTree = "<group>";
@@ -562,6 +565,14 @@
 				372CF6E925D9D5EC007A0366 /* Controller */,
 			);
 			path = Facts;
+			sourceTree = "<group>";
+		};
+		372CF6DC25D9D5B5007A0366 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				372CF73625D9DDC4007A0366 /* FactTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		372CF6E925D9D5EC007A0366 /* Controller */ = {
@@ -1433,6 +1444,7 @@
 				3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */,
 				372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */,
 				372CF6C925D9D2AD007A0366 /* FactsListViewController.swift in Sources */,
+				372CF73725D9DDC4007A0366 /* FactTableViewCell.swift in Sources */,
 				3708768225D47D5A004E6C10 /* Fact.swift in Sources */,
 				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
 				372CF68225D9CCA6007A0366 /* AppFlowController.swift in Sources */,
