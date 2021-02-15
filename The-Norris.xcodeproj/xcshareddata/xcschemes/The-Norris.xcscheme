@@ -26,7 +26,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3726981025D1FE45004FD4F9"
+            BuildableName = "The-Norris.app"
+            BlueprintName = "The-Norris"
+            ReferencedContainer = "container:The-Norris.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,16 +46,6 @@
                BlueprintIdentifier = "3726982625D1FE4C004FD4F9"
                BuildableName = "The-NorrisTests.xctest"
                BlueprintName = "The-NorrisTests"
-               ReferencedContainer = "container:The-Norris.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37397DF625D89342008C2EAC"
-               BuildableName = "ClientTests.xctest"
-               BlueprintName = "ClientTests"
                ReferencedContainer = "container:The-Norris.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FactView: UIView {
+public class FactView: UIView {
     
     // MARK: - Views
     private let factLabel: UILabel = {
@@ -39,7 +39,7 @@ class FactView: UIView {
     }
     
     // MARK: - Life Cycle
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupViews()
     }
@@ -70,13 +70,13 @@ class FactView: UIView {
 // MARK: - Auto Layout
 
 extension FactView: ViewCodable {
-    func setupViewHierarchy() {
+    public func setupViewHierarchy() {
         addSubview(factLabel)
         addSubview(categoryView)
         addSubview(shareButton)
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
         factLabel.layout.applyConstraint { make in
             make.topAnchor(equalTo: topAnchor, constant: 16)
             make.leadingAnchor(equalTo: leadingAnchor, constant: 16)
@@ -97,7 +97,7 @@ extension FactView: ViewCodable {
         }
     }
     
-    func setupAditionalConfiguration() {
+    public func setupAditionalConfiguration() {
         layer.cornerRadius = 12.0
         backgroundColor = Color.Background.main
     }
