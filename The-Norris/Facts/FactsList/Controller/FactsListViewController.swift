@@ -10,6 +10,8 @@ import UIKit
 class FactsListViewController: UIViewController {
     
     // MARK: - Views
+    private let factsView = FactsListView()
+    
     private lazy var searchButton: UIBarButtonItem = {
         return UIBarButtonItem(
             barButtonSystemItem: .search,
@@ -22,6 +24,10 @@ class FactsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
+    }
+    
+    override func loadView() {
+        view = factsView
     }
     
     // MARK: - Setup
