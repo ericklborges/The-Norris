@@ -8,6 +8,7 @@
 import Foundation
 
 enum FactsEndpoint {
+    case categories
     case search(query: String)
     
     private var baseUrl: URL {
@@ -16,21 +17,31 @@ enum FactsEndpoint {
     
     private var path: String {
         switch self {
+        case .categories:
+            return "/jokes/categories"
         case .search:
             return "/jokes/search"
         }
     }
 
+    private var queryItems: [URLQueryItem]? {
+        switch self {
+        case let .search(query):
+            return [URLQueryItem(name: "query", value: query)]
+        default:
+            return nil
+        }
+    }
+    
     var url: URL {
         var urlComponents = URLComponents(string: baseUrl.absoluteString)
         urlComponents?.path = path
-        urlComponents?.queryItems = []
+        urlComponents?.queryItems = queryItems
         
-        switch self {
-        case let .search(query):
-            urlComponents?.queryItems?.append(URLQueryItem(name: "query", value: query))
+        guard let url = urlComponents?.url else {
+            preconditionFailure("The url has not been built correctly")
         }
         
-        return urlComponents?.url ?? URL(string: "https://")!
+        return url
     }
 }

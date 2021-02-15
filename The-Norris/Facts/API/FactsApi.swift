@@ -29,6 +29,11 @@ class FactsApi: FactsApiProtocol {
 // MARK: - Requests
 
 extension FactsApi {
+    func fetchCategories(completion: @escaping (Result<[String], ClientError>) -> Void) {
+        let url = FactsEndpoint.categories.url
+        client.request(url: url, method: .get, headers: [:], parameters: [:], completion: completion)
+    }
+    
     func fetchFacts(query: String, completion: @escaping (Result<FactsQuery, ClientError>) -> Void) {
         let url = FactsEndpoint.search(query: query).url
         client.request(url: url, method: .get, headers: [:], parameters: [:], completion: completion)
