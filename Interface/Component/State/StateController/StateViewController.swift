@@ -7,18 +7,36 @@
 
 import UIKit
 
-public class StateViewController: UIViewController {
+open class StateViewController: UIViewController {
     
-    public enum State {
+    public enum State: Equatable {
         case main
         case loading(title: String, message: String?)
         case empty(title: String, message: String?, buttonConfiguration: ButtonConfiguration?)
         case error(image: UIImage?, title: String, message: String?, buttonConfiguration: ButtonConfiguration)
+        
+        public static func == (lhs: State, rhs: State) -> Bool {
+            switch (lhs, rhs) {
+            case (.main, .main):
+                return true
+            case (.loading, .loading):
+                return true
+            case (.empty, .empty):
+                return true
+            case (.error, .error):
+                return true
+            default:
+                return false
+            }
+        }
     }
     
     public var state: State = .main {
         didSet {
-            updatePresentation(to: state)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.updatePresentation(to: self.state)
+            }
         }
     }
 }

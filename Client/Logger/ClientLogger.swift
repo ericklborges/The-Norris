@@ -42,7 +42,7 @@ extension RequestLogger {
         log(body: data)
     }
     
-    func log(error: ClientError, request: URLRequest) {
+    func log(error: ClientError, request: URLRequest, data: Data?) {
         guard loglevel != .none else { return }
         guard let url = request.url else { return }
         
@@ -50,6 +50,7 @@ extension RequestLogger {
         printTagged("[Error] \(error.statusCode) '\(url)':")
         printTagged("Reason: \(error.reason)")
         printTagged("Description: \(error.reason.description)")
+        log(body: data)
     }
 }
 
