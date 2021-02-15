@@ -69,12 +69,12 @@ extension FactsListViewController: FactsListViewModelDelegate {
         setLoadingState()
     }
     
-    func didReceiveError() {
-        setErrorState()
-    }
-    
     func didReceiveEmptyResult() {
         seteEmptyState()
+    }
+    
+    func didReceiveError() {
+        setErrorState()
     }
 }
 
@@ -82,30 +82,30 @@ extension FactsListViewController: FactsListViewModelDelegate {
 
 private extension FactsListViewController {
     func setLoadingState() {
-        state = .loading(title: "Thinking", message: "Norris brain is processing your request, it won't take long.")
+        state = .loading(title: viewModel.loadingTitle, message: viewModel.loadingMessage)
+    }
+    
+    func seteEmptyState() {
+        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
+            self?.searchButtonTap()
+        })
+        
+        state = .empty(
+            title: viewModel.emptyTitle,
+            message: viewModel.emptyMessage,
+            buttonConfiguration: buttonConfiguration
+        )
     }
     
     func setErrorState() {
-        let buttonConfiguration = ButtonConfiguration(title: "Try Again", action: { [weak self] in
+        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
             self?.searchButtonTap()
         })
         
         state = .error(
             image: Symbol.clockArrowCirclepath.image(pointSize: 48),
-            title: "Something wrong",
-            message: "Norris brain could not process yout request, try again later.",
-            buttonConfiguration: buttonConfiguration
-        )
-    }
-    
-    func seteEmptyState() {
-        let buttonConfiguration = ButtonConfiguration(title: "Try Again", action: { [weak self] in
-            self?.searchButtonTap()
-        })
-        
-        state = .empty(
-            title: "Nothing found",
-            message: "Unfortunatly Norris did not create a word for that. Yet.",
+            title: viewModel.errorTitle,
+            message: viewModel.errorMessage,
             buttonConfiguration: buttonConfiguration
         )
     }

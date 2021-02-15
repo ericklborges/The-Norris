@@ -10,8 +10,8 @@ import Foundation
 protocol FactsListViewModelDelegate: AnyObject {
     func didChange(facts: [Fact])
     func didStartRequest()
-    func didReceiveError()
     func didReceiveEmptyResult()
+    func didReceiveError()
 }
 
 class FactsListViewModel {
@@ -24,6 +24,40 @@ class FactsListViewModel {
     // MARK: - Init
     init(api: FactsApiProtocol = FactsApi.make()) {
         self.api = api
+    }
+    
+    // MARK: - Computed Properties
+    
+    // MARK: Button
+    var buttonTitle: String {
+        return "Try again"
+    }
+    
+    // MARK: Loading
+    var loadingTitle: String {
+        return "Thinking"
+    }
+    
+    var loadingMessage: String {
+        return "Norris brain is processing your request, it won't take long."
+    }
+    
+    // MARK: Empty
+    var emptyTitle: String {
+        return "Nothing found"
+    }
+    
+    var emptyMessage: String {
+        return "Unfortunatly Norris did not create a word for that. Yet."
+    }
+    
+    // MARK: Error
+    var errorTitle: String {
+        return "Something wrong"
+    }
+    
+    var errorMessage: String {
+        return "Norris brain could not process yout request, try again later."
     }
 }
 
