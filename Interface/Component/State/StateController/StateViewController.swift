@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class StateViewController: UIViewController {
+open class StateViewController: UIViewController {
     
     public enum State {
         case main
@@ -18,7 +18,10 @@ public class StateViewController: UIViewController {
     
     public var state: State = .main {
         didSet {
-            updatePresentation(to: state)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.updatePresentation(to: self.state)
+            }
         }
     }
 }
