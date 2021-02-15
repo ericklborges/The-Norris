@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FactsQuery: Codable {
+struct FactsQuery: Decodable {
     let total: Int
     let result: [Fact]
 }
