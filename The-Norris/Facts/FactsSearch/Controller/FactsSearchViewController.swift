@@ -42,6 +42,7 @@ class FactsSearchViewController: UIViewController {
     
     private func setupSearchBar() {
         navigationItem.titleView = searchBar
+        searchBar.becomeFirstResponder()
     }
     
     private func setupKeyboardHideGesture() {

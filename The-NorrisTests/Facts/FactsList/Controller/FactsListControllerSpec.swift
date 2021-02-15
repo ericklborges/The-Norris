@@ -105,6 +105,19 @@ class FactsListViewControllerSpec: QuickSpec {
                         }
                     }
                 }
+                
+                context("FactsListViewShareDelegate") {
+                    
+                    context("when factsList(_:wantsToShare:) is called") {
+                        beforeEach {
+                            sut.factsList(FactsListView(), wantsToShare: .stub())
+                        }
+                        
+                        it("should present an UIActivityViewController") {
+                            expect(sut.presentedViewController).to(beAKindOf(UIActivityViewController.self))
+                        }
+                    }
+                }
             }
         }
     }

@@ -15,7 +15,11 @@ protocol FactsListViewControllerFlowDelegate: AnyObject {
 class FactsListViewController: StateViewController {
     
     // MARK: - Views
-    private let factsView = FactsListView()
+    private lazy var factsView: FactsListView = {
+        let view = FactsListView()
+        view.shareDelegate = self
+        return view
+    }()
     
     private lazy var searchButton: UIBarButtonItem = {
         return UIBarButtonItem(
@@ -92,6 +96,18 @@ extension FactsListViewController: FactsListViewModelDelegate {
     
     func didReceiveError() {
         setErrorState()
+    }
+}
+
+// MARK: - FactsListViewShareDelegate
+
+extension FactsListViewController: FactsListViewShareDelegate {
+    func factsList(_ view: FactsListView, wantsToShare fact: Fact) {
+        let activityController = UIActivityViewController(
+            activityItems: [fact.value],
+            applicationActivities: nil
+        )
+        present(activityController, animated: true)
     }
 }
 
