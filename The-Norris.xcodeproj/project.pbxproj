@@ -15,6 +15,8 @@
 		370876A725D493DB004E6C10 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3708769725D493DA004E6C10 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		370876AA25D493DB004E6C10 /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; };
 		370876AB25D493DB004E6C10 /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3708769525D493DA004E6C10 /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		371A5D5425DC4F8800561C25 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D4125DC4F8800561C25 /* SplashScreenViewModel.swift */; };
+		371A5D5525DC4F8800561C25 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D4325DC4F8800561C25 /* SplashScreenViewController.swift */; };
 		371A5D5625DC4F8800561C25 /* FactsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D4525DC4F8800561C25 /* FactsFlowController.swift */; };
 		371A5D5725DC4F8800561C25 /* FactsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D4825DC4F8800561C25 /* FactsSearchViewController.swift */; };
 		371A5D5825DC4F8800561C25 /* FactsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D4A25DC4F8800561C25 /* FactsApi.swift */; };
@@ -188,6 +190,8 @@
 		3708769825D493DA004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3708769D25D493DB004E6C10 /* InterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370876A625D493DB004E6C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		371A5D4125DC4F8800561C25 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		371A5D4325DC4F8800561C25 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		371A5D4525DC4F8800561C25 /* FactsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsFlowController.swift; sourceTree = "<group>"; };
 		371A5D4825DC4F8800561C25 /* FactsSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsSearchViewController.swift; sourceTree = "<group>"; };
 		371A5D4A25DC4F8800561C25 /* FactsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsApi.swift; sourceTree = "<group>"; };
@@ -425,9 +429,35 @@
 		371A5D3E25DC4F8800561C25 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				371A5D3F25DC4F8800561C25 /* Splash Screen */,
 				371A5D4425DC4F8800561C25 /* Facts */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		371A5D3F25DC4F8800561C25 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				371A5D4025DC4F8800561C25 /* ViewModel */,
+				371A5D4225DC4F8800561C25 /* Controller */,
+			);
+			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		371A5D4025DC4F8800561C25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				371A5D4125DC4F8800561C25 /* SplashScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		371A5D4225DC4F8800561C25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				371A5D4325DC4F8800561C25 /* SplashScreenViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		371A5D4425DC4F8800561C25 /* Facts */ = {
@@ -1656,10 +1686,12 @@
 				371A5D5625DC4F8800561C25 /* FactsFlowController.swift in Sources */,
 				371A5D5C25DC4F8800561C25 /* FactTableViewCell.swift in Sources */,
 				3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */,
+				371A5D5525DC4F8800561C25 /* SplashScreenViewController.swift in Sources */,
 				371A5D5825DC4F8800561C25 /* FactsApi.swift in Sources */,
 				372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */,
 				3708768225D47D5A004E6C10 /* Fact.swift in Sources */,
 				371A5D5B25DC4F8800561C25 /* FactsListViewController.swift in Sources */,
+				371A5D5425DC4F8800561C25 /* SplashScreenViewModel.swift in Sources */,
 				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
 				371A5D5925DC4F8800561C25 /* FactsEndpoint.swift in Sources */,
 				372CF68225D9CCA6007A0366 /* AppFlowController.swift in Sources */,
