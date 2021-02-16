@@ -9,9 +9,32 @@ import UIKit
 import Interface
 
 class AppFlowController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         install(child: FactsFlowController())
+        showSplashScreen()
+    }
+}
+
+// MARK: - Navigation
+
+extension AppFlowController {
+    private func showSplashScreen() {
+        let controller = SplashScreenViewController()
+        controller.flowDelegate = self
+        install(child: controller)
+    }
+    
+    private func showFirstViewController() {
+        switchChild(to: FactsFlowController())
+    }
+}
+
+// MARK: - SplashScreenFlowDelegate
+
+extension AppFlowController: SplashScreenFlowDelegate {
+    func splashScreenDidFinishSetup(_ controller: SplashScreenViewController) {
+        showFirstViewController()
     }
 }
