@@ -33,10 +33,7 @@ open class StateViewController: UIViewController {
     
     public var state: State = .main {
         didSet {
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.updatePresentation(to: self.state)
-            }
+            self.updatePresentation(to: self.state)
         }
     }
 }

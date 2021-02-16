@@ -29,7 +29,7 @@ class AppFlowControllerSpec: QuickSpec {
                     }
                     
                     it("should add the correct child view controller") {
-                        expect(sut.children.first).to(beAKindOf(FactsFlowController.self))
+                        expect(sut.children.first).toEventually(beAKindOf(FactsFlowController.self), timeout: .milliseconds(100))
                     }
                 }
             }
