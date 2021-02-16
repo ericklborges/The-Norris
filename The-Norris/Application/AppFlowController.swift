@@ -12,7 +12,6 @@ class AppFlowController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        install(child: FactsFlowController())
         showSplashScreen()
     }
 }
