@@ -429,8 +429,8 @@
 		371A5D3E25DC4F8800561C25 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				371A5D3F25DC4F8800561C25 /* Splash Screen */,
 				371A5D4425DC4F8800561C25 /* Facts */,
+				371A5D3F25DC4F8800561C25 /* Splash Screen */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -531,6 +531,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		371A5D6D25DC566600561C25 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				372CF6CF25D9D388007A0366 /* Facts */,
+				371A5D6E25DC567800561C25 /* Splash Screen */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		371A5D6E25DC567800561C25 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
 		371E41D325D981BD00C3D8BF /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,7 +632,7 @@
 				372CF6F925D9D753007A0366 /* Configuration.swift */,
 				372CF6A525D9CFF5007A0366 /* Application */,
 				374F3E9F25DACAA900290577 /* Extensions */,
-				372CF6CF25D9D388007A0366 /* Facts */,
+				371A5D6D25DC566600561C25 /* Features */,
 				374F3EF125DAD71A00290577 /* Mock */,
 				374F3E8025DAC8BF00290577 /* Stub */,
 				372CF70525D9D78F007A0366 /* Utilities */,
