@@ -46,7 +46,7 @@ class StateViewControllerSpec: QuickSpec {
                     }
                     
                     it("should layout itself properly") {
-                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Loading_State"), timeout: .milliseconds(100))
+                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Loading_State"))
                     }
                 }
                 
@@ -56,7 +56,7 @@ class StateViewControllerSpec: QuickSpec {
                     }
                     
                     it("should layout itself properly") {
-                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Empty_State"), timeout: .milliseconds(100))
+                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Empty_State"))
                     }
                 }
                 
@@ -66,7 +66,7 @@ class StateViewControllerSpec: QuickSpec {
                     }
                     
                     it("should layout itself properly") {
-                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Error_State"), timeout: .milliseconds(100))
+                        expect(sut).toEventually(haveValidSnapshot(named: "StateViewController_Layout_Error_State"))
                     }
                 }
             }
