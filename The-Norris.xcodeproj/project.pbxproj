@@ -472,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				371A5D4525DC4F8800561C25 /* FactsFlowController.swift */,
+				3708767825D47C81004E6C10 /* Model */,
 				371A5D4625DC4F8800561C25 /* FactsSearch */,
 				371A5D4925DC4F8800561C25 /* API */,
 				371A5D4C25DC4F8800561C25 /* FactsList */,
@@ -654,7 +655,6 @@
 				3708765E25D470A1004E6C10 /* Assets */,
 				3708766F25D47BAA004E6C10 /* Constants */,
 				371A5D3E25DC4F8800561C25 /* Features */,
-				3708767825D47C81004E6C10 /* Model */,
 				3708766A25D47258004E6C10 /* Utilities */,
 			);
 			path = "The-Norris";
