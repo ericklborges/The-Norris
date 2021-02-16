@@ -33,11 +33,17 @@ class FactsFlowControllerSpec: QuickSpec {
                     }
                     
                     it("should add a navigation as firts child controller") {
-                        expect(sut.children.first).to(beAKindOf(UINavigationController.self))
+                        expect(sut.children.first).toEventually(beAKindOf(UINavigationController.self), timeout: .milliseconds(100))
                     }
                     
                     it("navigation should show a FactsListViewController as root view controller") {
-                        expect(navigation?.viewControllers.first).to(beAKindOf(FactsListViewController.self))
+                        expect({
+                            navigation = sut.children.first as? UINavigationController
+                            if navigation?.viewControllers.first is FactsListViewController {
+                                return {.succeeded}
+                            }
+                            return {.failed(reason: "FactsListViewController hasn't been shown")}
+                        }).toEventually(succeed(), timeout: .milliseconds(100))
                     }
                     
                     context("and factsListShowsSearch(_:) is called") {
