@@ -8,6 +8,7 @@
 import Client
 
 protocol FactsApiProtocol {
+    func fetchCategories(completion: @escaping (Result<[String], ClientError>) -> Void)
     func fetchFacts(query: String, completion: @escaping (Result<FactsQuery, ClientError>) -> Void)
 }
 
