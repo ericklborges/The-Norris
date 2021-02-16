@@ -28,8 +28,18 @@ class AppFlowControllerSpec: QuickSpec {
                         sut.endAppearanceTransition()
                     }
                     
-                    it("should add the correct child view controller") {
-                        expect(sut.children.first).toEventually(beAKindOf(FactsFlowController.self), timeout: .milliseconds(100))
+                    it("should show splash screen") {
+                        expect(sut.children.first).toEventually(beAKindOf(SplashScreenViewController.self), timeout: .milliseconds(100))
+                    }
+                    
+                    context("and splash screen finishes setup") {
+                        beforeEach {
+                            sut.splashScreenDidFinishSetup(SplashScreenViewController())
+                        }
+                        
+                        it("should show FactsFlowController") {
+                            expect(sut.children.first).toEventually(beAKindOf(FactsFlowController.self), timeout: .milliseconds(100))
+                        }
                     }
                 }
             }

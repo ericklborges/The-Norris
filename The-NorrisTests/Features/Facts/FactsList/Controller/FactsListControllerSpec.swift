@@ -43,7 +43,7 @@ class FactsListViewControllerSpec: QuickSpec {
                     }
                     
                     it("should layout itself properly") {
-                        expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_First_Time_Empty"), timeout: .milliseconds(100))
+                        expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_First_Time_Empty"))
                     }
                 }
                 
@@ -59,7 +59,7 @@ class FactsListViewControllerSpec: QuickSpec {
                         }
                         
                         it("should layout itself properly") {
-                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Main"), timeout: .milliseconds(250))
+                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Main"))
                         }
                     }
                     
@@ -73,7 +73,7 @@ class FactsListViewControllerSpec: QuickSpec {
                         }
                         
                         it("should layout itself properly") {
-                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Loading"), timeout: .milliseconds(100))
+                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Loading"))
                         }
                     }
                     
@@ -87,7 +87,7 @@ class FactsListViewControllerSpec: QuickSpec {
                         }
                         
                         it("should layout itself properly") {
-                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Empty"), timeout: .milliseconds(100))
+                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Empty"))
                         }
                     }
                     
@@ -101,7 +101,7 @@ class FactsListViewControllerSpec: QuickSpec {
                         }
                         
                         it("should layout itself properly") {
-                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Error"), timeout: .milliseconds(100))
+                            expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_Error"))
                         }
                     }
                 }
