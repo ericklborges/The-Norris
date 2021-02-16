@@ -25,6 +25,8 @@
 		371A5D5B25DC4F8800561C25 /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D5025DC4F8800561C25 /* FactsListViewController.swift */; };
 		371A5D5C25DC4F8800561C25 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D5225DC4F8800561C25 /* FactTableViewCell.swift */; };
 		371A5D5D25DC4F8800561C25 /* FactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D5325DC4F8800561C25 /* FactsListView.swift */; };
+		371A5D7225DC56B700561C25 /* SplashScreenViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D7125DC56B700561C25 /* SplashScreenViewModelSpec.swift */; };
+		371A5D7F25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A5D7E25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift */; };
 		371E41D525D981D500C3D8BF /* ClientLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E41D425D981D500C3D8BF /* ClientLogger.swift */; };
 		371E422125D9947F00C3D8BF /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E422025D9947F00C3D8BF /* URLSessionMock.swift */; };
 		371E422925D9964D00C3D8BF /* URL+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E422825D9964D00C3D8BF /* URL+Stub.swift */; };
@@ -200,6 +202,8 @@
 		371A5D5025DC4F8800561C25 /* FactsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
 		371A5D5225DC4F8800561C25 /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		371A5D5325DC4F8800561C25 /* FactsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsListView.swift; sourceTree = "<group>"; };
+		371A5D7125DC56B700561C25 /* SplashScreenViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModelSpec.swift; sourceTree = "<group>"; };
+		371A5D7E25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		371E41D425D981D500C3D8BF /* ClientLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogger.swift; sourceTree = "<group>"; };
 		371E422025D9947F00C3D8BF /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		371E422825D9964D00C3D8BF /* URL+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Stub.swift"; sourceTree = "<group>"; };
@@ -438,8 +442,8 @@
 		371A5D3F25DC4F8800561C25 /* Splash Screen */ = {
 			isa = PBXGroup;
 			children = (
-				371A5D4025DC4F8800561C25 /* ViewModel */,
 				371A5D4225DC4F8800561C25 /* Controller */,
+				371A5D4025DC4F8800561C25 /* ViewModel */,
 			);
 			path = "Splash Screen";
 			sourceTree = "<group>";
@@ -543,8 +547,26 @@
 		371A5D6E25DC567800561C25 /* Splash Screen */ = {
 			isa = PBXGroup;
 			children = (
+				371A5D7D25DC56ED00561C25 /* Spy */,
+				371A5D6F25DC569800561C25 /* ViewModel */,
 			);
 			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		371A5D6F25DC569800561C25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				371A5D7125DC56B700561C25 /* SplashScreenViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		371A5D7D25DC56ED00561C25 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				371A5D7E25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		371E41D325D981BD00C3D8BF /* Logger */ = {
@@ -1739,6 +1761,8 @@
 				374F3FDE25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift in Sources */,
 				374F3F5025DAF69200290577 /* FactsListViewModelDelegateSpy.swift in Sources */,
 				374F3F5D25DAF73400290577 /* FactsListViewModelSpec.swift in Sources */,
+				371A5D7F25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift in Sources */,
+				371A5D7225DC56B700561C25 /* SplashScreenViewModelSpec.swift in Sources */,
 				374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */,
 				374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */,
 				374F3EE625DAD51B00290577 /* FactsApiSpec.swift in Sources */,

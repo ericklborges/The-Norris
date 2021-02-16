@@ -26,13 +26,8 @@ class SplashScreenViewModel {
 // MARK: - Requests
 extension SplashScreenViewModel {
     func fetchCategories() {
-        api.fetchCategories { [weak self] result in
-            switch result {
-            case .success:
-                self?.delegate?.didFinishSetup()
-            case .failure:
-                return
-            }
+        api.fetchCategories { [weak self] _ in
+            self?.delegate?.didFinishSetup()
         }
     }
 }

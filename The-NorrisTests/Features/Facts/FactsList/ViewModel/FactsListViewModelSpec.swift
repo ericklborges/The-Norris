@@ -7,7 +7,6 @@
 
 import Quick
 import Nimble
-import Nimble_Snapshots
 
 @testable import The_Norris
 
