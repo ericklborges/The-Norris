@@ -27,7 +27,9 @@ extension AppFlowController {
     }
     
     private func showFirstViewController() {
-        switchChild(to: FactsFlowController())
+        DispatchQueue.main.async { [weak self] in
+            self?.switchChild(to: FactsFlowController())
+        }
     }
 }
 

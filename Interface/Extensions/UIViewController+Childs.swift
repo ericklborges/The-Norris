@@ -10,10 +10,14 @@ import UIKit
 public extension UIViewController {
     
     func switchChild(to newController: UIViewController) {
-        if let currentController = children.last {
-            remove(child: currentController)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            if let currentController = self.children.last {
+                self.remove(child: currentController)
+            }
+            self.install(child: newController)
         }
-        install(child: newController)
     }
     
     func install(child: UIViewController) {

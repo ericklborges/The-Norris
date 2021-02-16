@@ -11,7 +11,7 @@ import Interface
 class FactsFlowController: UIViewController {
     
     // MARK: - Parameters
-    private let navigation = UINavigationController()
+    private lazy var navigation = UINavigationController()
     private var searchEndAction: ((String) -> Void)?
     
     // MARK: - Life Cycle
