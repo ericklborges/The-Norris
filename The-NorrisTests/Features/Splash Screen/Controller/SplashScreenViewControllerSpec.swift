@@ -34,7 +34,7 @@ class SplashScreenViewControllerSpec: QuickSpec {
                     }
                     
                     it("should layout itself properly") {
-                        expect(sut).toEventually(haveValidSnapshot(named: "SplashScreenViewController_Layout"), timeout: .milliseconds(200))
+                        expect(sut).toEventually(haveValidSnapshot(named: "SplashScreenViewController_Layout"))
                     }
                 }
                 

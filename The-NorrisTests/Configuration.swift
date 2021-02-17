@@ -17,7 +17,6 @@ class The_NorrisTestsConfiguration: QuickConfiguration {
             setNimbleTestFolder("The-NorrisTests")
             DatabaseMock.shared.loadPersistentStores()
             Database.shared.testsContext = { DatabaseMock.shared.context }
-            Database.shared.loadPersistentStores()
         }
         
         configuration.afterEach {
