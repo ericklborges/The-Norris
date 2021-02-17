@@ -56,8 +56,10 @@ extension StateViewController {
     }
     
     func setupMain() {
-        guard let currentChild = children.last else { return }
-        remove(child: currentChild)
+        DispatchQueue.main.async { [weak self] in
+            guard let currentChild = self?.children.last else { return }
+            self?.remove(child: currentChild)
+        }
     }
 
     func setupLoading(_ title: String, _ message: String?) {
