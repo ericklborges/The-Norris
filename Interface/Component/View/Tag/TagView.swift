@@ -24,7 +24,7 @@ public class TagView: UIView {
     }
     
     // MARK: - Life Cycle
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupViews()
     }
