@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Categories" representedClassName=".CDCategories" syncable="YES">
+        <attribute name="value" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer"/>
+    </entity>
+    <elements>
+        <element name="Categories" positionX="-63" positionY="-18" width="128" height="58"/>
+    </elements>
+</model>

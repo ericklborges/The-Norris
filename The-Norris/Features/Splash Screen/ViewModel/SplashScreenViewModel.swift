@@ -15,19 +15,27 @@ class SplashScreenViewModel {
     
     // MARK: - Parameters
     private let api: FactsApiProtocol
+    private let categoriesDao: CategoriesDAOProtocol
     weak var delegate: SplashScreenViewModelDelegate?
     
     // MARK: - Init
-    init(api: FactsApiProtocol = FactsApi.make()) {
+    init(api: FactsApiProtocol = FactsApi.make(), categoriesDao: CategoriesDAOProtocol = CategoriesDAO.make()) {
         self.api = api
+        self.categoriesDao = categoriesDao
     }
 }
 
 // MARK: - Requests
 extension SplashScreenViewModel {
     func fetchCategories() {
-        api.fetchCategories { [weak self] _ in
-            self?.delegate?.didFinishSetup()
+        api.fetchCategories { [weak self] result in
+            switch result {
+            case let .success(categories):
+                self?.categoriesDao.create(categories)
+                self?.delegate?.didFinishSetup()
+            default:
+                return
+            }
         }
     }
 }
