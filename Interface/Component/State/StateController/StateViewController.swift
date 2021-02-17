@@ -33,7 +33,10 @@ open class StateViewController: UIViewController {
     
     public var state: State = .main {
         didSet {
-            self.updatePresentation(to: self.state)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.updatePresentation(to: self.state)
+            }
         }
     }
 }
@@ -56,10 +59,8 @@ extension StateViewController {
     }
     
     func setupMain() {
-        DispatchQueue.main.async { [weak self] in
-            guard let currentChild = self?.children.last else { return }
-            self?.remove(child: currentChild)
-        }
+        guard let currentChild = children.last else { return }
+        remove(child: currentChild)
     }
 
     func setupLoading(_ title: String, _ message: String?) {

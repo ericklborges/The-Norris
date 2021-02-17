@@ -15,7 +15,7 @@ protocol FactsSearchViewControllerFlowDelegate: AnyObject {
 class FactsSearchViewController: UIViewController {
     
     // MARK: - Views
-    lazy var searchBar: UISearchBar = {
+    private lazy var searchBar: UISearchBar = {
         let searchbar = UISearchBar()
         searchbar.delegate = self
         searchbar.searchTextField.delegate = self
@@ -24,22 +24,27 @@ class FactsSearchViewController: UIViewController {
         return searchbar
     }()
     
+    private lazy var factsSearchView: FactsSearchView = {
+        let view = FactsSearchView()
+        view.delegate = self
+        return view
+    }()
+    
     // MARK: - Properties
     weak var flowDelegate: FactsSearchViewControllerFlowDelegate?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         setupSearchBar()
         setupKeyboardHideGesture()
     }
     
-    // MARK: - Setup
-    private func setupView() {
-        view.backgroundColor = Color.Background.main
+    override func loadView() {
+        view = factsSearchView
     }
     
+    // MARK: - Setup
     private func setupSearchBar() {
         navigationItem.titleView = searchBar
         searchBar.becomeFirstResponder()
@@ -66,11 +71,19 @@ extension FactsSearchViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: - UISearchBarDelegate
+// MARK: - UITextFieldDelegate
 
 extension FactsSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         flowDelegate?.factsSearch(self, didEndWith: textField.text ?? "")
         return true
+    }
+}
+
+// MARK: - FactsSearchViewDelegate
+
+extension FactsSearchViewController: FactsSearchViewDelegate {
+    func didSelectSuggestion(_ query: String) {
+        flowDelegate?.factsSearch(self, didEndWith: query)
     }
 }

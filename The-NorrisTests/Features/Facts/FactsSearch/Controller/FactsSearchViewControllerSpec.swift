@@ -45,6 +45,16 @@ class FactsSearchViewControllerSpec: QuickSpec {
                         expect(flowDelegateSpy.calledFactsSearchDidEndWith) == true
                     }
                 }
+                
+                context("and didSelectSuggestion(_:) is caled") {
+                    beforeEach {
+                        sut.didSelectSuggestion("")
+                    }
+                    
+                    it("should call flowDelegate's factsSearch(_:didEndWith:) method") {
+                        expect(flowDelegateSpy.calledFactsSearchDidEndWith) == true
+                    }
+                }
             }
         }
     }
