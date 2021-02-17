@@ -97,6 +97,7 @@
 		378717F625D5F23800E9E320 /* FactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378717F525D5F23800E9E320 /* FactView.swift */; };
 		3787180725D5F7A100E9E320 /* FactViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787180625D5F7A100E9E320 /* FactViewSpec.swift */; };
 		37B948C525DC784A00C7A715 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948C425DC784A00C7A715 /* Database.swift */; };
+		37B948D225DC788800C7A715 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37B948D025DC788800C7A715 /* Database.xcdatamodeld */; };
 		37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */; };
 		37C4DB1A25D6C1CB00F4BD31 /* PrimaryButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */; };
 		37C4DB8025D70A2100F4BD31 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB7F25D70A2100F4BD31 /* MessageView.swift */; };
@@ -281,6 +282,7 @@
 		378717F525D5F23800E9E320 /* FactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactView.swift; sourceTree = "<group>"; };
 		3787180625D5F7A100E9E320 /* FactViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewSpec.swift; sourceTree = "<group>"; };
 		37B948C425DC784A00C7A715 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		37B948D125DC788800C7A715 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonSpec.swift; sourceTree = "<group>"; };
 		37C4DB7F25D70A2100F4BD31 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -648,7 +650,7 @@
 				37397DFD25D89342008C2EAC /* ClientTests */,
 				3726981225D1FE45004FD4F9 /* Products */,
 				D86A796943F053FD164B860E /* Pods */,
-				C4F7FA31F7280B2E139223E1 /* Frameworks */,
+				14F8807DADEB5CA3C4FA9E8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1070,6 +1072,7 @@
 		37B948AF25DC77EC00C7A715 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				37B948D025DC788800C7A715 /* Database.xcdatamodeld */,
 				37B948C425DC784A00C7A715 /* Database.swift */,
 			);
 			path = Database;
@@ -1769,6 +1772,7 @@
 				372CF68225D9CCA6007A0366 /* AppFlowController.swift in Sources */,
 				371A5D5A25DC4F8800561C25 /* FactsListViewModel.swift in Sources */,
 				3708767A25D47C9B004E6C10 /* FactsQuery.swift in Sources */,
+				37B948D225DC788800C7A715 /* Database.xcdatamodeld in Sources */,
 				371A5D5725DC4F8800561C25 /* FactsSearchViewController.swift in Sources */,
 				371A5D5D25DC4F8800561C25 /* FactsListView.swift in Sources */,
 				3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */,
@@ -2594,6 +2598,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		37B948D025DC788800C7A715 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				37B948D125DC788800C7A715 /* Database.xcdatamodel */,
+			);
+			currentVersion = 37B948D125DC788800C7A715 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3726980925D1FE45004FD4F9 /* Project object */;
 }
