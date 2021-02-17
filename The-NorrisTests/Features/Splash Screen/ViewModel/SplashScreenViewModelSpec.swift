@@ -16,13 +16,15 @@ class SplashScreenViewModelSpec: QuickSpec {
             
             var sut: SplashScreenViewModel!
             var apiMock: FactsApiMock!
+            var daoSpy: CategoriesDaoSpy!
             var delegateSpy: SplashScreenViewModelDelegateSpy!
             
             context("when initialized") {
                 beforeEach {
                     apiMock = FactsApiMock()
+                    daoSpy = CategoriesDaoSpy()
                     delegateSpy = SplashScreenViewModelDelegateSpy()
-                    sut = SplashScreenViewModel(api: apiMock)
+                    sut = SplashScreenViewModel(api: apiMock, categoriesDao: daoSpy)
                     sut.delegate = delegateSpy
                 }
                 
@@ -32,6 +34,10 @@ class SplashScreenViewModelSpec: QuickSpec {
                         beforeEach {
                             apiMock.shouldFail = false
                             sut.fetchCategories()
+                        }
+                        
+                        it("should save the received categories in the Database") {
+                            expect(daoSpy.calledCreate) == true
                         }
                         
                         it("should call delegate's didFinishSetup method") {
@@ -46,7 +52,7 @@ class SplashScreenViewModelSpec: QuickSpec {
                         }
                         
                         it("should call delegate's didFinishSetup method") {
-                            expect(delegateSpy.calledDidFinishSetup) == true
+                            expect(delegateSpy.calledDidFinishSetup) == false
                         }
                     }
                 }
