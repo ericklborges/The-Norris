@@ -37,6 +37,20 @@
             BlueprintName = "The-Norris"
             ReferencedContainer = "container:The-Norris.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "37397DEE25D89342008C2EAC"
+            BuildableName = "Client.framework"
+            BlueprintName = "Client"
+            ReferencedContainer = "container:The-Norris.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3708769425D493DA004E6C10"
+            BuildableName = "Interface.framework"
+            BlueprintName = "Interface"
+            ReferencedContainer = "container:The-Norris.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -46,6 +60,26 @@
                BlueprintIdentifier = "3726982625D1FE4C004FD4F9"
                BuildableName = "The-NorrisTests.xctest"
                BlueprintName = "The-NorrisTests"
+               ReferencedContainer = "container:The-Norris.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "37397DF625D89342008C2EAC"
+               BuildableName = "ClientTests.xctest"
+               BlueprintName = "ClientTests"
+               ReferencedContainer = "container:The-Norris.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3708769C25D493DB004E6C10"
+               BuildableName = "InterfaceTests.xctest"
+               BlueprintName = "InterfaceTests"
                ReferencedContainer = "container:The-Norris.xcodeproj">
             </BuildableReference>
          </TestableReference>
