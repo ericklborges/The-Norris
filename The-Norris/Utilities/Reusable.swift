@@ -36,7 +36,7 @@ extension UITableView {
 
 // MARK: - UICollectionView
 
-extension UICollectionViewCell: Reusable {}
+extension UICollectionReusableView: Reusable {}
 
 extension UICollectionView {
     func register<T: UICollectionViewCell>(_: T.Type) {
@@ -48,5 +48,16 @@ extension UICollectionView {
             return T()
         }
         return cell
+    }
+    
+    func registerSectionHeader<T: UICollectionReusableView>(_: T.Type) {
+        register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
+    }
+    
+    func dequeueReusableSectionHeader<T: UICollectionReusableView>(for indexPath: IndexPath) -> T {
+        guard let sectionHeader = dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            return T()
+        }
+        return sectionHeader
     }
 }
