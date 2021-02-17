@@ -103,8 +103,9 @@ extension FactsListViewController: FactsListViewModelDelegate {
 
 extension FactsListViewController: FactsListViewShareDelegate {
     func factsList(_ view: FactsListView, wantsToShare fact: Fact) {
+        let activityItems = viewModel.activityItems(for: fact)
         let activityController = UIActivityViewController(
-            activityItems: [fact.value],
+            activityItems: activityItems,
             applicationActivities: nil
         )
         present(activityController, animated: true)

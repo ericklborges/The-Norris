@@ -10,8 +10,8 @@ import Foundation
 @testable import The_Norris
 
 extension Fact {
-    static func stub(id: String = "0", value: String = "value", categories: [String] = ["category"]) -> Fact {
-        return Fact(id: id, value: value, categories: categories)
+    static func stub(id: String = "0", value: String = "value", categories: [String] = ["category"], url: String = "") -> Fact {
+        return Fact(id: id, value: value, categories: categories, url: url)
     }
 }
 

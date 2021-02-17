@@ -11,4 +11,5 @@ struct Fact: Codable {
     let id: String
     let value: String
     let categories: [String]
+    let url: String
 }

@@ -75,6 +75,31 @@ class FactsListViewModelSpec: QuickSpec {
                         }
                     }
                 }
+                
+                context("activity items are requested") {
+                    var items: [Any] = []
+                    
+                    context("for a fact with a valid url") {
+                        beforeEach {
+                            let validUrlString = URL.stub().absoluteString
+                            items = sut.activityItems(for: .stub(url: validUrlString))
+                        }
+                        
+                        it("should return an url") {
+                            expect(items.first).to(beAKindOf(URL.self))
+                        }
+                    }
+                    
+                    context("for a fact with an invalid url") {
+                        beforeEach {
+                            items = sut.activityItems(for: .stub(value: "value", url: ""))
+                        }
+                        
+                        it("should return the fact value String") {
+                            expect(items.first as? String) == "value"
+                        }
+                    }
+                }
             }
         }
     }

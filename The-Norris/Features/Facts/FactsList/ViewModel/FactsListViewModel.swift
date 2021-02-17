@@ -72,6 +72,15 @@ class FactsListViewModel {
     var errorMessage: String {
         return "Norris brain could not process yout request, try again later."
     }
+    
+    // MARK: - Methods
+    func activityItems(for fact: Fact) -> [Any] {
+        if let url = URL(string: fact.url) {
+            return [url]
+        } else {
+            return [fact.value]
+        }
+    }
 }
 
 // MARK: - Requests
