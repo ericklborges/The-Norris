@@ -19,7 +19,7 @@ class SplashScreenViewModel {
     weak var delegate: SplashScreenViewModelDelegate?
     
     // MARK: - Init
-    init(api: FactsApiProtocol = FactsApi.make(), categoriesDao: CategoriesDAOProtocol = CategoriesDAO.create()) {
+    init(api: FactsApiProtocol = FactsApi.make(), categoriesDao: CategoriesDAOProtocol = CategoriesDAO.make()) {
         self.api = api
         self.categoriesDao = categoriesDao
     }

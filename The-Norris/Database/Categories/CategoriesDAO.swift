@@ -24,8 +24,8 @@ class CategoriesDAO: CategoriesDAOProtocol {
         self.context = context
     }
     
-    // MARK: - Create
-    static func create() -> CategoriesDAO {
+    // MARK: - Make
+    static func make() -> CategoriesDAO {
         return CategoriesDAO(Database.shared.context)
     }
     
