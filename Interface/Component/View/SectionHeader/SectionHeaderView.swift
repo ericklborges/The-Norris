@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SectionHeaderView: UIView {
+public class SectionHeaderView: UIView {
     
     // MARK: - Views
     private let label: UILabel = {
@@ -24,7 +24,7 @@ class SectionHeaderView: UIView {
     }
     
     // MARK: - Life Cycle
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupViews()
     }
@@ -38,11 +38,11 @@ class SectionHeaderView: UIView {
 // MARK: - Auto Layout
 
 extension SectionHeaderView: ViewCodable {
-    func setupViewHierarchy() {
+    public func setupViewHierarchy() {
         addSubview(label)
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
         label.layout.applyConstraint { make in
             make.topAnchor(equalTo: topAnchor, constant: 8)
             make.bottomAnchor(equalTo: bottomAnchor, constant: -8)
