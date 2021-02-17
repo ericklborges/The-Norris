@@ -97,6 +97,7 @@
 		378717F625D5F23800E9E320 /* FactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378717F525D5F23800E9E320 /* FactView.swift */; };
 		3787180725D5F7A100E9E320 /* FactViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787180625D5F7A100E9E320 /* FactViewSpec.swift */; };
 		37B948B225DC781100C7A715 /* CDCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948B125DC781100C7A715 /* CDCategories.swift */; };
+		37B948BE25DC783300C7A715 /* CategoriesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948BD25DC783300C7A715 /* CategoriesDAO.swift */; };
 		37B948C525DC784A00C7A715 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948C425DC784A00C7A715 /* Database.swift */; };
 		37B948D225DC788800C7A715 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37B948D025DC788800C7A715 /* Database.xcdatamodeld */; };
 		37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */; };
@@ -283,6 +284,7 @@
 		378717F525D5F23800E9E320 /* FactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactView.swift; sourceTree = "<group>"; };
 		3787180625D5F7A100E9E320 /* FactViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewSpec.swift; sourceTree = "<group>"; };
 		37B948B125DC781100C7A715 /* CDCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCategories.swift; sourceTree = "<group>"; };
+		37B948BD25DC783300C7A715 /* CategoriesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDAO.swift; sourceTree = "<group>"; };
 		37B948C425DC784A00C7A715 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		37B948D125DC788800C7A715 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -1076,6 +1078,7 @@
 			children = (
 				37B948D025DC788800C7A715 /* Database.xcdatamodeld */,
 				37B948C425DC784A00C7A715 /* Database.swift */,
+				37B948B025DC780800C7A715 /* Categories */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1084,6 +1087,11 @@
 			isa = PBXGroup;
 			children = (
 				37B948B125DC781100C7A715 /* CDCategories.swift */,
+				37B948BD25DC783300C7A715 /* CategoriesDAO.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1775,6 +1783,7 @@
 				372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */,
 				3708768225D47D5A004E6C10 /* Fact.swift in Sources */,
 				371A5D5B25DC4F8800561C25 /* FactsListViewController.swift in Sources */,
+				37B948BE25DC783300C7A715 /* CategoriesDAO.swift in Sources */,
 				371A5D5425DC4F8800561C25 /* SplashScreenViewModel.swift in Sources */,
 				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
 				371A5D5925DC4F8800561C25 /* FactsEndpoint.swift in Sources */,
