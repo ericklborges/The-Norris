@@ -32,12 +32,12 @@ class CategoriesDAO: CategoriesDAOProtocol {
     // MARK: - Methods
     @discardableResult
     func create(_ categories: [String]) -> Bool {
-        let cdCategories = CDCategories(context: context)
-        cdCategories.value = Set(categories)
-        
         guard getAll() == nil else {
             return update(categories)
         }
+        
+        let cdCategories = CDCategories(context: context)
+        cdCategories.value = Set(categories)
         
         do {
             try context.save()
@@ -53,7 +53,11 @@ class CategoriesDAO: CategoriesDAOProtocol {
         
         do {
             let results = try context.fetch(fetchRequest)
-            results.first?.value = Set(categories)
+            guard let previousCategories = results.first else {
+                return false
+            }
+            
+            previousCategories.value = Set(categories)
             try context.save()
             return true
         } catch {
@@ -66,8 +70,11 @@ class CategoriesDAO: CategoriesDAOProtocol {
         
         do {
             let results = try context.fetch(fetchRequest)
+            guard let categories = results.first else {
+                return nil
+            }
             
-            return results.first?.value.map { $0 }
+            return categories.value.compactMap { $0 }
         } catch {
             return nil
         }
