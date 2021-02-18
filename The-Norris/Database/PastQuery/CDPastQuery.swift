@@ -9,8 +9,14 @@ import CoreData
 
 final class CDPastQuery: NSManagedObject {
     @NSManaged public var value: String
+    @NSManaged public var creationDate: NSDate
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDPastQuery> {
         return NSFetchRequest<CDPastQuery>(entityName: "PastQuery")
+    }
+    
+    override public func awakeFromInsert() {
+        super.awakeFromInsert()
+        creationDate = NSDate()
     }
 }

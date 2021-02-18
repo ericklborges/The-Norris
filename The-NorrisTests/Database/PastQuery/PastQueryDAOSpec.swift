@@ -23,15 +23,20 @@ class PastQueryDAOSpec: QuickSpec {
                     sut = PastQueryDAO.make()
                 }
                 
-                context("and PastTerms are created") {
+                context("and PastQueries are created") {
                     
                     beforeEach {
-                        sut.create("past term")
+                        sut.create("1")
+                        sut.create("2")
+                        sut.create("3")
                     }
                     
-                    it("should retrieve the created PastTerms") {
-                        expect(sut.getAll()?.count) == 1
-                        expect(sut.getAll()?.first) == "past term"
+                    it("should retrieve the created PastQueries") {
+                        expect(sut.getAll()?.count) == 3
+                    }
+                    
+                    it("should order the created PastQueries descending from last created") {
+                        expect(sut.getAll()) == ["3", "2", "1"]
                     }
                 }
             }

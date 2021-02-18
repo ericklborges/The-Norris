@@ -47,7 +47,10 @@ final class PastQueryDAO: PastQueryDAOProtocol {
         
         do {
             let results = try context.fetch(fetchRequest)
-            return results.compactMap { $0.value }
+            
+            return results
+                .sorted { $0.creationDate > $1.creationDate }
+                .compactMap { $0.value }
         } catch {
             return nil
         }
