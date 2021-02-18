@@ -11,7 +11,7 @@ protocol SplashScreenViewModelDelegate: AnyObject {
     func didFinishSetup()
 }
 
-class SplashScreenViewModel {
+final class SplashScreenViewModel {
     
     // MARK: - Parameters
     private let api: FactsApiProtocol
