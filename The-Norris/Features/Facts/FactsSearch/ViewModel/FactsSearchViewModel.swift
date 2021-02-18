@@ -22,7 +22,7 @@ final class FactsSearchViewModel {
         guard let categories = categoriesDao.getAll() else { return [] }
         guard categories.count > 10 else { return categories }
         let suffled = categories.shuffled()
-        let firstTenSuffled = Array(suffled[0...10])
+        let firstTenSuffled = Array(suffled[0..<10])
         return firstTenSuffled
     }
 }

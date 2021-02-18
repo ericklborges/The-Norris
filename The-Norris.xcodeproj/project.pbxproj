@@ -115,6 +115,7 @@
 		37C4DB8025D70A2100F4BD31 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB7F25D70A2100F4BD31 /* MessageView.swift */; };
 		37C4DBA825D731B400F4BD31 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DBA725D731B400F4BD31 /* MessageViewController.swift */; };
 		37E6F05F25DF0C520040717F /* FactsSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6F05E25DF0C520040717F /* FactsSearchViewModel.swift */; };
+		37E6F07B25DF14D00040717F /* FactsSearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6F07A25DF14D00040717F /* FactsSearchViewModelSpec.swift */; };
 		37E7124A25D8581B00E49F68 /* MessageViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */; };
 		37E7124B25D8581B00E49F68 /* MessageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7124925D8581B00E49F68 /* MessageViewSpec.swift */; };
 		37E7125425D8593A00E49F68 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7125325D8593A00E49F68 /* WindowHelper.swift */; };
@@ -313,6 +314,7 @@
 		37C4DB7F25D70A2100F4BD31 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		37C4DBA725D731B400F4BD31 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		37E6F05E25DF0C520040717F /* FactsSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewModel.swift; sourceTree = "<group>"; };
+		37E6F07A25DF14D00040717F /* FactsSearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewModelSpec.swift; sourceTree = "<group>"; };
 		37E7124725D8581B00E49F68 /* MessageViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewControllerSpec.swift; sourceTree = "<group>"; };
 		37E7124925D8581B00E49F68 /* MessageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewSpec.swift; sourceTree = "<group>"; };
 		37E7125325D8593A00E49F68 /* WindowHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
@@ -1049,6 +1051,7 @@
 				374F3FAF25DB20C700290577 /* Controller */,
 				374F3FBC25DB21A100290577 /* Spy */,
 				37B5A68325DDDAEF0019A601 /* View */,
+				37E6F07925DF14BD0040717F /* ViewModel */,
 			);
 			path = FactsSearch;
 			sourceTree = "<group>";
@@ -1220,6 +1223,14 @@
 			isa = PBXGroup;
 			children = (
 				37E6F05E25DF0C520040717F /* FactsSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37E6F07925DF14BD0040717F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37E6F07A25DF14D00040717F /* FactsSearchViewModelSpec.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1883,6 +1894,7 @@
 				3703096E25DDDE810038A20F /* FactsSearchViewSpec.swift in Sources */,
 				3703098825DDE1260038A20F /* UICollectionView+Stub.swift in Sources */,
 				372CF6EB25D9D5F9007A0366 /* FactsListControllerSpec.swift in Sources */,
+				37E6F07B25DF14D00040717F /* FactsSearchViewModelSpec.swift in Sources */,
 				371A5D9825DC593000561C25 /* SplashScreenFlowDelegateSpy.swift in Sources */,
 				374F3F6A25DAF78000290577 /* FactsApiMock.swift in Sources */,
 				374F3F0625DADC7900290577 /* JsonHelper.swift in Sources */,
