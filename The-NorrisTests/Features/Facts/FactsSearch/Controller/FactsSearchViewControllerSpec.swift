@@ -18,11 +18,13 @@ class FactsSearchViewControllerSpec: QuickSpec {
             var sut: FactsSearchViewController!
             var navigationMock: UINavigationController!
             var flowDelegateSpy: FactsSearchViewControllerFlowDelegateSpy!
+            var pastQueryDaoMock: PastQueryDAO!
             
             context("when initialized") {
                 
                 beforeEach {
                     sut = FactsSearchViewController()
+                    pastQueryDaoMock = PastQueryDAO.make()
                     
                     flowDelegateSpy = FactsSearchViewControllerFlowDelegateSpy()
                     sut.flowDelegate = flowDelegateSpy
@@ -38,21 +40,31 @@ class FactsSearchViewControllerSpec: QuickSpec {
                 
                 context("and textFieldShouldReturn(_:) is caled") {
                     beforeEach {
-                        _ = sut.textFieldShouldReturn(UITextField())
+                        let textField = UITextField()
+                        textField.text = "query"
+                        _ = sut.textFieldShouldReturn(textField)
                     }
                     
                     it("should call flowDelegate's factsSearch(_:didEndWith:) method") {
                         expect(flowDelegateSpy.calledFactsSearchDidEndWith) == true
+                    }
+                    
+                    it("should save query in the database") {
+                        expect(pastQueryDaoMock.getAll()) == ["query"]
                     }
                 }
                 
                 context("and didSelectSuggestion(_:) is caled") {
                     beforeEach {
-                        sut.didSelectSuggestion("")
+                        sut.didSelectSuggestion("query")
                     }
                     
                     it("should call flowDelegate's factsSearch(_:didEndWith:) method") {
                         expect(flowDelegateSpy.calledFactsSearchDidEndWith) == true
+                    }
+                    
+                    it("should save query in the database") {
+                        expect(pastQueryDaoMock.getAll()) == ["query"]
                     }
                 }
             }

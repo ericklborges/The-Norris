@@ -7,7 +7,7 @@
 
 import CoreData
 
-class Database {
+final class Database {
     
     static let shared = Database()
     
@@ -36,7 +36,8 @@ class Database {
     }()
     
     func loadPersistentStores() {
-        container.loadPersistentStores { description, error in
+        container.loadPersistentStores { [weak self] description, error in
+            self?.context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             guard let error = error else { return }
             preconditionFailure("Failed to load database with error: \(String(describing: error)), \(description)")
         }

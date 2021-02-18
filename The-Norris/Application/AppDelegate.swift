@@ -14,6 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if !TESTS
         Database.shared.loadPersistentStores()
         #endif
+        
+//        let dao = PastQueryDAO.make()
+//        dao.create("a")
+//        dao.create("b")
+//        dao.create("a")
+//        dao.create("b")
+//        dao.create("a")
+//        dao.create("b")
+//        dao.create("a")
+//        dao.create("b")
+//
+//        print("[debug] \(dao.getAll() ?? [])")
+        
         return true
     }
 

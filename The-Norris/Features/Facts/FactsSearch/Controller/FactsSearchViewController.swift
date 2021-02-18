@@ -78,6 +78,11 @@ final class FactsSearchViewController: UIViewController {
     private func dismissKeyboard() {
         searchBar.resignFirstResponder()
     }
+    
+    private func endSearch(with query: String) {
+        viewModel.save(query: query)
+        flowDelegate?.factsSearch(self, didEndWith: query)
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -92,7 +97,7 @@ extension FactsSearchViewController: UISearchBarDelegate {
 
 extension FactsSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        flowDelegate?.factsSearch(self, didEndWith: textField.text ?? "")
+        endSearch(with: textField.text ?? "")
         return true
     }
 }
@@ -101,6 +106,6 @@ extension FactsSearchViewController: UITextFieldDelegate {
 
 extension FactsSearchViewController: FactsSearchViewDelegate {
     func didSelectSuggestion(_ query: String) {
-        flowDelegate?.factsSearch(self, didEndWith: query)
+        endSearch(with: query)
     }
 }

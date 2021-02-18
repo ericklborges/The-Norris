@@ -93,6 +93,10 @@
 		374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */; };
 		374F3FDE25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F3FDD25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift */; };
 		374F3FEF25DB3D0700290577 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 374F3FEE25DB3D0700290577 /* categories.json */; };
+		3764CC4225DF1C3200C6AA40 /* CDPastQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC4125DF1C3200C6AA40 /* CDPastQuery.swift */; };
+		3764CC4E25DF1D0A00C6AA40 /* PastQueryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC4D25DF1D0A00C6AA40 /* PastQueryDAO.swift */; };
+		3764CC6B25DF21C600C6AA40 /* PastQueryDAOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC6A25DF21C600C6AA40 /* PastQueryDAOSpec.swift */; };
+		3764CC8B25DF2CCF00C6AA40 /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC8A25DF2CCF00C6AA40 /* NSDate+Comparable.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -292,6 +296,10 @@
 		374F3FBD25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsSearchViewControllerFlowDelegateSpy.swift; sourceTree = "<group>"; };
 		374F3FDD25DB2B7600290577 /* FactsListViewShareDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewShareDelegateSpy.swift; sourceTree = "<group>"; };
 		374F3FEE25DB3D0700290577 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		3764CC4125DF1C3200C6AA40 /* CDPastQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPastQuery.swift; sourceTree = "<group>"; };
+		3764CC4D25DF1D0A00C6AA40 /* PastQueryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastQueryDAO.swift; sourceTree = "<group>"; };
+		3764CC6A25DF21C600C6AA40 /* PastQueryDAOSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastQueryDAOSpec.swift; sourceTree = "<group>"; };
+		3764CC8A25DF2CCF00C6AA40 /* NSDate+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparable.swift"; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -435,6 +443,7 @@
 			children = (
 				3708766B25D4726E004E6C10 /* BundleWrapper.swift */,
 				372CF72E25D9DB62007A0366 /* Reusable.swift */,
+				3764CC8A25DF2CCF00C6AA40 /* NSDate+Comparable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1073,6 +1082,23 @@
 			path = Spy;
 			sourceTree = "<group>";
 		};
+		3764CC4025DF1BFF00C6AA40 /* PastQuery */ = {
+			isa = PBXGroup;
+			children = (
+				3764CC4125DF1C3200C6AA40 /* CDPastQuery.swift */,
+				3764CC4D25DF1D0A00C6AA40 /* PastQueryDAO.swift */,
+			);
+			path = PastQuery;
+			sourceTree = "<group>";
+		};
+		3764CC6825DF21A800C6AA40 /* PastQuery */ = {
+			isa = PBXGroup;
+			children = (
+				3764CC6A25DF21C600C6AA40 /* PastQueryDAOSpec.swift */,
+			);
+			path = PastQuery;
+			sourceTree = "<group>";
+		};
 		378717DC25D5EE4600E9E320 /* TermSuggestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,9 +1153,10 @@
 		37B948AF25DC77EC00C7A715 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				37B948D025DC788800C7A715 /* Database.xcdatamodeld */,
 				37B948C425DC784A00C7A715 /* Database.swift */,
+				37B948D025DC788800C7A715 /* Database.xcdatamodeld */,
 				37B948B025DC780800C7A715 /* Categories */,
+				3764CC4025DF1BFF00C6AA40 /* PastQuery */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1148,6 +1175,7 @@
 			children = (
 				37B948E425DC86B500C7A715 /* DatabaseMock.swift */,
 				37B9498B25DC947400C7A715 /* Categories */,
+				3764CC6825DF21A800C6AA40 /* PastQuery */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1863,6 +1891,7 @@
 				37B5A65825DDC38A0019A601 /* FactsSearchView.swift in Sources */,
 				372CF72F25D9DB62007A0366 /* Reusable.swift in Sources */,
 				3708768225D47D5A004E6C10 /* Fact.swift in Sources */,
+				3764CC4E25DF1D0A00C6AA40 /* PastQueryDAO.swift in Sources */,
 				371A5D5B25DC4F8800561C25 /* FactsListViewController.swift in Sources */,
 				37B948BE25DC783300C7A715 /* CategoriesDAO.swift in Sources */,
 				371A5D5425DC4F8800561C25 /* SplashScreenViewModel.swift in Sources */,
@@ -1880,7 +1909,9 @@
 				37B948B225DC781100C7A715 /* CDCategories.swift in Sources */,
 				3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */,
 				3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */,
+				3764CC4225DF1C3200C6AA40 /* CDPastQuery.swift in Sources */,
 				37B5A67825DDCFCA0019A601 /* FactsSearchSectionHeader.swift in Sources */,
+				3764CC8B25DF2CCF00C6AA40 /* NSDate+Comparable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1903,6 +1934,7 @@
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,
 				374F3E8325DAC8F900290577 /* Fact+Stub.swift in Sources */,
 				374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */,
+				3764CC6B25DF21C600C6AA40 /* PastQueryDAOSpec.swift in Sources */,
 				374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */,
 				374F3E7525DAC86A00290577 /* FactsListViewSpec.swift in Sources */,
 				371A5D8C25DC583200561C25 /* SplashScreenViewControllerSpec.swift in Sources */,

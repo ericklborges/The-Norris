@@ -9,7 +9,7 @@ import CoreData
 
 @testable import The_Norris
 
-class DatabaseMock {
+final class DatabaseMock {
     
     static let shared = DatabaseMock()
     
