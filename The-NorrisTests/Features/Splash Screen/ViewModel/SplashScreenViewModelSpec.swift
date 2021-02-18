@@ -16,43 +16,70 @@ class SplashScreenViewModelSpec: QuickSpec {
             
             var sut: SplashScreenViewModel!
             var apiMock: FactsApiMock!
-            var daoSpy: CategoriesDaoSpy!
+            var daoMock: CategoriesDAO!
             var delegateSpy: SplashScreenViewModelDelegateSpy!
             
             context("when initialized") {
                 beforeEach {
                     apiMock = FactsApiMock()
-                    daoSpy = CategoriesDaoSpy()
+                    daoMock = CategoriesDAO.make()
                     delegateSpy = SplashScreenViewModelDelegateSpy()
-                    sut = SplashScreenViewModel(api: apiMock, categoriesDao: daoSpy)
+                    sut = SplashScreenViewModel(api: apiMock, categoriesDao: daoMock)
                     sut.delegate = delegateSpy
                 }
                 
-                context("and it fetchCategories") {
+                context("and fetchCategoriesIfNeeded is called") {
                     
-                    context("and it suceeds") {
-                        beforeEach {
-                            apiMock.shouldFail = false
-                            sut.fetchCategories()
+                    context("and there are no local categories yet") {
+                        
+                        context("and it succeeds") {
+                            beforeEach {
+                                apiMock.shouldFail = false
+                                apiMock.fetchCategoriesReturn = ["test1"]
+                                sut.fetchCategoriesIfNeeded()
+                            }
+                            
+                            it("should fetch categories") {
+                                expect(apiMock.calledFetchCategories) == true
+                            }
+                            
+                            it("should save the received categories in the Database") {
+                                expect(daoMock.getAll) == ["test1"]
+                            }
+                            
+                            it("should call delegate's didFinishSetup method") {
+                                expect(delegateSpy.calledDidFinishSetup) == true
+                            }
                         }
                         
-                        it("should save the received categories in the Database") {
-                            expect(daoSpy.calledCreate) == true
+                        context("and it fails") {
+                            beforeEach {
+                                apiMock.shouldFail = true
+                                sut.fetchCategoriesIfNeeded()
+                            }
+                            
+                            it("should fetch categories") {
+                                expect(apiMock.calledFetchCategories) == true
+                            }
+                            
+                            it("should not save any categories in the Database") {
+                                expect(daoMock.getAll).to(beNil())
+                            }
+                        }
+                    }
+                    
+                    context("and there are local categories already") {
+                        beforeEach {
+                            daoMock.create(["test1"])
+                            sut.fetchCategoriesIfNeeded()
                         }
                         
                         it("should call delegate's didFinishSetup method") {
                             expect(delegateSpy.calledDidFinishSetup) == true
                         }
-                    }
-                    
-                    context("and it fails") {
-                        beforeEach {
-                            apiMock.shouldFail = true
-                            sut.fetchCategories()
-                        }
                         
-                        it("should call delegate's didFinishSetup method") {
-                            expect(delegateSpy.calledDidFinishSetup) == false
+                        it("should not fetch categories") {
+                            expect(apiMock.calledFetchFacts) == false
                         }
                     }
                 }

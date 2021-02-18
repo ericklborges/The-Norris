@@ -109,7 +109,6 @@
 		37B948C525DC784A00C7A715 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948C425DC784A00C7A715 /* Database.swift */; };
 		37B948D225DC788800C7A715 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37B948D025DC788800C7A715 /* Database.xcdatamodeld */; };
 		37B948E525DC86B500C7A715 /* DatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B948E425DC86B500C7A715 /* DatabaseMock.swift */; };
-		37B9498D25DC948800C7A715 /* CategoriesDaoSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9498C25DC948800C7A715 /* CategoriesDaoSpy.swift */; };
 		37B94A7325DCA34300C7A715 /* CategoriesDAOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B94A7225DCA34300C7A715 /* CategoriesDAOSpec.swift */; };
 		37C4DB1125D6C0DC00F4BD31 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */; };
 		37C4DB1A25D6C1CB00F4BD31 /* PrimaryButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */; };
@@ -307,7 +306,6 @@
 		37B948C425DC784A00C7A715 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		37B948D125DC788800C7A715 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		37B948E425DC86B500C7A715 /* DatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMock.swift; sourceTree = "<group>"; };
-		37B9498C25DC948800C7A715 /* CategoriesDaoSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDaoSpy.swift; sourceTree = "<group>"; };
 		37B94A7225DCA34300C7A715 /* CategoriesDAOSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDAOSpec.swift; sourceTree = "<group>"; };
 		37C4DB1025D6C0DC00F4BD31 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		37C4DB1925D6C1CB00F4BD31 /* PrimaryButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonSpec.swift; sourceTree = "<group>"; };
@@ -1148,18 +1146,9 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
-		37B9498A25DC947000C7A715 /* Spy */ = {
-			isa = PBXGroup;
-			children = (
-				37B9498C25DC948800C7A715 /* CategoriesDaoSpy.swift */,
-			);
-			path = Spy;
-			sourceTree = "<group>";
-		};
 		37B9498B25DC947400C7A715 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				37B9498A25DC947000C7A715 /* Spy */,
 				37B94A7225DCA34300C7A715 /* CategoriesDAOSpec.swift */,
 			);
 			path = Categories;
@@ -1885,7 +1874,6 @@
 				371A5D9825DC593000561C25 /* SplashScreenFlowDelegateSpy.swift in Sources */,
 				374F3F6A25DAF78000290577 /* FactsApiMock.swift in Sources */,
 				374F3F0625DADC7900290577 /* JsonHelper.swift in Sources */,
-				37B9498D25DC948800C7A715 /* CategoriesDaoSpy.swift in Sources */,
 				3703097525DDDEE40038A20F /* Array+CategoriesStub.swift in Sources */,
 				372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */,
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,

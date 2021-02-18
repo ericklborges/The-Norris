@@ -30,7 +30,7 @@ class SplashScreenViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         viewModel.delegate = self
-        viewModel.fetchCategories()
+        viewModel.fetchCategoriesIfNeeded()
     }
     
     @available(*, unavailable)
