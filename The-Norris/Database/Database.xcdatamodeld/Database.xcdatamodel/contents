@@ -3,7 +3,16 @@
     <entity name="Categories" representedClassName=".CDCategories" syncable="YES">
         <attribute name="value" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer"/>
     </entity>
+    <entity name="PastQuery" representedClassName=".CDPastQuery" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="value"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <elements>
         <element name="Categories" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="PastQuery" positionX="-63" positionY="-9" width="128" height="58"/>
     </elements>
 </model>
