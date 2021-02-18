@@ -11,10 +11,12 @@ final class FactsSearchViewModel {
     
     // MARK: - Parameters
     private let categoriesDao: CategoriesDAOProtocol
+    private let pastQueryDao: PastQueryDAOProtocol
     
     // MARK: - Init
-    init(categoriesDao: CategoriesDAOProtocol = CategoriesDAO.make()) {
+    init(categoriesDao: CategoriesDAOProtocol = CategoriesDAO.make(), pastQueryDao: PastQueryDAOProtocol = PastQueryDAO.make()) {
         self.categoriesDao = categoriesDao
+        self.pastQueryDao = pastQueryDao
     }
     
     // MARK: - Computed Properties
@@ -24,5 +26,14 @@ final class FactsSearchViewModel {
         let suffled = categories.shuffled()
         let firstTenSuffled = Array(suffled[0..<10])
         return firstTenSuffled
+    }
+    
+    var pastQueries: [String] {
+        return pastQueryDao.getAll() ?? []
+    }
+    
+    // MARK: - Methods
+    func save(query: String) {
+        pastQueryDao.create(query)
     }
 }
