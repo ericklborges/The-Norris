@@ -12,7 +12,7 @@ protocol FactsSearchViewDelegate: AnyObject {
     func didSelectSuggestion(_ query: String)
 }
 
-class FactsSearchView: UIView {
+final class FactsSearchView: UIView {
     
     // MARK: - Views
     private lazy var collectionView: UICollectionView = {
@@ -86,9 +86,9 @@ extension FactsSearchView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
         let sectionHeader: FactsSearchSectionHeader = collectionView.dequeueReusableSectionHeader(for: indexPath)
         sectionHeader.setup(title: "Suggestions")
+        sectionHeader.isHidden = categories.isEmpty
         return sectionHeader
     }
 }

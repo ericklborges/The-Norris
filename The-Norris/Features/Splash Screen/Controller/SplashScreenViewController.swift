@@ -12,7 +12,7 @@ protocol SplashScreenFlowDelegate: AnyObject {
     func splashScreenDidFinishSetup(_ controller: SplashScreenViewController)
 }
 
-class SplashScreenViewController: UIViewController {
+final class SplashScreenViewController: UIViewController {
     
     // MARK: - Views
     private let activityIndicator: UIActivityIndicatorView = {
@@ -30,7 +30,6 @@ class SplashScreenViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         viewModel.delegate = self
-        viewModel.fetchCategories()
     }
     
     @available(*, unavailable)
@@ -42,6 +41,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
         addLaunchScreen()
         addActivityIndicator()
+        viewModel.fetchCategoriesIfNeeded()
     }
     
     // MARK: - Setup

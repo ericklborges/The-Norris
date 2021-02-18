@@ -24,16 +24,34 @@ class FactsSearchViewSpec: QuickSpec {
                     sut = FactsSearchView()
                     delegateSpy = FactsSearchViewDelegateSpy()
                     sut.delegate = delegateSpy
-                    sut.setup(categories: .categoriesStub())
-                    sut.frame.size = CGSize(width: 375, height: 812)
                 }
                 
-                it("should layout itself properly") {
-                    expect(sut) == snapshot("FactsSearchView_Layout")
+                context("and it is setup with categories") {
+                    
+                    beforeEach {
+                        sut.setup(categories: .categoriesStub())
+                        sut.frame.size = CGSize(width: 375, height: 812)
+                    }
+                    
+                    it("should layout itself properly") {
+                        expect(sut) == snapshot("FactsSearchView_Layout")
+                    }
+                }
+                
+                context("and it is setup with an empty array of categories") {
+                    beforeEach {
+                        sut.setup(categories: [])
+                        sut.frame.size = CGSize(width: 375, height: 812)
+                    }
+                    
+                    it("should layout itself properly") {
+                        expect(sut) == snapshot("FactsSearchView_Layout_Empty_Categories")
+                    }
                 }
                 
                 context("and collectionView selects an item") {
                     beforeEach {
+                        sut.setup(categories: .categoriesStub())
                         sut.collectionView(.stub(), didSelectItemAt: IndexPath(row: 0, section: 0))
                     }
                     

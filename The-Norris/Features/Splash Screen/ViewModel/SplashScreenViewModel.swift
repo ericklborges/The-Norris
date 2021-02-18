@@ -11,7 +11,7 @@ protocol SplashScreenViewModelDelegate: AnyObject {
     func didFinishSetup()
 }
 
-class SplashScreenViewModel {
+final class SplashScreenViewModel {
     
     // MARK: - Parameters
     private let api: FactsApiProtocol
@@ -23,16 +23,25 @@ class SplashScreenViewModel {
         self.api = api
         self.categoriesDao = categoriesDao
     }
+    
+    // MARK: - Meethods
+    func fetchCategoriesIfNeeded() {
+        guard categoriesDao.getAll() == nil else {
+            delegate?.didFinishSetup()
+            return
+        }
+        fetchCategories()
+    }
 }
 
 // MARK: - Requests
 extension SplashScreenViewModel {
-    func fetchCategories() {
+    private func fetchCategories() {
         api.fetchCategories { [weak self] result in
+            self?.delegate?.didFinishSetup()
             switch result {
             case let .success(categories):
                 self?.categoriesDao.create(categories)
-                self?.delegate?.didFinishSetup()
             default:
                 return
             }
