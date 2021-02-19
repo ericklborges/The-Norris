@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class TermSuggestionViewSpec: QuickSpec {
+final class TermSuggestionViewSpec: QuickSpec {
     override func spec() {
         
         describe("TermSuggestionView") {
@@ -22,7 +22,7 @@ class TermSuggestionViewSpec: QuickSpec {
                 beforeEach {
                     sut = TermSuggestionView()
                     sut.text = "Term Suggestion"
-                    sut.setDynamicSize(forHeight: 44.0)
+                    sut.setDynamicSize()
                 }
                 
                 context("and offset separator is set") {
