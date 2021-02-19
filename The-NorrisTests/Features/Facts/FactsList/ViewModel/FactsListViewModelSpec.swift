@@ -74,6 +74,18 @@ class FactsListViewModelSpec: QuickSpec {
                             expect(delegateSpy.calledDidStartRequest) == true
                         }
                     }
+                    
+                    context("and fetchFactsRetry() is called") {
+                        beforeEach {
+                            sut.fetchFacts(query: "lastQuery")
+                            apiMock.passedQuery = nil
+                            sut.fetchFactsRetry()
+                        }
+                        
+                        it("should fetchFacts with the same query as last time") {
+                            expect(apiMock.passedQuery) == "lastQuery"
+                        }
+                    }
                 }
                 
                 context("activity items are requested") {
