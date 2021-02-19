@@ -22,7 +22,7 @@ final class TermSuggestionViewSpec: QuickSpec {
                 beforeEach {
                     sut = TermSuggestionView()
                     sut.text = "Term Suggestion"
-                    sut.setDynamicSize()
+                    sut.setDynamicSize(forWidth: 390.0)
                 }
                 
                 context("and offset separator is set") {

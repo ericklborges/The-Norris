@@ -71,6 +71,9 @@ final class FactsSearchViewController: UIViewController {
     private func setupFactsSearchView() {
         let categories = viewModel.categories
         factsSearchView.setup(categories: categories)
+        
+        let pastQueries = viewModel.pastQueries
+        factsSearchView.setup(pastQueries: pastQueries)
     }
     
     // MARK: - Actions

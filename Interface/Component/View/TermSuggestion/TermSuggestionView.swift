@@ -82,7 +82,7 @@ extension TermSuggestionView: ViewCodable {
     
     public func setupConstraints() {
         layout.applyConstraint { make in
-            make.widthAnchor(equalTo: UIScreen.main.bounds.width)
+            make.widthAnchor(equalTo: UIScreen.main.bounds.width, priority: .defaultLow)
         }
         
         label.layout.applyConstraint { make in
@@ -94,7 +94,6 @@ extension TermSuggestionView: ViewCodable {
         arrowIcon.layout.applyConstraint { make in
             make.widthAnchor(equalTo: 20)
             make.heightAnchor(equalTo: 20)
-            make.leadingAnchor(equalTo: label.trailingAnchor, constant: 8)
             make.trailingAnchor(equalTo: trailingAnchor, constant: -16)
             make.centerYAnchor(equalTo: centerYAnchor)
         }

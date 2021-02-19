@@ -198,14 +198,5 @@ extension FactsSearchView {
                 return 0.0
             }
         }
-        
-        var estimatedSize: CGSize {
-            switch self {
-            case .suggestion:
-                return UICollectionViewFlowLayout.automaticSize
-            case .pastQuery:
-                return CGSize(width: UIScreen.main.bounds.width, height: 44.0)
-            }
-        }
     }
 }
