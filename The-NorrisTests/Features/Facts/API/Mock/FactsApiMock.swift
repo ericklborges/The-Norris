@@ -14,6 +14,7 @@ class FactsApiMock: FactsApiProtocol {
     private(set) var calledFetchCategories: Bool = false
     private(set) var calledFetchFacts: Bool = false
     
+    var passedQuery: String?
     var shouldFail: Bool = false
     var fetchFactsReturn: FactsQuery = .stub()
     var fetchCategoriesReturn: [String] = []
@@ -31,6 +32,7 @@ class FactsApiMock: FactsApiProtocol {
     
     func fetchFacts(query: String, completion: @escaping (Result<FactsQuery, ClientError>) -> Void) {
         calledFetchFacts = true
+        passedQuery = query
         if shouldFail {
             completion(.failure(error))
         } else {

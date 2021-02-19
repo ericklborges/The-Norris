@@ -19,6 +19,7 @@ class FactsListViewModel {
     // MARK: - Parameters
     private let api: FactsApiProtocol
     private var factsQuery: FactsQuery?
+    private var lastQuery: String?
     weak var delegate: FactsListViewModelDelegate?
     
     // MARK: - Init
@@ -85,7 +86,13 @@ class FactsListViewModel {
 
 // MARK: - Requests
 extension FactsListViewModel {
+    func fetchFactsRetry() {
+        guard let query = lastQuery else { return }
+        fetchFacts(query: query)
+    }
+    
     func fetchFacts(query: String) {
+        lastQuery = query
         delegate?.didStartRequest()
         api.fetchFacts(query: query) { [weak self] result in
             switch result {

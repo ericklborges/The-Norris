@@ -144,7 +144,9 @@ private extension FactsListViewController {
     }
     
     func setErrorState() {
-        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: {})
+        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
+            self?.viewModel.fetchFactsRetry()
+        })
         
         state = .error(
             image: Symbol.clockArrowCirclepath.image(pointSize: 48),
