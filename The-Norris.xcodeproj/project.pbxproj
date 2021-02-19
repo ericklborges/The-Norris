@@ -97,6 +97,7 @@
 		3764CC4E25DF1D0A00C6AA40 /* PastQueryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC4D25DF1D0A00C6AA40 /* PastQueryDAO.swift */; };
 		3764CC6B25DF21C600C6AA40 /* PastQueryDAOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC6A25DF21C600C6AA40 /* PastQueryDAOSpec.swift */; };
 		3764CC8B25DF2CCF00C6AA40 /* NSDate+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC8A25DF2CCF00C6AA40 /* NSDate+Comparable.swift */; };
+		3764CC9225DF322200C6AA40 /* PastQueryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764CC9125DF322200C6AA40 /* PastQueryCollectionViewCell.swift */; };
 		376C821625D5CBC600965BC6 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */; };
 		376C821B25D5D1DB00965BC6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376C821A25D5D1DB00965BC6 /* Configuration.swift */; };
 		376C822D25D5D3A700965BC6 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 376C822C25D5D3A700965BC6 /* ReferenceImages */; };
@@ -300,6 +301,7 @@
 		3764CC4D25DF1D0A00C6AA40 /* PastQueryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastQueryDAO.swift; sourceTree = "<group>"; };
 		3764CC6A25DF21C600C6AA40 /* PastQueryDAOSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastQueryDAOSpec.swift; sourceTree = "<group>"; };
 		3764CC8A25DF2CCF00C6AA40 /* NSDate+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Comparable.swift"; sourceTree = "<group>"; };
+		3764CC9125DF322200C6AA40 /* PastQueryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastQueryCollectionViewCell.swift; sourceTree = "<group>"; };
 		376C821525D5CBC600965BC6 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Boilerplate.swift"; path = "/Users/erick.lozano.borges/Git/The-Norris/Interface/Extensions/UIColor+Boilerplate.swift"; sourceTree = "<absolute>"; };
 		376C821A25D5D1DB00965BC6 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		376C822C25D5D3A700965BC6 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
@@ -1137,6 +1139,7 @@
 				37B5A66B25DDC9680019A601 /* CategoryCollectionViewCell.swift */,
 				37B5A67725DDCFCA0019A601 /* FactsSearchSectionHeader.swift */,
 				37B5A65725DDC38A0019A601 /* FactsSearchView.swift */,
+				3764CC9125DF322200C6AA40 /* PastQueryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1906,6 +1909,7 @@
 				37B948D225DC788800C7A715 /* Database.xcdatamodeld in Sources */,
 				371A5D5725DC4F8800561C25 /* FactsSearchViewController.swift in Sources */,
 				371A5D5D25DC4F8800561C25 /* FactsListView.swift in Sources */,
+				3764CC9225DF322200C6AA40 /* PastQueryCollectionViewCell.swift in Sources */,
 				37B948B225DC781100C7A715 /* CDCategories.swift in Sources */,
 				3708767125D47BB7004E6C10 /* BaseUrl.swift in Sources */,
 				3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */,
