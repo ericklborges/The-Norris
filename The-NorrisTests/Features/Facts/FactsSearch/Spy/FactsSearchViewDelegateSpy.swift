@@ -9,7 +9,7 @@ import Foundation
 
 @testable import The_Norris
 
-class FactsSearchViewDelegateSpy: FactsSearchViewDelegate {
+final class FactsSearchViewDelegateSpy: FactsSearchViewDelegate {
     private(set) var calledDidSelectSuggestion: Bool = false
     
     func didSelectSuggestion(_ query: String) {

@@ -57,6 +57,13 @@ final class FactsSearchView: UIView {
             self?.collectionView.reloadData()
         }
     }
+    
+    func setup(pastQueries: [String]) {
+        self.pastQueries = pastQueries
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -92,8 +99,7 @@ extension FactsSearchView: UICollectionViewDelegateFlowLayout {
 
 extension FactsSearchView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        let sections = [!categories.isEmpty, !pastQueries.isEmpty].filter { $0 }
-        return sections.count
+        return Section.allCases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -162,7 +168,7 @@ extension FactsSearchView: ViewCodable {
 
 extension FactsSearchView {
     
-    enum Section: Int {
+    enum Section: Int, CaseIterable {
         case suggestion = 0
         case pastQuery = 1
         

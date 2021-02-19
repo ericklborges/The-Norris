@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactsSearchViewSpec: QuickSpec {
+final class FactsSearchViewSpec: QuickSpec {
     override func spec() {
         
         describe("FactsSearchView") {
@@ -26,11 +26,12 @@ class FactsSearchViewSpec: QuickSpec {
                     sut.delegate = delegateSpy
                 }
                 
-                context("and it is setup with categories") {
+                context("and it is setup with both categories and past queries") {
                     
                     beforeEach {
                         sut.setup(categories: .categoriesStub())
-                        sut.frame.size = CGSize(width: 375, height: 812)
+                        sut.setup(pastQueries: .pastQueriesStub())
+                        sut.frame.size = CGSize(width: 390.0, height: 844.0)
                     }
                     
                     it("should layout itself properly") {
@@ -41,11 +42,36 @@ class FactsSearchViewSpec: QuickSpec {
                 context("and it is setup with an empty array of categories") {
                     beforeEach {
                         sut.setup(categories: [])
-                        sut.frame.size = CGSize(width: 375, height: 812)
+                        sut.setup(pastQueries: .pastQueriesStub())
+                        sut.frame.size = CGSize(width: 390.0, height: 844.0)
                     }
                     
                     it("should layout itself properly") {
                         expect(sut) == snapshot("FactsSearchView_Layout_Empty_Categories")
+                    }
+                }
+                
+                context("and it is setup with an empty array of past queries") {
+                    beforeEach {
+                        sut.setup(categories: .categoriesStub())
+                        sut.setup(pastQueries: [])
+                        sut.frame.size = CGSize(width: 390.0, height: 844.0)
+                    }
+                    
+                    it("should layout itself properly") {
+                        expect(sut) == snapshot("FactsSearchView_Layout_Empty_Past_Queries")
+                    }
+                }
+                
+                context("and it is setup with an empty array for both past queries and categories") {
+                    beforeEach {
+                        sut.setup(categories: [])
+                        sut.setup(pastQueries: [])
+                        sut.frame.size = CGSize(width: 390.0, height: 844.0)
+                    }
+                    
+                    it("should layout itself properly") {
+                        expect(sut) == snapshot("FactsSearchView_Layout_Empty_Past_Queries_And_Categories")
                     }
                 }
                 
