@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TermSuggestionView: UIView {
+public final class TermSuggestionView: UIView {
     
     // MARK: - Views
     private let label: UILabel = {
@@ -48,7 +48,7 @@ class TermSuggestionView: UIView {
     }
     
     // MARK: - Life Cycle
-    init() {
+    public init() {
         super.init(frame: .zero)
         setupViews()
     }
@@ -71,7 +71,7 @@ class TermSuggestionView: UIView {
 // MARK: - Auto Layout
 
 extension TermSuggestionView: ViewCodable {
-    func setupViewHierarchy() {
+    public func setupViewHierarchy() {
         addSubview(label)
         addSubview(arrowIcon)
         
@@ -80,7 +80,11 @@ extension TermSuggestionView: ViewCodable {
         separatorStack.addArrangedSubview(separatorView)
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
+        layout.applyConstraint { make in
+            make.widthAnchor(equalTo: UIScreen.main.bounds.width)
+        }
+        
         label.layout.applyConstraint { make in
             make.topAnchor(equalTo: topAnchor, constant: 12)
             make.bottomAnchor(equalTo: bottomAnchor, constant: -12)
