@@ -48,7 +48,6 @@ final class FactsListViewController: StateViewController {
         super.viewDidLoad()
         setupNavigation()
         viewModel.delegate = self
-        setFirstTimeEmptyState()
     }
     
     override func loadView() {
@@ -81,21 +80,21 @@ final class FactsListViewController: StateViewController {
 // MARK: - FactsListViewModelDelegate
 
 extension FactsListViewController: FactsListViewModelDelegate {
-    func didChange(facts: [Fact]) {
+    func didReceive(facts: [Fact]) {
         factsView.setup(facts: facts)
         state = .main
     }
     
-    func didStartRequest() {
-        setLoadingState()
+    func didStartLoading(title: String, message: String) {
+        setLoadingState(title: title, message: message)
     }
     
-    func didReceiveEmptyResult() {
-        setEmptyState()
+    func didReceiveError(image: UIImage, title: String, message: String, buttonTitle: String) {
+        setErrorState(image: image, title: title, message: message, buttonTitle: buttonTitle)
     }
     
-    func didReceiveError() {
-        setErrorState()
+    func didReceiveEmptyResult(title: String, message: String, buttonTitle: String) {
+        setEmptyState(title: title, message: message, buttonTitle: buttonTitle)
     }
 }
 
@@ -115,44 +114,23 @@ extension FactsListViewController: FactsListViewShareDelegate {
 // MARK: - Presentation State
 
 private extension FactsListViewController {
-    func setLoadingState() {
-        state = .loading(title: viewModel.loadingTitle, message: viewModel.loadingMessage)
+    func setLoadingState(title: String, message: String) {
+        state = .loading(title: title, message: message)
     }
     
-    func setFirstTimeEmptyState() {
-        let buttonConfiguration = ButtonConfiguration(title: viewModel.firstTimeEmptyButtonTitle, action: { [weak self] in
+    func setEmptyState(title: String, message: String, buttonTitle: String) {
+        let buttonConfiguration = ButtonConfiguration(title: buttonTitle, action: { [weak self] in
             self?.showSearch()
         })
         
-        state = .empty(
-            title: viewModel.firstTimeEmptyTitle,
-            message: viewModel.firstTimeEmptyMessage,
-            buttonConfiguration: buttonConfiguration
-        )
+        state = .empty(title: title, message: message, buttonConfiguration: buttonConfiguration)
     }
     
-    func setEmptyState() {
-        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
-            self?.showSearch()
-        })
-        
-        state = .empty(
-            title: viewModel.emptyTitle,
-            message: viewModel.emptyMessage,
-            buttonConfiguration: buttonConfiguration
-        )
-    }
-    
-    func setErrorState() {
-        let buttonConfiguration = ButtonConfiguration(title: viewModel.buttonTitle, action: { [weak self] in
+    func setErrorState(image: UIImage, title: String, message: String, buttonTitle: String) {
+        let buttonConfiguration = ButtonConfiguration(title: buttonTitle, action: { [weak self] in
             self?.viewModel.fetchFactsRetry()
         })
         
-        state = .error(
-            image: Symbol.clockArrowCirclepath.image(pointSize: 48),
-            title: viewModel.errorTitle,
-            message: viewModel.errorMessage,
-            buttonConfiguration: buttonConfiguration
-        )
+        state = .error(image: image, title: title, message: message, buttonConfiguration: buttonConfiguration)
     }
 }
