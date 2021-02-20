@@ -48,7 +48,6 @@ final class FactsSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
-        setupKeyboardHideGesture()
         setupFactsSearchView()
     }
     
@@ -62,12 +61,6 @@ final class FactsSearchViewController: UIViewController {
         searchBar.becomeFirstResponder()
     }
     
-    private func setupKeyboardHideGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tapGesture.cancelsTouchesInView = false
-        view.addGestureRecognizer(tapGesture)
-    }
-    
     private func setupFactsSearchView() {
         let categories = viewModel.categories
         factsSearchView.setup(categories: categories)
@@ -77,11 +70,6 @@ final class FactsSearchViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @objc
-    private func dismissKeyboard() {
-        searchBar.resignFirstResponder()
-    }
-    
     private func endSearch(with query: String) {
         viewModel.save(query: query)
         flowDelegate?.factsSearch(self, didEndWith: query)
