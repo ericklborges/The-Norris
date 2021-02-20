@@ -19,7 +19,7 @@ final class FactsApiMock: FactsApiProtocol {
     var fetchFactsReturn: FactsQuery = .stub()
     var fetchCategoriesReturn: [String] = []
     
-    private let error = ClientError(reason: .api("FactsApiMock should sFail"), statusCode: 99)
+    var error = ClientError(reason: .api("FactsApiMock should Fail"), statusCode: 99)
     
     func fetchCategories(completion: @escaping (Result<[String], ClientError>) -> Void) {
         calledFetchCategories = true
