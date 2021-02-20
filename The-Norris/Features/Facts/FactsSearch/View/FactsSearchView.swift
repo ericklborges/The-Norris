@@ -10,6 +10,7 @@ import Interface
 
 protocol FactsSearchViewDelegate: AnyObject {
     func didSelectSuggestion(_ query: String)
+    func contentInset() -> UIEdgeInsets
 }
 
 final class FactsSearchView: UIView {
@@ -55,6 +56,7 @@ final class FactsSearchView: UIView {
         self.categories = categories
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
+            self?.updateCollectionContentInset()
         }
     }
     
@@ -62,7 +64,14 @@ final class FactsSearchView: UIView {
         self.pastQueries = pastQueries
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
+            self?.updateCollectionContentInset()
         }
+    }
+    
+    private func updateCollectionContentInset() {
+        guard let contentInset = delegate?.contentInset() else { return }
+        collectionView.contentInset = contentInset
+        collectionView.scrollIndicatorInsets = contentInset
     }
 }
 

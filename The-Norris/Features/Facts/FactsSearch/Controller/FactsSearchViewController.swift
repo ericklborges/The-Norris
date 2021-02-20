@@ -32,12 +32,14 @@ final class FactsSearchViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel: FactsSearchViewModel
+    private var scrollViewContentInset: UIEdgeInsets = .zero
     weak var flowDelegate: FactsSearchViewControllerFlowDelegate?
     
     // MARK: - Life Cycle
     init(viewModel: FactsSearchViewModel = FactsSearchViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        addKeyboardShowNotification()
     }
 
     @available(*, unavailable)
@@ -56,6 +58,11 @@ final class FactsSearchViewController: UIViewController {
     }
     
     // MARK: - Setup
+    private func addKeyboardShowNotification() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
     private func setupSearchBar() {
         navigationItem.titleView = searchBar
         searchBar.becomeFirstResponder()
@@ -70,6 +77,14 @@ final class FactsSearchViewController: UIViewController {
     }
     
     // MARK: - Actions
+    @objc
+    private func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        scrollViewContentInset.bottom = keyboardViewEndFrame.height - view.safeAreaInsets.bottom
+    }
+    
     private func endSearch(with query: String) {
         viewModel.save(query: query)
         flowDelegate?.factsSearch(self, didEndWith: query)
@@ -98,5 +113,9 @@ extension FactsSearchViewController: UITextFieldDelegate {
 extension FactsSearchViewController: FactsSearchViewDelegate {
     func didSelectSuggestion(_ query: String) {
         endSearch(with: query)
+    }
+    
+    func contentInset() -> UIEdgeInsets {
+        return scrollViewContentInset
     }
 }
