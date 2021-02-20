@@ -40,6 +40,7 @@
 		371E423525D9966100C3D8BF /* HTTPURLResponse+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E423425D9966100C3D8BF /* HTTPURLResponse+Stub.swift */; };
 		371E423D25D9975400C3D8BF /* ClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E423C25D9975400C3D8BF /* ClientSpec.swift */; };
 		371E424925D999C300C3D8BF /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E424825D999C300C3D8BF /* URLSessionDataTaskMock.swift */; };
+		371EBB8C25E18F3A00AC778C /* FactDAOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371EBB8B25E18F3A00AC778C /* FactDAOSpec.swift */; };
 		3726981525D1FE45004FD4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981425D1FE45004FD4F9 /* AppDelegate.swift */; };
 		3726981725D1FE45004FD4F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726981625D1FE45004FD4F9 /* SceneDelegate.swift */; };
 		3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3726981D25D1FE4B004FD4F9 /* Assets.xcassets */; };
@@ -242,6 +243,7 @@
 		371E423425D9966100C3D8BF /* HTTPURLResponse+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Stub.swift"; sourceTree = "<group>"; };
 		371E423C25D9975400C3D8BF /* ClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSpec.swift; sourceTree = "<group>"; };
 		371E424825D999C300C3D8BF /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		371EBB8B25E18F3A00AC778C /* FactDAOSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDAOSpec.swift; sourceTree = "<group>"; };
 		3726981125D1FE45004FD4F9 /* The-Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726981425D1FE45004FD4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3726981625D1FE45004FD4F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -684,6 +686,14 @@
 				371E423C25D9975400C3D8BF /* ClientSpec.swift */,
 			);
 			path = ProjectClient;
+			sourceTree = "<group>";
+		};
+		371EBB8A25E18F2D00AC778C /* Fact */ = {
+			isa = PBXGroup;
+			children = (
+				371EBB8B25E18F3A00AC778C /* FactDAOSpec.swift */,
+			);
+			path = Fact;
 			sourceTree = "<group>";
 		};
 		3726980825D1FE45004FD4F9 = {
@@ -1195,6 +1205,7 @@
 			children = (
 				37B948E425DC86B500C7A715 /* DatabaseMock.swift */,
 				37B9498B25DC947400C7A715 /* Categories */,
+				371EBB8A25E18F2D00AC778C /* Fact */,
 				3764CC6825DF21A800C6AA40 /* PastQuery */,
 			);
 			path = Database;
@@ -1956,6 +1967,7 @@
 				372CF70725D9D790007A0366 /* WindowHelper.swift in Sources */,
 				372CF6D125D9D39B007A0366 /* FactsFlowControllerSpec.swift in Sources */,
 				374F3E8325DAC8F900290577 /* Fact+Stub.swift in Sources */,
+				371EBB8C25E18F3A00AC778C /* FactDAOSpec.swift in Sources */,
 				374F3F2B25DAE62100290577 /* URL+Stub.swift in Sources */,
 				3764CC6B25DF21C600C6AA40 /* PastQueryDAOSpec.swift in Sources */,
 				374F3EB225DACD5400290577 /* FactTableViewCellSpec.swift in Sources */,

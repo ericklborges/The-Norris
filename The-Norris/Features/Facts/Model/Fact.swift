@@ -13,6 +13,13 @@ struct Fact: Codable {
     let categories: [String]
     let url: String
     
+    init(id: String, value: String, categories: [String], url: String) {
+        self.id = id
+        self.value = value
+        self.categories = categories
+        self.url = url
+    }
+    
     init(cdFact: CDFact) {
         self.id = cdFact.id
         self.value = cdFact.value
