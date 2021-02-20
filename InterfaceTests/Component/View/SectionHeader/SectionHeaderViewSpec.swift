@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class SectionHeaderSpec: QuickSpec {
+final class SectionHeaderSpec: QuickSpec {
     override func spec() {
         
         describe("SectionHeader") {

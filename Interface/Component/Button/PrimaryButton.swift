@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PrimaryButton: UIButton {
+final class PrimaryButton: UIButton {
     
     // MARK: - Life Cycle
     init() {

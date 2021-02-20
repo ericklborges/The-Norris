@@ -13,7 +13,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class SeparatorViewSpec: QuickSpec {
+final class SeparatorViewSpec: QuickSpec {
     override func spec() {
         
         describe("SeparatorView") {

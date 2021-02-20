@@ -8,7 +8,7 @@
 import UIKit
 import Interface
 
-class AppFlowController: UIViewController {
+final class AppFlowController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

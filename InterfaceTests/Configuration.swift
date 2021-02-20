@@ -8,7 +8,7 @@
 import Quick
 import Nimble_Snapshots
 
-class InterfaceTestsConfiguration: QuickConfiguration {
+final class InterfaceTestsConfiguration: QuickConfiguration {
     override class func configure(_ configuration: Configuration) {
         
         configuration.beforeSuite {

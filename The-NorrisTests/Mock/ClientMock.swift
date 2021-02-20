@@ -8,7 +8,7 @@
 import Client
 import Foundation
 
-class ClientMock: ClientProtocol {
+final class ClientMock: ClientProtocol {
     var shouldFail: Bool = false
     var mockFileName: String = ""
     

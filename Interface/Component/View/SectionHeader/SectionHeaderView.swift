@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SectionHeaderView: UIView {
+public final class SectionHeaderView: UIView {
     
     // MARK: - Views
     private let label: UILabel = {

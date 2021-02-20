@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactsListViewSpec: QuickSpec {
+final class FactsListViewSpec: QuickSpec {
     override func spec() {
         describe("FactsListView") {
             

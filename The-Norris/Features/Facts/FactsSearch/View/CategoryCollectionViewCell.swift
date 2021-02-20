@@ -8,7 +8,7 @@
 import UIKit
 import Interface
 
-class CategoryCollectionViewCell: UICollectionViewCell {
+final class CategoryCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Views
     private let tagView = TagView()

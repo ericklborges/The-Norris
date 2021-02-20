@@ -7,7 +7,7 @@
 
 @testable import The_Norris
 
-class FactsListViewShareDelegateSpy: FactsListViewShareDelegate {
+final class FactsListViewShareDelegateSpy: FactsListViewShareDelegate {
     
     private(set) var calledFactsListWantsToShare: Bool = false
     

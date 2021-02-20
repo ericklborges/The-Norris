@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class MessageViewControllerSpec: QuickSpec {
+final class MessageViewControllerSpec: QuickSpec {
     override func spec() {
         
         describe("MessageViewController") {

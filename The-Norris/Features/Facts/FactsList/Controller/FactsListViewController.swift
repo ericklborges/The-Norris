@@ -12,7 +12,7 @@ protocol FactsListViewControllerFlowDelegate: AnyObject {
     func factsListShowsSearch(_ controller: FactsListViewController)
 }
 
-class FactsListViewController: StateViewController {
+final class FactsListViewController: StateViewController {
     
     // MARK: - Views
     private lazy var factsView: FactsListView = {

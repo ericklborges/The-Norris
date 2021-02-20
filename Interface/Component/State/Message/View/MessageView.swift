@@ -9,7 +9,7 @@ import UIKit
 
 public typealias ButtonConfiguration = (title: String, action: () -> Void)
 
-class MessageView: UIView {
+final class MessageView: UIView {
         
     // MARK: - Views
     private let stackView: UIStackView = {

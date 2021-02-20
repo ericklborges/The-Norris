@@ -12,7 +12,7 @@ protocol FactTableViewCellActionDelegate: AnyObject {
     func factCell(_ cell: FactTableViewCell, buttonTappedWith fact: Fact)
 }
 
-class FactTableViewCell: UITableViewCell {
+final class FactTableViewCell: UITableViewCell {
     
     // MARK: - Views
     private let factView = FactView()

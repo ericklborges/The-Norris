@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageViewController: UIViewController {
+final class MessageViewController: UIViewController {
     
     // MARK: - Views
     let messageView = MessageView()

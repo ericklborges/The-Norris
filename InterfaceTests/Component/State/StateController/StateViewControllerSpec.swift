@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class StateViewControllerSpec: QuickSpec {
+final class StateViewControllerSpec: QuickSpec {
     override func spec() {
         
         describe("StateViewController") {

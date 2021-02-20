@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class PastQueryDAOSpec: QuickSpec {
+final class PastQueryDAOSpec: QuickSpec {
     override func spec() {
         
         describe("PastQueryDAO") {

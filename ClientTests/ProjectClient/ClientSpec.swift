@@ -14,7 +14,7 @@ private struct Object: Decodable {
     var boolean: Bool
 }
 
-class ClientSpec: QuickSpec {
+final class ClientSpec: QuickSpec {
     override func spec() {
     
         describe("Client") {

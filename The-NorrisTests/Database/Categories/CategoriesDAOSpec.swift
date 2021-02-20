@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class CategoriesDAOSpec: QuickSpec {
+final class CategoriesDAOSpec: QuickSpec {
     override func spec() {
         
         describe("CategoriesDAO") {

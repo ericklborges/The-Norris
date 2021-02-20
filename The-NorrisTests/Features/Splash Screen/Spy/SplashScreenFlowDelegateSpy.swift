@@ -9,7 +9,7 @@ import Foundation
 
 @testable import The_Norris
 
-class SplashScreenFlowDelegateSpy: SplashScreenFlowDelegate {
+final class SplashScreenFlowDelegateSpy: SplashScreenFlowDelegate {
     
     private(set) var calledSplashScreenDidFinishSetup: Bool = false
     

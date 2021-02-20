@@ -10,7 +10,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class The_NorrisTestsConfiguration: QuickConfiguration {
+final class The_NorrisTestsConfiguration: QuickConfiguration {
     override class func configure(_ configuration: Configuration) {
         
         configuration.beforeSuite {

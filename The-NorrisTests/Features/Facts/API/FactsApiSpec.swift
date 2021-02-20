@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class FactsApiSpec: QuickSpec {
+final class FactsApiSpec: QuickSpec {
     override func spec() {
         describe("FactsApi") {
             

@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class SplashScreenViewModelSpec: QuickSpec {
+final class SplashScreenViewModelSpec: QuickSpec {
     override func spec() {
         describe("SplashScreenViewModel") {
             

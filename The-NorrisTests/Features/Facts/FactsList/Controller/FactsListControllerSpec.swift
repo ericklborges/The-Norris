@@ -12,7 +12,7 @@ import Interface
 
 @testable import The_Norris
 
-class FactsListViewControllerSpec: QuickSpec {
+final class FactsListViewControllerSpec: QuickSpec {
     override func spec() {
         describe("FactsListViewController") {
             

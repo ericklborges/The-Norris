@@ -9,7 +9,7 @@ import Client
 
 @testable import The_Norris
 
-class FactsApiMock: FactsApiProtocol {
+final class FactsApiMock: FactsApiProtocol {
     
     private(set) var calledFetchCategories: Bool = false
     private(set) var calledFetchFacts: Bool = false

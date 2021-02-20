@@ -7,7 +7,7 @@
 
 @testable import The_Norris
 
-class FactsListViewModelDelegateSpy: FactsListViewModelDelegate {
+final class FactsListViewModelDelegateSpy: FactsListViewModelDelegate {
     
     private(set) var calledDidChangeFacts: Bool = false
     private(set) var calledDidStartRequest: Bool = false

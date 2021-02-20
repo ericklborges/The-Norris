@@ -9,7 +9,7 @@ import Foundation
 
 @testable import The_Norris
 
-class SplashScreenViewModelDelegateSpy: SplashScreenViewModelDelegate {
+final class SplashScreenViewModelDelegateSpy: SplashScreenViewModelDelegate {
     
     private(set) var calledDidFinishSetup: Bool = false
     

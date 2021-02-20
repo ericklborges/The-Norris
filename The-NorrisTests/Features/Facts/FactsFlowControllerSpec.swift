@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class FactsFlowControllerSpec: QuickSpec {
+final class FactsFlowControllerSpec: QuickSpec {
     override func spec() {
         describe("FactsFlowController") {
             

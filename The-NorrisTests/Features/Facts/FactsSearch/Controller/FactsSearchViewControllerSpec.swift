@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactsSearchViewControllerSpec: QuickSpec {
+final class FactsSearchViewControllerSpec: QuickSpec {
     override func spec() {
         describe("FactsSearchViewController") {
             

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class JsonHelper {
+final class JsonHelper {
     static func getDataFrom<T: Decodable>(json file: String) -> T? {
         guard let path = Bundle(for: JsonHelper.self).path(forResource: file, ofType: "json") else { return nil }
         

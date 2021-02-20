@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class FactView: UIView {
+public final class FactView: UIView {
     
     // MARK: - Views
     private let factLabel: UILabel = {

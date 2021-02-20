@@ -12,7 +12,7 @@ protocol FactsListViewShareDelegate: AnyObject {
     func factsList(_ view: FactsListView, wantsToShare fact: Fact)
 }
 
-class FactsListView: UIView {
+final class FactsListView: UIView {
     
     // MARK: - Views
     private lazy var tableView: UITableView = {

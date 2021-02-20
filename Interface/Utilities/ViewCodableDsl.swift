@@ -16,7 +16,7 @@ public extension UIView {
     }
 }
 
-public class ViewCodableDsl {
+public final class ViewCodableDsl {
 
     let view: UIView
 

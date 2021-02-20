@@ -10,7 +10,7 @@ import Nimble
 
 @testable import The_Norris
 
-class FactsListViewModelSpec: QuickSpec {
+final class FactsListViewModelSpec: QuickSpec {
     override func spec() {
         describe("FactsListViewModel") {
             

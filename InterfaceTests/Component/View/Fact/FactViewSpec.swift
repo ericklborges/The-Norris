@@ -13,7 +13,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class FactViewSpec: QuickSpec {
+final class FactViewSpec: QuickSpec {
     override func spec() {
         
         describe("FactView") {

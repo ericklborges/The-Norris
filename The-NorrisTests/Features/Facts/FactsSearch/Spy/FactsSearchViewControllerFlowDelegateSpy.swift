@@ -7,7 +7,7 @@
 
 @testable import The_Norris
 
-class FactsSearchViewControllerFlowDelegateSpy: FactsSearchViewControllerFlowDelegate {
+final class FactsSearchViewControllerFlowDelegateSpy: FactsSearchViewControllerFlowDelegate {
     
     private(set) var calledFactsSearchDidEndWith: Bool = false
     

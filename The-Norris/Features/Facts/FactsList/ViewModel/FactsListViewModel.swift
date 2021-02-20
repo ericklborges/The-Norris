@@ -14,7 +14,7 @@ protocol FactsListViewModelDelegate: AnyObject {
     func didReceiveError()
 }
 
-class FactsListViewModel {
+final class FactsListViewModel {
     
     // MARK: - Parameters
     private let api: FactsApiProtocol

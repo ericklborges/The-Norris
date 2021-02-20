@@ -8,7 +8,7 @@
 import UIKit
 import Interface
 
-class FactsSearchSectionHeader: UICollectionReusableView {
+final class FactsSearchSectionHeader: UICollectionReusableView {
     
     // MARK: - Views
     let sectionHeaderView = SectionHeaderView()

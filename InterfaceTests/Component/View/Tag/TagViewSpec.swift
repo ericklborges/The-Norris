@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class TagViewSpec: QuickSpec {
+final class TagViewSpec: QuickSpec {
     override func spec() {
         
         describe("TagView") {

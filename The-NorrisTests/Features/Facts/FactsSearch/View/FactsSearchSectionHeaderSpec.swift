@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactsSearchSectionHeaderSpec: QuickSpec {
+final class FactsSearchSectionHeaderSpec: QuickSpec {
     override func spec() {
         
         describe("FactsSearchSectionHeader") {

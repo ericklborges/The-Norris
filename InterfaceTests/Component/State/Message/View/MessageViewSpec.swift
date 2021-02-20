@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class MessageViewSpec: QuickSpec {
+final class MessageViewSpec: QuickSpec {
     override func spec() {
         
         describe("MessageView") {

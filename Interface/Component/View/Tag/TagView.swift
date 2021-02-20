@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class TagView: UIView {
+public final class TagView: UIView {
     
     // MARK: - Views
     private let label: UILabel = {

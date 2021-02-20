@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class FactTableViewCellSpec: QuickSpec {
+final class FactTableViewCellSpec: QuickSpec {
     override func spec() {
         describe("FactTableViewCell") {
             

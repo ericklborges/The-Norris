@@ -12,7 +12,7 @@ protocol FactsApiProtocol {
     func fetchFacts(query: String, completion: @escaping (Result<FactsQuery, ClientError>) -> Void)
 }
 
-class FactsApi: FactsApiProtocol {
+final class FactsApi: FactsApiProtocol {
     
     // MARK: - Parameters
     private let client: ClientProtocol

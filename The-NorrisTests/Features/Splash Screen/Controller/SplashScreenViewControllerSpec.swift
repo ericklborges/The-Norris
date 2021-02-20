@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import The_Norris
 
-class SplashScreenViewControllerSpec: QuickSpec {
+final class SplashScreenViewControllerSpec: QuickSpec {
     override func spec() {
         describe("SplashScreenViewController") {
             

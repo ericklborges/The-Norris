@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WindowHelper {
+final class WindowHelper {
     
     static var testWindow = UIWindow(frame: UIScreen.main.bounds)
     

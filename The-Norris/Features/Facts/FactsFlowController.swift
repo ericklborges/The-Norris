@@ -8,7 +8,7 @@
 import UIKit
 import Interface
 
-class FactsFlowController: UIViewController {
+final class FactsFlowController: UIViewController {
     
     // MARK: - Parameters
     private lazy var navigation = UINavigationController()

@@ -11,7 +11,7 @@ import Nimble_Snapshots
 
 @testable import Interface
 
-class PrimaryButtonSpec: QuickSpec {
+final class PrimaryButtonSpec: QuickSpec {
     override func spec() {
         
         describe("PrimaryButton") {

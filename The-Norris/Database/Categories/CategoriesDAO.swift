@@ -14,7 +14,7 @@ protocol CategoriesDAOProtocol {
     func getAll() -> [String]?
 }
 
-class CategoriesDAO: CategoriesDAOProtocol {
+final class CategoriesDAO: CategoriesDAOProtocol {
     
     // MARK: - Parameters
     private let context: NSManagedObjectContext
