@@ -71,6 +71,7 @@
 		37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */; };
 		3731906725E170360019A487 /* CDFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731906625E170360019A487 /* CDFact.swift */; };
 		3731907325E17ADD0019A487 /* FactDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731907225E17ADD0019A487 /* FactDAO.swift */; };
+		3731904D25E16D060019A487 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731904C25E16D060019A487 /* NetworkMonitor.swift */; };
 		37397DF825D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
 		37397E0125D89342008C2EAC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 37397DF125D89342008C2EAC /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37397E0425D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
@@ -282,6 +283,7 @@
 		37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
 		3731906625E170360019A487 /* CDFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFact.swift; sourceTree = "<group>"; };
 		3731907225E17ADD0019A487 /* FactDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDAO.swift; sourceTree = "<group>"; };
+		3731904C25E16D060019A487 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		37397DEF25D89342008C2EAC /* Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37397DF125D89342008C2EAC /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		37397DF225D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -956,6 +958,14 @@
 			path = Fact;
 			sourceTree = "<group>";
 		};
+		3731904A25E16CEC0019A487 /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				3731904C25E16D060019A487 /* NetworkMonitor.swift */,
+			);
+			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
 		37397DF025D89342008C2EAC /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +974,7 @@
 				37397E4225D89527008C2EAC /* Base */,
 				37397E4625D89527008C2EAC /* Factory */,
 				371E41D325D981BD00C3D8BF /* Logger */,
+				3731904A25E16CEC0019A487 /* NetworkMonitor */,
 				37397E4825D89527008C2EAC /* ProjectClient */,
 			);
 			path = Client;
@@ -2033,6 +2044,7 @@
 				37397E4B25D89527008C2EAC /* HTTPMethod.swift in Sources */,
 				37397E4E25D89527008C2EAC /* Client.swift in Sources */,
 				37397E4A25D89527008C2EAC /* ClientProtocol.swift in Sources */,
+				3731904D25E16D060019A487 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
