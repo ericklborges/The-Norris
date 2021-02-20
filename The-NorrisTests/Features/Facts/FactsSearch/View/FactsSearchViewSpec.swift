@@ -37,6 +37,10 @@ final class FactsSearchViewSpec: QuickSpec {
                     it("should layout itself properly") {
                         expect(sut) == snapshot("FactsSearchView_Layout")
                     }
+                    
+                    it("should ask the delegate for the scroll view content insets") {
+                        expect(delegateSpy.calledContentInset).toEventually(beTrue())
+                    }
                 }
                 
                 context("and it is setup with an empty array of categories") {
@@ -48,6 +52,10 @@ final class FactsSearchViewSpec: QuickSpec {
                     
                     it("should layout itself properly") {
                         expect(sut) == snapshot("FactsSearchView_Layout_Empty_Categories")
+                    }
+                    
+                    it("should ask the delegate for the scroll view content insets") {
+                        expect(delegateSpy.calledContentInset).toEventually(beTrue())
                     }
                 }
                 
@@ -61,6 +69,10 @@ final class FactsSearchViewSpec: QuickSpec {
                     it("should layout itself properly") {
                         expect(sut) == snapshot("FactsSearchView_Layout_Empty_Past_Queries")
                     }
+                    
+                    it("should ask the delegate for the scroll view content insets") {
+                        expect(delegateSpy.calledContentInset).toEventually(beTrue())
+                    }
                 }
                 
                 context("and it is setup with an empty array for both past queries and categories") {
@@ -72,6 +84,10 @@ final class FactsSearchViewSpec: QuickSpec {
                     
                     it("should layout itself properly") {
                         expect(sut) == snapshot("FactsSearchView_Layout_Empty_Past_Queries_And_Categories")
+                    }
+                    
+                    it("should ask the delegate for the scroll view content insets") {
+                        expect(delegateSpy.calledContentInset).toEventually(beTrue())
                     }
                 }
                 
