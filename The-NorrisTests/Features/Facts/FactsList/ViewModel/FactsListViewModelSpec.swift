@@ -15,75 +15,84 @@ final class FactsListViewModelSpec: QuickSpec {
         describe("FactsListViewModel") {
             
             var sut: FactsListViewModel!
-            var apiMock: FactsApiMock!
+            var serviceSpy: FactsListServiceSpy!
             var delegateSpy: FactsListViewModelDelegateSpy!
             
             context("when initialized") {
                 beforeEach {
-                    apiMock = FactsApiMock()
+                    serviceSpy = FactsListServiceSpy()
+                    sut = FactsListViewModel(service: serviceSpy)
                     delegateSpy = FactsListViewModelDelegateSpy()
-                    sut = FactsListViewModel(api: apiMock)
                     sut.delegate = delegateSpy
                 }
                 
-                context("facts are fetched") {
+                context("and fetchFacts(query:) is called") {
+                    beforeEach {
+                        sut.fetchFacts(query: "")
+                    }
                     
-                    context("and it returns a successful factsQuery") {
+                    it("should call service's fetchFacts(query:) method") {
+                        expect(serviceSpy.calledFetchFacts) == true
+                    }
+                    
+                    it("should call delegate's didStartLoading() method") {
+                        expect(delegateSpy.calledDidStartLoading) == true
+                    }
+                }
+                
+                context("and fetchFactsRetry() is called") {
+                    beforeEach {
+                        sut.fetchFactsRetry()
+                    }
+                    
+                    it("should call service's fetchFacts(query:) method") {
+                        expect(serviceSpy.calledFetchFactsRetry) == true
+                    }
+                    
+                    it("should call delegate's didStartLoading() method") {
+                        expect(delegateSpy.calledDidStartLoading) == true
+                    }
+                }
+                
+                context("FactsListServiceDelegate") {
+                    
+                    context("didReceive(facts:) is called") {
                         beforeEach {
-                            apiMock.shouldFail = false
-                            apiMock.fetchFactsReturn = .stub(total: 2, result: [.stub(), .stub()])
-                            sut.fetchFacts(query: "")
+                            sut.didReceive(facts: [])
                         }
                         
-                        it("should call delegate's didChange(facts:) method") {
-                            expect(delegateSpy.calledDidChangeFacts) == true
-                        }
-                        
-                        it("should call delegate's didStartRequest() method") {
-                            expect(delegateSpy.calledDidStartRequest) == true
+                        it("should call delegate's didReceive(facts:) method") {
+                            expect(delegateSpy.calledDidReceiveFacts) == true
                         }
                     }
                     
-                    context("and it returns a factsQuery with zero results") {
+                    context("didReceiveError() is called") {
                         beforeEach {
-                            apiMock.shouldFail = false
-                            apiMock.fetchFactsReturn = .stub(total: 0, result: [])
-                            sut.fetchFacts(query: "")
+                            sut.didReceiveError()
                         }
                         
-                        it("should call delegate's didReceiveEmptyResult() method") {
-                            expect(delegateSpy.calledDidReceiveEmptyResult) == true
-                        }
-                        
-                        it("should call delegate's didStartRequest() method") {
-                            expect(delegateSpy.calledDidStartRequest) == true
-                        }
-                    }
-                    
-                    context("and it returns an error") {
-                        beforeEach {
-                            apiMock.shouldFail = true
-                            sut.fetchFacts(query: "")
-                        }
-                        
-                        it("should call delegate's didReceiveError() method") {
+                        it("should call delegate's didReceiveError(image:title:message:buttonTitle:) method") {
                             expect(delegateSpy.calledDidReceiveError) == true
                         }
+                    }
+                    
+                    context("didReceiveEmptyResult() is called") {
+                        beforeEach {
+                            sut.didReceiveEmptyResult()
+                        }
                         
-                        it("should call delegate's didStartRequest() method") {
-                            expect(delegateSpy.calledDidStartRequest) == true
+                        it("should call delegate's didReceiveEmptyResult(title:message:buttonTitle:) method") {
+                            expect(delegateSpy.calledDidReceiveEmptyResult) == true
                         }
                     }
                     
-                    context("and fetchFactsRetry() is called") {
+                    context("didReceiveInvalidQuery() is called") {
                         beforeEach {
-                            sut.fetchFacts(query: "lastQuery")
-                            apiMock.passedQuery = nil
-                            sut.fetchFactsRetry()
+                            sut.didReceiveInvalidQuery()
                         }
                         
-                        it("should fetchFacts with the same query as last time") {
-                            expect(apiMock.passedQuery) == "lastQuery"
+                        it("should call delegate's didReceiveEmptyResult(title:message:buttonTitle:) method") {
+                            expect(delegateSpy.calledDidReceiveEmptyResult) == true
                         }
                     }
                 }

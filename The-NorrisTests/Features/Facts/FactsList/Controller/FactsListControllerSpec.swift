@@ -32,26 +32,11 @@ final class FactsListViewControllerSpec: QuickSpec {
                     expect(sut.navigationController?.navigationBar) == snapshot("FactsListViewController_Navigation_Layout")
                 }
                 
-                context("and view loads") {
-                    beforeEach {
-                        sut.beginAppearanceTransition(true, animated: false)
-                        sut.endAppearanceTransition()
-                    }
-                    
-                    it("should set it's state to empty") {
-                        expect(sut.state) == .empty(title: "", message: nil, buttonConfiguration: nil)
-                    }
-                    
-                    it("should layout itself properly") {
-                        expect(navigationMock).toEventually(haveValidSnapshot(named: "FactsListViewController_Layout_First_Time_Empty"))
-                    }
-                }
-                
                 context("FactsListViewModelDelegate") {
                     
-                    context("when didChange(facts:) is called") {
+                    context("when didReceive(facts:) is called") {
                         beforeEach {
-                            sut.didChange(facts: .stub())
+                            sut.didReceive(facts: .stub())
                         }
                         
                         it("should set it's state to main") {
@@ -63,9 +48,9 @@ final class FactsListViewControllerSpec: QuickSpec {
                         }
                     }
                     
-                    context("when didStartRequest() is called") {
+                    context("when didStartLoading(title:message:) is called") {
                         beforeEach {
-                            sut.didStartRequest()
+                            sut.didStartLoading(title: "Loading title", message: "Loading message")
                         }
                         
                         it("should set it's state to main") {
@@ -77,9 +62,9 @@ final class FactsListViewControllerSpec: QuickSpec {
                         }
                     }
                     
-                    context("when didReceiveEmptyResult() is called") {
+                    context("when didReceiveEmptyResult(title:message:buttonTitle:) is called") {
                         beforeEach {
-                            sut.didReceiveEmptyResult()
+                            sut.didReceiveEmptyResult(title: "Empty title", message: "Empty message", buttonTitle: "Empty button")
                         }
                         
                         it("should set it's state to main") {
@@ -91,9 +76,9 @@ final class FactsListViewControllerSpec: QuickSpec {
                         }
                     }
                     
-                    context("when didReceiveError is called") {
+                    context("when didReceiveError(image:title:message:buttonTitle:) is called") {
                         beforeEach {
-                            sut.didReceiveError()
+                            sut.didReceiveError(image: Symbol.clockArrowCirclepath.image(pointSize: 48), title: "Error title", message: "Error message", buttonTitle: "Error Button")
                         }
                         
                         it("should set it's state to main") {
