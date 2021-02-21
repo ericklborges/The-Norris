@@ -69,9 +69,9 @@
 		37316BA325D4A96B005C4688 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BA225D4A96B005C4688 /* TagView.swift */; };
 		37316BAD25D4ACE2005C4688 /* TagViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */; };
 		37316BB925D4AF3F005C4688 /* UIView+DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */; };
+		3731904D25E16D060019A487 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731904C25E16D060019A487 /* NetworkMonitor.swift */; };
 		3731906725E170360019A487 /* CDFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731906625E170360019A487 /* CDFact.swift */; };
 		3731907325E17ADD0019A487 /* FactDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731907225E17ADD0019A487 /* FactDAO.swift */; };
-		3731904D25E16D060019A487 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731904C25E16D060019A487 /* NetworkMonitor.swift */; };
 		37397DF825D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
 		37397E0125D89342008C2EAC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 37397DF125D89342008C2EAC /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37397E0425D89342008C2EAC /* Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37397DEF25D89342008C2EAC /* Client.framework */; };
@@ -136,6 +136,7 @@
 		37FE98DA25E1B16800573165 /* FactsListServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE98D925E1B16800573165 /* FactsListServiceSpec.swift */; };
 		37FE98F625E1B17500573165 /* FactsListServiceDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE98F525E1B17500573165 /* FactsListServiceDelegateSpy.swift */; };
 		37FE98FD25E1B63C00573165 /* FactsListServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE98FC25E1B63C00573165 /* FactsListServiceSpy.swift */; };
+		37FE990D25E2F28E00573165 /* FactDAOMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE990C25E2F28E00573165 /* FactDAOMock.swift */; };
 		51C6E1BBB5F98A11984FF8AC /* Pods_Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AEB24467F8B8C432EE52A1 /* Pods_Interface.framework */; };
 		65D22378C59535E1C0FD718E /* Pods_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284EC777DC7195340F402F09 /* Pods_Client.framework */; };
 		8F4BC96A72B650E6279F3288 /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1DBB98AA7E259554B97F6F /* Pods_InterfaceTests.framework */; };
@@ -281,9 +282,9 @@
 		37316BA225D4A96B005C4688 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		37316BAC25D4ACE2005C4688 /* TagViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewSpec.swift; sourceTree = "<group>"; };
 		37316BB825D4AF3F005C4688 /* UIView+DynamicSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DynamicSize.swift"; sourceTree = "<group>"; };
+		3731904C25E16D060019A487 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3731906625E170360019A487 /* CDFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFact.swift; sourceTree = "<group>"; };
 		3731907225E17ADD0019A487 /* FactDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDAO.swift; sourceTree = "<group>"; };
-		3731904C25E16D060019A487 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		37397DEF25D89342008C2EAC /* Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37397DF125D89342008C2EAC /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		37397DF225D89342008C2EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -349,6 +350,7 @@
 		37FE98D925E1B16800573165 /* FactsListServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListServiceSpec.swift; sourceTree = "<group>"; };
 		37FE98F525E1B17500573165 /* FactsListServiceDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListServiceDelegateSpy.swift; sourceTree = "<group>"; };
 		37FE98FC25E1B63C00573165 /* FactsListServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListServiceSpy.swift; sourceTree = "<group>"; };
+		37FE990C25E2F28E00573165 /* FactDAOMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDAOMock.swift; sourceTree = "<group>"; };
 		3E1DBB98AA7E259554B97F6F /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8C310614FCF36D119C7B0A /* Pods-Interface.tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface.tests.xcconfig"; path = "Target Support Files/Pods-Interface/Pods-Interface.tests.xcconfig"; sourceTree = "<group>"; };
 		41AEB24467F8B8C432EE52A1 /* Pods_Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -949,6 +951,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3731904A25E16CEC0019A487 /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				3731904C25E16D060019A487 /* NetworkMonitor.swift */,
+			);
+			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
 		3731906525E170270019A487 /* Fact */ = {
 			isa = PBXGroup;
 			children = (
@@ -956,14 +966,6 @@
 				3731907225E17ADD0019A487 /* FactDAO.swift */,
 			);
 			path = Fact;
-			sourceTree = "<group>";
-		};
-		3731904A25E16CEC0019A487 /* NetworkMonitor */ = {
-			isa = PBXGroup;
-			children = (
-				3731904C25E16D060019A487 /* NetworkMonitor.swift */,
-			);
-			path = NetworkMonitor;
 			sourceTree = "<group>";
 		};
 		37397DF025D89342008C2EAC /* Client */ = {
@@ -1237,6 +1239,7 @@
 				37B948E425DC86B500C7A715 /* DatabaseMock.swift */,
 				37B9498B25DC947400C7A715 /* Categories */,
 				371EBB8A25E18F2D00AC778C /* Fact */,
+				37FE990B25E2F27400573165 /* Mock */,
 				3764CC6825DF21A800C6AA40 /* PastQuery */,
 			);
 			path = Database;
@@ -1380,6 +1383,14 @@
 				37FE98D925E1B16800573165 /* FactsListServiceSpec.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		37FE990B25E2F27400573165 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				37FE990C25E2F28E00573165 /* FactDAOMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		D86A796943F053FD164B860E /* Pods */ = {
@@ -2025,6 +2036,7 @@
 				371A5D7F25DC56FC00561C25 /* SplashScreenViewModelDelegateSpy.swift in Sources */,
 				371A5D7225DC56B700561C25 /* SplashScreenViewModelSpec.swift in Sources */,
 				374F3FBE25DB21A900290577 /* FactsSearchViewControllerFlowDelegateSpy.swift in Sources */,
+				37FE990D25E2F28E00573165 /* FactDAOMock.swift in Sources */,
 				374F3F7725DAF7D200290577 /* FactsQuery+Stub.swift in Sources */,
 				374F3EE625DAD51B00290577 /* FactsApiSpec.swift in Sources */,
 				372CF6A725D9D00E007A0366 /* AppFlowControllerSpec.swift in Sources */,

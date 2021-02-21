@@ -12,8 +12,13 @@ class FactsListServiceDelegateSpy: FactsListServiceDelegate {
     private(set) var calledDidReceiveError: Bool = false
     private(set) var calledDidReceiveEmptyResult: Bool = false
     private(set) var calledDidReceiveInvalidQuery: Bool = false
+    private(set) var calledDidReceiveDatabaseIsEmpty: Bool = false
+    private(set) var calledDidReceiveEmptyResultFromDatabase: Bool = false
+    
+    private(set) var receivedFacts: [Fact]?
     
     func didReceive(facts: [Fact]) {
+        receivedFacts = facts
         calledDidReceiveFacts = true
     }
     
@@ -27,5 +32,13 @@ class FactsListServiceDelegateSpy: FactsListServiceDelegate {
     
     func didReceiveInvalidQuery() {
         calledDidReceiveInvalidQuery = true
+    }
+    
+    func didReceiveDatabaseIsEmpty() {
+        calledDidReceiveDatabaseIsEmpty = true
+    }
+    
+    func didReceiveEmptyResultFromDatabase() {
+        calledDidReceiveEmptyResultFromDatabase = true
     }
 }

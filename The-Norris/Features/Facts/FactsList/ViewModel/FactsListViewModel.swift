@@ -48,6 +48,7 @@ final class FactsListViewModel {
 }
 
 // MARK: - Requests
+
 extension FactsListViewModel {
     func fetchFactsRetry() {
         startLoading()
@@ -58,7 +59,13 @@ extension FactsListViewModel {
         startLoading()
         service.fetchFacts(query: query)
     }
+    
+    func fetchTenRandomfacts() {
+        service.fetchTenRandomFacts()
+    }
 }
+
+// MARK: - FactsListServiceDelegate
 
 extension FactsListViewModel: FactsListServiceDelegate {
     func didReceive(facts: [Fact]) {
@@ -83,10 +90,26 @@ extension FactsListViewModel: FactsListServiceDelegate {
     }
     
     func didReceiveEmptyResult() {
-        // TODO: menssagem diferente para vazio da primeira vez
         delegate?.didReceiveEmptyResult(
             title: "Nothing found",
             message: "Unfortunatly Norris did not create a word for that. Yet.",
+            buttonTitle: "Try again"
+        )
+    }
+    
+    func didReceiveDatabaseIsEmpty() {
+        delegate?.didReceiveEmptyResult(
+            title: "First time around?",
+            message: "Start looking for the most interesting facts about Norris you've ever seen.",
+            buttonTitle: "Tap to search"
+        )
+    }
+    
+    func didReceiveEmptyResultFromDatabase() {
+        delegate?.didReceiveError(
+            image: Symbol.wifiSlash.image(pointSize: 48),
+            title: "No connection",
+            message: "Norris can share information telepathically, but you don't. Go get some internet.",
             buttonTitle: "Try again"
         )
     }
