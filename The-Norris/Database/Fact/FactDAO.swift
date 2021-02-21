@@ -10,6 +10,7 @@ import CoreData
 
 protocol FactDAOProtocol {
     @discardableResult func create(_ fact: Fact, for query: String) -> Bool
+    func getAll(for query: String) -> [Fact]?
     func getAll() -> [Fact]?
 }
 
@@ -46,11 +47,25 @@ final class FactDAO: FactDAOProtocol {
         }
     }
     
+    func getAll(for query: String) -> [Fact]? {
+        let fetchRequest: NSFetchRequest<CDFact> = CDFact.fetchRequest()
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            let filtedResults = results.filter { $0.queries.contains(query) }
+            guard !filtedResults.isEmpty else { return nil }
+            return filtedResults.map { Fact(cdFact: $0) }
+        } catch {
+            return nil
+        }
+    }
+    
     func getAll() -> [Fact]? {
         let fetchRequest: NSFetchRequest<CDFact> = CDFact.fetchRequest()
         
         do {
             let results = try context.fetch(fetchRequest)
+            guard !results.isEmpty else { return nil }
             return results.map { Fact(cdFact: $0) }
         } catch {
             return nil
