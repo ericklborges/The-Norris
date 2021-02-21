@@ -57,7 +57,7 @@ final class FactsListViewController: StateViewController {
     
     // MARK: - Setup
     private func setupNavigation() {
-        title = "Facts"
+        title = L10n.FactsList.title
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.rightBarButtonItem = searchButton
     }

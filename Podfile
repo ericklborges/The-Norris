@@ -7,6 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 def commom_dependencies
   pod 'SwiftLint', '0.42.0'
+  pod 'SwiftGen', '6.4.0'
 end
 
 def commom_test_dependencies

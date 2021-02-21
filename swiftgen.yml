@@ -1,0 +1,9 @@
+input_dir: The-Norris/Features
+output_dir: The-Norris/Resources
+
+strings:
+    inputs:
+      - Facts/Facts.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Strings.swift

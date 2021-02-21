@@ -184,9 +184,9 @@ extension FactsSearchView {
         var title: String {
             switch self {
             case .suggestion:
-                return "Suggestions"
+                return L10n.FactsSearch.Section.Suggestions.title
             case .pastQuery:
-                return "Past searches"
+                return L10n.FactsSearch.Section.PastQueries.title
             }
         }
         
