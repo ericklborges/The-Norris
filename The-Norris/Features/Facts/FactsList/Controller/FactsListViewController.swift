@@ -48,6 +48,7 @@ final class FactsListViewController: StateViewController {
         super.viewDidLoad()
         setupNavigation()
         viewModel.delegate = self
+        viewModel.fetchTenRandomfacts()
     }
     
     override func loadView() {

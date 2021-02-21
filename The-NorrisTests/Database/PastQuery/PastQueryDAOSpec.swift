@@ -23,8 +23,8 @@ final class PastQueryDAOSpec: QuickSpec {
                     sut = PastQueryDAO.make()
                 }
                 
-                context("and PastQueries are created") {
-                    
+                context("and past queries are created") {
+
                     beforeEach {
                         sut.create("1")
                         sut.create("2")
@@ -37,6 +37,27 @@ final class PastQueryDAOSpec: QuickSpec {
                     
                     it("should order the created PastQueries descending from last created") {
                         expect(sut.getAll()) == ["3", "2", "1"]
+                    }
+                }
+                
+                context("and all past queries are request") {
+                    
+                    context("and there are past queries persisted") {
+                        
+                        beforeEach {
+                            sut.create("1")
+                            sut.create("2")
+                        }
+
+                        it("should return past queries") {
+                            expect(sut.getAll()?.count) == 2
+                        }
+                    }
+
+                    context("without past queries persisted") {
+                        it("should return nil") {
+                            expect(sut.getAll()).to(beNil())
+                        }
                     }
                 }
             }

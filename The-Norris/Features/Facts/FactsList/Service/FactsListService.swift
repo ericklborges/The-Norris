@@ -13,12 +13,15 @@ protocol FactsListServiceDelegate: AnyObject {
     func didReceiveError()
     func didReceiveEmptyResult()
     func didReceiveInvalidQuery()
+    func didReceiveDatabaseIsEmpty()
+    func didReceiveEmptyResultFromDatabase()
 }
 
 protocol FactsListServiceProtocol {
     var delegate: FactsListServiceDelegate? { get set }
     func fetchFactsRetry()
     func fetchFacts(query: String)
+    func fetchTenRandomFacts()
 }
 
 final class FactsListService: FactsListServiceProtocol {
@@ -29,6 +32,11 @@ final class FactsListService: FactsListServiceProtocol {
     private var lastQuery: String?
     weak var delegate: FactsListServiceDelegate?
     
+    // MARK: - Computed Properties
+    private var isReachable: Bool {
+        return NetworkMonitor.shared.isReachable
+    }
+    
     // MARK: - Init
     init(api: FactsApiProtocol = FactsApi.make(), dao: FactDAOProtocol = FactDAO.make()) {
         self.api = api
@@ -38,11 +46,20 @@ final class FactsListService: FactsListServiceProtocol {
     // MARK: - Methods
     func fetchFactsRetry() {
         guard let query = lastQuery else { return }
-        apiFetchFacts(query: query)
+        fetchFacts(query: query)
+    }
+
+    func fetchFacts(query: String) {
+        lastQuery = query
+        if isReachable {
+            apiFetchFacts(query: query)
+        } else {
+            daoFetchFacts(query: query)
+        }
     }
     
-    func fetchFacts(query: String) {
-        apiFetchFacts(query: query)
+    func fetchTenRandomFacts() {
+        daoFetchTenRandomFacts()
     }
 }
 
@@ -51,12 +68,35 @@ extension FactsListService {
     private func save(_ facts: [Fact], for query: String) {
         facts.forEach { dao.create($0, for: query) }
     }
+    
+    private func daoFetchFacts(query: String) {
+        guard let facts = dao.getAll(for: query) else {
+            delegate?.didReceiveEmptyResultFromDatabase()
+            return
+        }
+        delegate?.didReceive(facts: facts)
+    }
+    
+    private func daoFetchTenRandomFacts() {
+        guard let facts = dao.getAll() else {
+            delegate?.didReceiveDatabaseIsEmpty()
+            return
+        }
+        
+        guard facts.count > 10 else {
+            delegate?.didReceive(facts: facts)
+            return
+        }
+
+        let suffled = facts.shuffled()
+        let firstTenSuffled = Array(suffled[0..<10])
+        delegate?.didReceive(facts: firstTenSuffled)
+    }
 }
 
 // MARK: - Network
 extension FactsListService {
     private func apiFetchFacts(query: String) {
-        lastQuery = query
         api.fetchFacts(query: query) { [weak self] result in
             switch result {
             case let .success(factsQuery):

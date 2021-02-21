@@ -8,9 +8,9 @@
 @testable import The_Norris
 
 class FactsListServiceSpy: FactsListServiceProtocol {
-    
     private(set) var calledFetchFactsRetry: Bool = true
     private(set) var calledFetchFacts: Bool = true
+    private(set) var calledFetchTenRandomFacts: Bool = true
     
     var delegate: FactsListServiceDelegate? = nil
     
@@ -20,5 +20,9 @@ class FactsListServiceSpy: FactsListServiceProtocol {
     
     func fetchFacts(query: String) {
         calledFetchFacts = true
+    }
+    
+    func fetchTenRandomFacts() {
+        calledFetchTenRandomFacts = true
     }
 }
