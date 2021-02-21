@@ -1449,7 +1449,7 @@
 				3708769125D493DA004E6C10 /* Sources */,
 				3708769225D493DA004E6C10 /* Frameworks */,
 				3708769325D493DA004E6C10 /* Resources */,
-				37E7125E25D85CB100E49F68 /* [SwiftLint] */,
+				37E7125E25D85CB100E49F68 /* [SwiftLint] Run Script */,
 			);
 			buildRules = (
 			);
@@ -1490,7 +1490,8 @@
 				3726980E25D1FE45004FD4F9 /* Frameworks */,
 				3726980F25D1FE45004FD4F9 /* Resources */,
 				370876AC25D493DB004E6C10 /* Embed Frameworks */,
-				37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] */,
+				37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] Run Script */,
+				37FE992525E3017700573165 /* [SwiftGen] Run Script */,
 			);
 			buildRules = (
 			);
@@ -1532,7 +1533,7 @@
 				37397DEB25D89342008C2EAC /* Sources */,
 				37397DEC25D89342008C2EAC /* Frameworks */,
 				37397DED25D89342008C2EAC /* Resources */,
-				37397E1625D8935B008C2EAC /* [SwiftLint] */,
+				37397E1625D8935B008C2EAC /* [SwiftLint] Run Script */,
 			);
 			buildRules = (
 			);
@@ -1736,7 +1737,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37397E1625D8935B008C2EAC /* [SwiftLint] */ = {
+		37397E1625D8935B008C2EAC /* [SwiftLint] Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1745,7 +1746,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[SwiftLint]";
+			name = "[SwiftLint] Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1754,7 +1755,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"${SRCROOT}/Client/.swiftlint.yml\"\n";
 		};
-		37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] */ = {
+		37C4DB6925D6FD8F00F4BD31 /* [SwiftLint] Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1763,7 +1764,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[SwiftLint]";
+			name = "[SwiftLint] Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1772,7 +1773,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
-		37E7125E25D85CB100E49F68 /* [SwiftLint] */ = {
+		37E7125E25D85CB100E49F68 /* [SwiftLint] Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1781,7 +1782,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[SwiftLint]";
+			name = "[SwiftLint] Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1789,6 +1790,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"${SRCROOT}/Interface/.swiftlint.yml\"\n";
+		};
+		37FE992525E3017700573165 /* [SwiftGen] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftGen] Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen\n";
 		};
 		6AA275067F8B01698897DDA1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

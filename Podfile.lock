@@ -11,12 +11,14 @@ PODS:
     - iOSSnapshotTestCase (~> 6.0)
     - Nimble
   - Quick (3.1.1)
+  - SwiftGen (6.4.0)
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - Nimble (~> 9.0.0)
   - Nimble-Snapshots (~> 9.0.0)
   - Quick (~> 3.1.1)
+  - SwiftGen (~> 6.0)
   - SwiftLint (= 0.42.0)
 
 SPEC REPOS:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -32,8 +35,9 @@ SPEC CHECKSUMS:
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   Nimble-Snapshots: 36b027fd637b3e405ddc8362203d9dad3f5405fd
   Quick: ea9a702cdf4bfd561c47006f1e48c084dfca309e
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 143b49aa198a00dc59322c2a7f16505924642d64
+PODFILE CHECKSUM: c4b87ef14cbbe7174eeb02ce7d1f4c0e714a9571
 
 COCOAPODS: 1.10.1
