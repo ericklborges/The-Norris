@@ -53,10 +53,7 @@ final class CategoriesDAO: CategoriesDAOProtocol {
         
         do {
             let results = try context.fetch(fetchRequest)
-            guard let previousCategories = results.first else {
-                return false
-            }
-            
+            guard let previousCategories = results.first else { return false }
             previousCategories.value = Set(categories)
             try context.save()
             return true
@@ -70,10 +67,7 @@ final class CategoriesDAO: CategoriesDAOProtocol {
         
         do {
             let results = try context.fetch(fetchRequest)
-            guard let categories = results.first else {
-                return nil
-            }
-            
+            guard let categories = results.first else { return nil }
             return categories.value.compactMap { $0 }
         } catch {
             return nil
