@@ -28,6 +28,16 @@ final class PrimaryButtonSpec: QuickSpec {
                 it("should layout itself properly") {
                     expect(sut) == snapshot("PrimaryButton_Layout")
                 }
+                
+                context("and it is highlighted") {
+                    beforeEach {
+                        sut.isHighlighted = true
+                    }
+                    
+                    it("should layout itself properly") {
+                        expect(sut) == snapshot("PrimaryButton_Layout_Highlighted")
+                    }
+                }
             }
         }
     }
