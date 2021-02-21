@@ -41,7 +41,7 @@ final class FactTableViewCell: UITableViewCell {
         clearData()
         self.fact = fact
         factView.factText = fact.value
-        factView.categoryText = fact.categories.first ?? "Uncategorized"
+        factView.categoryText = fact.categories.first ?? L10n.FactsList.Fact.defaultCategory
         
         factView.buttonAction = { [weak self] in
             guard let self = self else { return }

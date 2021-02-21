@@ -41,8 +41,8 @@ final class FactsListViewModel {
     
     private func startLoading() {
         delegate?.didStartLoading(
-            title: "Thinking",
-            message: "Norris brain is processing your request, it won't take long."
+            title: L10n.Loading.title,
+            message: L10n.Loading.message
         )
     }
 }
@@ -75,42 +75,42 @@ extension FactsListViewModel: FactsListServiceDelegate {
     func didReceiveError() {
         delegate?.didReceiveError(
             image: Symbol.clockArrowCirclepath.image(pointSize: 48),
-            title: "Something wrong",
-            message: "Norris brain could not process your request, try again later.",
-            buttonTitle: "Try again"
+            title: L10n.Error.Dafault.title,
+            message: L10n.Error.Dafault.message,
+            buttonTitle: L10n.Error.Dafault.buttonTitle
         )
     }
     
     func didReceiveInvalidQuery() {
         delegate?.didReceiveEmptyResult(
-            title: "Invalid search",
-            message: "Norris will ignore any search with less than 3 characters. It is a waste of time for him.",
-            buttonTitle: "Try again"
+            title: L10n.Error.InvalidQuery.title,
+            message: L10n.Error.InvalidQuery.message,
+            buttonTitle: L10n.Error.InvalidQuery.buttonTitle
         )
     }
     
     func didReceiveEmptyResult() {
         delegate?.didReceiveEmptyResult(
-            title: "Nothing found",
-            message: "Unfortunatly Norris did not create a word for that. Yet.",
-            buttonTitle: "Try again"
+            title: L10n.Error.EmptyResult.title,
+            message: L10n.Error.EmptyResult.message,
+            buttonTitle: L10n.Error.EmptyResult.buttonTitle
         )
     }
     
     func didReceiveDatabaseIsEmpty() {
         delegate?.didReceiveEmptyResult(
-            title: "First time around?",
-            message: "Start looking for the most interesting facts about Norris you've ever seen.",
-            buttonTitle: "Tap to search"
+            title: L10n.Error.FirstTime.title,
+            message: L10n.Error.FirstTime.message,
+            buttonTitle: L10n.Error.FirstTime.buttonTitle
         )
     }
     
     func didReceiveEmptyResultFromDatabase() {
         delegate?.didReceiveError(
             image: Symbol.wifiSlash.image(pointSize: 48),
-            title: "No connection",
-            message: "Norris can share information telepathically, but you don't. Go get some internet.",
-            buttonTitle: "Try again"
+            title: L10n.Error.NoConnection.title,
+            message: L10n.Error.NoConnection.message,
+            buttonTitle: L10n.Error.NoConnection.buttonTitle
         )
     }
 }

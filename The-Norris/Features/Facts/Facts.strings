@@ -1,0 +1,48 @@
+/* 
+  Facts.strings
+  The-Norris
+
+  Created by erick.lozano.borges on 21/02/21.
+  
+*/
+
+// MARK: - FactsList
+"factsList.title" = "Facts";
+"factsList.fact.defaultCategory" = "Uncategorized";
+
+// Loading
+"loading.title" = "Thinking";
+"loading.message" = "Norris brain is processing your request, it won't take long.";
+
+// [Error] Default
+"error.dafault.title" = "Something wrong";
+"error.dafault.message" = "Norris brain could not process your request, try again later.";
+"error.dafault.buttonTitle" = "Try again";
+
+// [Error] Invalid Query
+"error.invalidQuery.title" = "Invalid search";
+"error.invalidQuery.message" = "Norris will ignore any search with less than 3 characters. It is a waste of time for him.";
+"error.invalidQuery.buttonTitle" = "Try again";
+
+// [Error] Empty Result
+"error.emptyResult.title" = "Nothing found";
+"error.emptyResult.message" = "Unfortunatly Norris did not create a word for that. Yet.";
+"error.emptyResult.buttonTitle" = "Try again";
+
+// [Error] First Time
+"error.firstTime.title" = "First time around?";
+"error.firstTime.message" = "Start looking for the most interesting facts about Norris you've ever seen.";
+"error.firstTime.buttonTitle" = "Tap to search";
+
+// [Error] No connection
+"error.noConnection.title" = "No connection";
+"error.noConnection.message" = "Norris can share information telepathically, but you don't. Go get some internet.";
+"error.noConnection.buttonTitle" = "Try again";
+
+// MARK: - FactsSearch
+"factsSearch.searchbar.placeholder" = "search for a fact";
+
+// Sections
+
+"factsSearch.section.suggestions.title" = "Suggestions";
+"factsSearch.section.pastQueries.title" = "Past searches";

@@ -20,7 +20,7 @@ final class FactsSearchViewController: UIViewController {
         searchbar.delegate = self
         searchbar.searchTextField.delegate = self
         searchbar.showsCancelButton = true
-        searchbar.placeholder = "search for a fact"
+        searchbar.placeholder = L10n.FactsSearch.Searchbar.placeholder
         return searchbar
     }()
     

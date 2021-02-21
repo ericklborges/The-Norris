@@ -137,6 +137,8 @@
 		37FE98F625E1B17500573165 /* FactsListServiceDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE98F525E1B17500573165 /* FactsListServiceDelegateSpy.swift */; };
 		37FE98FD25E1B63C00573165 /* FactsListServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE98FC25E1B63C00573165 /* FactsListServiceSpy.swift */; };
 		37FE990D25E2F28E00573165 /* FactDAOMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE990C25E2F28E00573165 /* FactDAOMock.swift */; };
+		37FE993825E3046C00573165 /* Facts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FE993725E3046C00573165 /* Facts.strings */; };
+		37FE994925E309CC00573165 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE994825E309CC00573165 /* Strings.swift */; };
 		51C6E1BBB5F98A11984FF8AC /* Pods_Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AEB24467F8B8C432EE52A1 /* Pods_Interface.framework */; };
 		65D22378C59535E1C0FD718E /* Pods_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284EC777DC7195340F402F09 /* Pods_Client.framework */; };
 		8F4BC96A72B650E6279F3288 /* Pods_InterfaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1DBB98AA7E259554B97F6F /* Pods_InterfaceTests.framework */; };
@@ -351,6 +353,8 @@
 		37FE98F525E1B17500573165 /* FactsListServiceDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListServiceDelegateSpy.swift; sourceTree = "<group>"; };
 		37FE98FC25E1B63C00573165 /* FactsListServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListServiceSpy.swift; sourceTree = "<group>"; };
 		37FE990C25E2F28E00573165 /* FactDAOMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDAOMock.swift; sourceTree = "<group>"; };
+		37FE993725E3046C00573165 /* Facts.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Facts.strings; sourceTree = "<group>"; };
+		37FE994825E309CC00573165 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3E1DBB98AA7E259554B97F6F /* Pods_InterfaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterfaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8C310614FCF36D119C7B0A /* Pods-Interface.tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interface.tests.xcconfig"; path = "Target Support Files/Pods-Interface/Pods-Interface.tests.xcconfig"; sourceTree = "<group>"; };
 		41AEB24467F8B8C432EE52A1 /* Pods_Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -452,12 +456,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		3708765E25D470A1004E6C10 /* Assets */ = {
+		3708765E25D470A1004E6C10 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37FE994825E309CC00573165 /* Strings.swift */,
 				3726981D25D1FE4B004FD4F9 /* Assets.xcassets */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3708766A25D47258004E6C10 /* Utilities */ = {
@@ -551,6 +556,7 @@
 		371A5D4425DC4F8800561C25 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				37FE993725E3046C00573165 /* Facts.strings */,
 				371A5D4525DC4F8800561C25 /* FactsFlowController.swift */,
 				371A5D4925DC4F8800561C25 /* API */,
 				371A5D4C25DC4F8800561C25 /* FactsList */,
@@ -751,10 +757,10 @@
 				3726982225D1FE4B004FD4F9 /* Info.plist */,
 				3726981F25D1FE4B004FD4F9 /* LaunchScreen.storyboard */,
 				3708765125D4706F004E6C10 /* Application */,
-				3708765E25D470A1004E6C10 /* Assets */,
 				3708766F25D47BAA004E6C10 /* Constants */,
 				37B948AF25DC77EC00C7A715 /* Database */,
 				371A5D3E25DC4F8800561C25 /* Features */,
+				3708765E25D470A1004E6C10 /* Resources */,
 				3708766A25D47258004E6C10 /* Utilities */,
 			);
 			path = "The-Norris";
@@ -1646,6 +1652,7 @@
 			files = (
 				3726982125D1FE4B004FD4F9 /* LaunchScreen.storyboard in Resources */,
 				3726981E25D1FE4B004FD4F9 /* Assets.xcassets in Resources */,
+				37FE993825E3046C00573165 /* Facts.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1995,6 +2002,7 @@
 				3764CC4E25DF1D0A00C6AA40 /* PastQueryDAO.swift in Sources */,
 				371A5D5B25DC4F8800561C25 /* FactsListViewController.swift in Sources */,
 				37B948BE25DC783300C7A715 /* CategoriesDAO.swift in Sources */,
+				37FE994925E309CC00573165 /* Strings.swift in Sources */,
 				371A5D5425DC4F8800561C25 /* SplashScreenViewModel.swift in Sources */,
 				3708766C25D4726E004E6C10 /* BundleWrapper.swift in Sources */,
 				37E6F05F25DF0C520040717F /* FactsSearchViewModel.swift in Sources */,
