@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol FactDAOProtocol {
-    @discardableResult func create(_ fact: Fact, for query: String) -> Bool
+    @discardableResult func create(_ facts: [Fact], for query: String) -> Bool
     func getAll(for query: String) -> [Fact]?
     func getAll() -> [Fact]?
 }
@@ -30,19 +30,24 @@ final class FactDAO: FactDAOProtocol {
     }
     
     // MARK: - Methods
+    
     @discardableResult
-    func create(_ fact: Fact, for query: String) -> Bool {
-        let cdFact = CDFact(context: context)
-        cdFact.id = fact.id
-        cdFact.value = fact.value
-        cdFact.categories = Set(fact.categories)
-        cdFact.url = fact.url
-        cdFact.queries.insert(query)
+    func create(_ facts: [Fact], for query: String) -> Bool {
+        
+        facts.forEach { fact in
+            let cdFact = CDFact(context: context)
+            cdFact.id = fact.id
+            cdFact.value = fact.value
+            cdFact.categories = Set(fact.categories)
+            cdFact.url = fact.url
+            cdFact.queries.insert(query)
+        }
         
         do {
             try context.save()
             return true
-        } catch {
+        } catch let error {
+            print("[debug] error: \(error)")
             return false
         }
     }

@@ -66,7 +66,7 @@ final class FactsListService: FactsListServiceProtocol {
 // MARK: - Database
 extension FactsListService {
     private func save(_ facts: [Fact], for query: String) {
-        facts.forEach { dao.create($0, for: query) }
+        dao.create(facts, for: query)
     }
     
     private func daoFetchFacts(query: String) {
