@@ -52,8 +52,8 @@ final class FactsListServiceSpec: QuickSpec {
                         
                         context("and facts are available on the Database") {
                             beforeEach {
-                                daoMock.create(.stub(), for: "query 1")
-                                daoMock.create(.stub(), for: "query 1")
+                                daoMock.create([.stub(id: "1")], for: "query 1")
+                                daoMock.create([.stub(id: "2")], for: "query 1")
                                 sut.fetchFacts(query: "query 1")
                             }
                             
@@ -63,6 +63,10 @@ final class FactsListServiceSpec: QuickSpec {
                             
                             it("should call delegate's didReceive(facts:) method") {
                                 expect(delegateSpy.calledDidReceiveFacts) == true
+                            }
+                            
+                            it("delegate should receive facts") {
+                                expect(delegateSpy.receivedFacts?.count) == 2
                             }
                         }
                     }
@@ -85,8 +89,8 @@ final class FactsListServiceSpec: QuickSpec {
                         
                         context("and less than 10 facts are available on the Database") {
                             beforeEach {
-                                daoMock.create(.stub(), for: "query 1")
-                                daoMock.create(.stub(), for: "query 1")
+                                daoMock.create([.stub(id: "1")], for: "query 1")
+                                daoMock.create([.stub(id: "2")], for: "query 1")
                                 sut.fetchTenRandomFacts()
                             }
                             
@@ -105,8 +109,9 @@ final class FactsListServiceSpec: QuickSpec {
                         
                         context("and at least 10 facts are available on the Database") {
                             beforeEach {
-                                let facts = Array(repeating: Fact.stub(), count: 15)
-                                facts.forEach { daoMock.create($0, for: "query") }
+                                let ids = Array(1...15)
+                                let facts: [Fact] = ids.map { Fact.stub(id: String($0)) }
+                                daoMock.create(facts, for: "query")
                                 sut.fetchTenRandomFacts()
                             }
                             
@@ -131,8 +136,12 @@ final class FactsListServiceSpec: QuickSpec {
                         context("and it returns a successful factsQuery") {
                             beforeEach {
                                 apiMock.shouldFail = false
-                                apiMock.fetchFactsReturn = .stub(total: 2, result: [.stub(), .stub()])
+                                apiMock.fetchFactsReturn = .stub(total: 2, result: [.stub(id: "1"), .stub(id: "2")])
                                 sut.fetchFacts(query: "")
+                            }
+                            
+                            it("dao should save received facts on local database") {
+                                expect(daoMock.getAll()?.count) == 2
                             }
                             
                             it("should request facts for api") {
@@ -145,10 +154,6 @@ final class FactsListServiceSpec: QuickSpec {
                             
                             it("should ask dao to save received facts") {
                                 expect(daoMock.calledCreate) == true
-                            }
-                            
-                            it("should save received facts on local database") {
-                                expect(daoMock.getAll()?.count) == 2
                             }
                         }
                         

@@ -28,9 +28,9 @@ final class FactDAOSpec: QuickSpec {
                 context("and facts are created") {
                     
                     beforeEach {
-                        sut.create(.stub(id: "1"), for: "query 1")
-                        sut.create(.stub(id: "2"), for: "query 2")
-                        sut.create(.stub(id: "3"), for: "query 3")
+                        sut.create([.stub(id: "1")], for: "query 1")
+                        sut.create([.stub(id: "2")], for: "query 2")
+                        sut.create([.stub(id: "3")], for: "query 3")
                     }
                     
                     it("should retrieve the created Facts") {
@@ -43,10 +43,9 @@ final class FactDAOSpec: QuickSpec {
                     context("and there are facts persisted associated with that query") {
                         
                         beforeEach {
-                            sut.create(.stub(id: "1"), for: "query 1")
-                            sut.create(.stub(id: "2"), for: "query 1")
-                            sut.create(.stub(id: "2"), for: "query 2")
-                            sut.create(.stub(id: "2"), for: "query 3")
+                            sut.create([.stub(id: "1"), .stub(id: "2")], for: "query 1")
+                            sut.create([.stub(id: "2")], for: "query 2")
+                            sut.create([.stub(id: "3")], for: "query 3")
                         }
 
                         it("should return only the facts related to that query") {
@@ -57,8 +56,8 @@ final class FactDAOSpec: QuickSpec {
                     context("and there are no facts persisted related the query") {
                         
                         beforeEach {
-                            sut.create(.stub(id: "2"), for: "query 2")
-                            sut.create(.stub(id: "2"), for: "query 3")
+                            sut.create([.stub(id: "2")], for: "query 2")
+                            sut.create([.stub(id: "3")], for: "query 3")
                         }
 
                         it("should return only the facts related to that query") {
@@ -78,8 +77,8 @@ final class FactDAOSpec: QuickSpec {
                     context("and there are facts persisted") {
                         
                         beforeEach {
-                            sut.create(.stub(id: "1"), for: "query 1")
-                            sut.create(.stub(id: "2"), for: "query 2")
+                            sut.create([.stub(id: "1")], for: "query 1")
+                            sut.create([.stub(id: "2")], for: "query 2")
                         }
 
                         it("should return facts") {

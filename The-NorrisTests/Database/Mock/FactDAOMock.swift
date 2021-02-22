@@ -17,10 +17,10 @@ class FactDAOMock: FactDAOProtocol {
     var passedQuery: String?
     
     @discardableResult
-    func create(_ fact: Fact, for query: String) -> Bool {
+    func create(_ facts: [Fact], for query: String) -> Bool {
         calledCreate = true
         passedQuery = query
-        return dao.create(fact, for: query)
+        return dao.create(facts, for: query)
     }
     
     func getAll(for query: String) -> [Fact]? {

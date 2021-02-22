@@ -10,7 +10,7 @@ import Foundation
 @testable import The_Norris
 
 extension FactsQuery {
-    static func stub(total: Int = 0, result: [Fact] = .stub()) -> FactsQuery {
+    static func stub(total: Int = 0, result: [Fact] = []) -> FactsQuery {
         return FactsQuery(total: total, result: result)
     }
 }

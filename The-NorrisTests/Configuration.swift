@@ -8,6 +8,7 @@
 import Quick
 import Nimble_Snapshots
 
+@testable import Client
 @testable import The_Norris
 
 final class The_NorrisTestsConfiguration: QuickConfiguration {
@@ -21,6 +22,7 @@ final class The_NorrisTestsConfiguration: QuickConfiguration {
         
         configuration.afterEach {
             DatabaseMock.shared.clearDatabase()
+            NetworkMonitor.shared.testsIsReachable = { true }
             WindowHelper.cleanTestWindow()
         }
     }
