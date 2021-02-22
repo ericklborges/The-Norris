@@ -46,8 +46,8 @@ final class FactsSearchViewModelSpec: QuickSpec {
                         }
                         
                         it("should return a suffled array with 10 itens") {
-                            expect(sut.categories.count) == 10
-                            expect(sut.categories) != ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+                            expect(sut.categories.count) == 8
+                            expect(sut.categories) != ["1", "2", "3", "4", "5", "6", "7", "8"]
                         }
                     }
                 }
