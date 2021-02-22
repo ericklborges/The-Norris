@@ -5,7 +5,6 @@ whitelist_rules:
   - closing_brace
   - closure_spacing
   - empty_count
-  - array_init
   - closure_end_indentation
   - contains_over_first_not_nil
   - explicit_init
