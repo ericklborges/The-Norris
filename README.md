@@ -16,7 +16,7 @@ Na pasta raíz do projeto:
 Basta rodar a build de testes do scheme `The-Norris`, ele também irá rodar os testes dos outros módulos.
 * **The-Noris**: 88,0% (`112 tests`)
 * **Interface**: 91,0% (`19 tests`)
-* **Client**: 81,0% (`7 tests`)
+* **Client**: 86,5% (`7 tests`)
 
 ## 🗺 Roadmap
 ### 1. [Setup](https://github.com/ericklborges/The-Norris/milestone/1?closed=1)
