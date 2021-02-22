@@ -33,11 +33,6 @@ public class NetworkMonitor {
         let queue = DispatchQueue(label: "NetworkMonitor")
         monitor.pathUpdateHandler = { [weak self] path in
             self?.currentStatus = path.status
-            if path.status == .satisfied {
-                print("[debug] Connected")
-            } else {
-                print("[debug] Disconnected")
-            }
         }
         monitor.start(queue: queue)
     }
